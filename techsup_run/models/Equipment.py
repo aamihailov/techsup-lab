@@ -10,6 +10,7 @@ class Equipment(models.Model):
     serial_number    = models.CharField(max_length=s.SN_NAME_LENGTH)
     addr             = models.CharField(max_length=s.EQ_ADDR_LENGTH)
     equipment_model  = models.ForeignKey('EquipmentModel')
+    owner            = models.ManyToManyField('Employee')
      
     class Meta:
         app_label = 'techsup_run'

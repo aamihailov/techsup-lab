@@ -2,7 +2,7 @@ import Department
 import DepartmentActivitySphere
 import DetailModel
 import Employee
-import EmployeeEquipmentCommunication 
+#import EmployeeEquipmentCommunication 
 import EmployeeOperation
 import EmployeeOperationType
 import EmployeeRole
@@ -12,7 +12,7 @@ import EquipmentOperation
 import EquipmentOperationType
 import NodeCategory
 import Repair
-import RepairWorkers
+#import RepairWorkers
 import RightsGroup
 import Task
 import TaskOperation

@@ -325,8 +325,11 @@ def generate_dot(app_labels, **kwargs):
 
 def main():
     try:
-        opts, args = getopt.getopt(sys.argv[1:], "hadgi:L:x:X:en",
-                    ["help", "all_applications", "disable_fields", "group_models", "include_models=", "inheritance", "verbose_names", "language=", "exclude_columns=", "exclude_models="])
+        #        opts, args = getopt.getopt(sys.argv[1:], "hadgi:L:x:X:en",
+        #            ["help", "all_applications", "disable_fields", "group_models", "include_models=", "inheritance", "verbose_names", "language=", "exclude_columns=", "exclude_models="])
+
+        opts, args = getopt.getopt("-a", "hadgi:L:x:X:en",
+            ["help", "all_applications", "disable_fields", "group_models", "include_models=", "inheritance", "verbose_names", "language=", "exclude_columns=", "exclude_models="])
     except getopt.GetoptError, error:
         print __doc__
         sys.exit(error)

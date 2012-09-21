@@ -11,6 +11,7 @@ class Repair(models.Model):
     detail_price         = models.FloatField()
     detail_model         = models.ForeignKey('DetailModel')
     equpment_operation   = models.ForeignKey('EquipmentOperation')
+    task                 = models.ForeignKey('TaskOperation')
     
     class Meta:
         app_label = 'techsup_run'
