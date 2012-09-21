@@ -7,7 +7,7 @@ import settings as s
 # Подразделение
 class Department(models.Model):
     name            = models.CharField(max_length=s.DEPARTMENT_NAME_LENGTH)
-    phone           = models.CharField(max_length=s.DEPARTMENT_PHONE_LENGTH)
+    phone           = models.CharField(max_length=s.DEPARTMENT_PHONE_LENGTH, null=True)
     email           = models.EmailField()
     addr            = models.CharField(max_length=s.DEPARTMENT_ADDR_LENGTH)
     exists_now      = models.BooleanField()
