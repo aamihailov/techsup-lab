@@ -10,9 +10,9 @@ class Task(models.Model):
     priority  = models.ForeignKey('TaskPriority')
     client    = models.ForeignKey('Employee', related_name='client_id')
     owner     = models.ForeignKey('Employee', related_name='owner_id')
+    equipment = models.ManyToManyField('Equipment')
         
     class Meta:
         app_label = 'techsup_run'
-    
-    
+        db_table = 'task'
     

@@ -15,4 +15,5 @@ class Department(models.Model):
     
     class Meta:
         app_label = 'techsup_run'
+        db_table = 'department'
     

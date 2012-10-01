@@ -4,13 +4,13 @@ from django.db import models
 
 # Операции с заявкой
 class TaskOperation(models.Model):
-    task      = models.ForeignKey('Task')
-    technic   = models.ForeignKey('Employee', related_name='technic_id')
-    state     = models.ForeignKey('TaskState')
-    date      = models.DateField()
+    work_price  = models.FloatField()
+    date        = models.DateField()
+    task        = models.ForeignKey('Task')
+    technic     = models.ForeignKey('Employee', related_name='technic_id')
+    state       = models.ForeignKey('TaskState')
     
     class Meta:
         app_label = 'techsup_run'
-    
-    
+        db_table = 'task_operation'
     

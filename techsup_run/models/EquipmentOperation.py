@@ -4,10 +4,12 @@ from django.db import models
 
 # Операции с оборудованием
 class EquipmentOperation(models.Model):
+    detail_price = models.FloatField()
+    date         = models.DateField()
     equipment    = models.ForeignKey('Equipment')
     eq_oper_type = models.ForeignKey('EquipmentOperationType')
-    date         = models.DateField()
     
     class Meta:
         app_label = 'techsup_run'
+        db_table = 'equipment_operation'
     

@@ -10,4 +10,5 @@ class TaskPriority(models.Model):
     
     class Meta:
         app_label = 'techsup_run'
+        db_table = 'task_priority'
     

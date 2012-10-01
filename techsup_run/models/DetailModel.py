@@ -6,8 +6,9 @@ import settings as s
 
 # Модель детали
 class DetailModel(models.Model):
-    name           = models.CharField(max_length=s.DETAIL_MODEL_NAME_LENGTH)
-    node_category  = models.ForeignKey('NodeCategory')
+    name      = models.CharField(max_length=s.DETAIL_MODEL_NAME_LENGTH)
+    category  = models.ForeignKey('DetailCategory')
     
     class Meta:
         app_label = 'techsup_run'
+        db_table = 'detail_model'

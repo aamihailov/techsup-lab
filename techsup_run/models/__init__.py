@@ -1,8 +1,8 @@
 import Department
 import DepartmentActivitySphere
 import DetailModel
+import DetailCategory
 import Employee
-#import EmployeeEquipmentCommunication 
 import EmployeeOperation
 import EmployeeOperationType
 import EmployeeRole
@@ -10,9 +10,7 @@ import Equipment
 import EquipmentModel
 import EquipmentOperation
 import EquipmentOperationType
-import NodeCategory
 import Repair
-#import RepairWorkers
 import RightsGroup
 import Task
 import TaskOperation

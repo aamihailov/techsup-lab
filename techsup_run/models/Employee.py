@@ -17,4 +17,5 @@ class Employee(models.Model):
 
     class Meta:
         app_label = 'techsup_run'
+        db_table = 'employee'
     

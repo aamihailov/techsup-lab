@@ -10,3 +10,4 @@ class DepartmentActivitySphere(models.Model):
 
     class Meta:
         app_label = 'techsup_run'
+        db_table = 'department_activity_sphere'

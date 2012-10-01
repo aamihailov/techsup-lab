@@ -10,4 +10,5 @@ class EquipmentOperationType(models.Model):
     
     class Meta:
         app_label = 'techsup_run'
+        db_table = 'equipment_operation_type'
     
