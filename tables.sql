@@ -1,26 +1,31 @@
 BEGIN;
-CREATE TABLE "techsup_run_department" (
+CREATE TABLE "department" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(128) NOT NULL,
-    "phone" varchar(32) NOT NULL,
+    "phone" varchar(32),
     "email" varchar(75) NOT NULL,
     "addr" varchar(256) NOT NULL,
     "exists_now" bool NOT NULL,
     "activity_sphere_id" integer NOT NULL
 )
 ;
-CREATE TABLE "techsup_run_departmentactivitysphere" (
+CREATE TABLE "department_activity_sphere" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(128) NOT NULL
 )
 ;
-CREATE TABLE "techsup_run_detailmodel" (
+CREATE TABLE "detail_model" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(128) NOT NULL,
-    "node_category_id" integer NOT NULL
+    "category_id" integer NOT NULL
 )
 ;
-CREATE TABLE "techsup_run_employee" (
+CREATE TABLE "detail_category" (
+    "id" integer NOT NULL PRIMARY KEY,
+    "name" varchar(128) NOT NULL
+)
+;
+CREATE TABLE "employee" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(128) NOT NULL,
     "phone" varchar(32) NOT NULL,
@@ -32,30 +37,32 @@ CREATE TABLE "techsup_run_employee" (
     "group_id" integer NOT NULL
 )
 ;
-CREATE TABLE "techsup_run_employeeequipmentcommunication" (
+CREATE TABLE "employee_operation" (
     "id" integer NOT NULL PRIMARY KEY,
-    "employee_id" integer NOT NULL REFERENCES "techsup_run_employee" ("id"),
-    "equipment_id" integer NOT NULL
-)
-;
-CREATE TABLE "techsup_run_employeeoperation" (
-    "id" integer NOT NULL PRIMARY KEY,
+    "date" date NOT NULL,
     "type_id" integer NOT NULL,
-    "employee_id" integer NOT NULL REFERENCES "techsup_run_employee" ("id"),
-    "department_id" integer NOT NULL REFERENCES "techsup_run_department" ("id")
+    "employee_id" integer NOT NULL REFERENCES "employee" ("id"),
+    "department_id" integer NOT NULL REFERENCES "department" ("id")
 )
 ;
-CREATE TABLE "techsup_run_employeeoperationtype" (
+CREATE TABLE "employee_operation_type" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(128) NOT NULL
 )
 ;
-CREATE TABLE "techsup_run_employeerole" (
+CREATE TABLE "employee_role" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(128) NOT NULL
 )
 ;
-CREATE TABLE "techsup_run_equipment" (
+CREATE TABLE "equipment_owner" (
+    "id" integer NOT NULL PRIMARY KEY,
+    "equipment_id" integer NOT NULL,
+    "employee_id" integer NOT NULL REFERENCES "employee" ("id"),
+    UNIQUE ("equipment_id", "employee_id")
+)
+;
+CREATE TABLE "equipment" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(128) NOT NULL,
     "serial_number" varchar(128) NOT NULL,
@@ -63,93 +70,90 @@ CREATE TABLE "techsup_run_equipment" (
     "equipment_model_id" integer NOT NULL
 )
 ;
-CREATE TABLE "techsup_run_equipmentmodel" (
+CREATE TABLE "equipment_model" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(128) NOT NULL
 )
 ;
-CREATE TABLE "techsup_run_equipmentoperation" (
+CREATE TABLE "equipment_operation" (
     "id" integer NOT NULL PRIMARY KEY,
-    "equipment_id" integer NOT NULL REFERENCES "techsup_run_equipment" ("id"),
-    "eq_oper_type_id" integer NOT NULL,
-    "date" date NOT NULL
+    "detail_price" real NOT NULL,
+    "date" date NOT NULL,
+    "equipment_id" integer NOT NULL REFERENCES "equipment" ("id"),
+    "eq_oper_type_id" integer NOT NULL
 )
 ;
-CREATE TABLE "techsup_run_equipmentoperationtype" (
-    "id" integer NOT NULL PRIMARY KEY,
-    "name" varchar(128) NOT NULL
-)
-;
-CREATE TABLE "techsup_run_nodecategory" (
+CREATE TABLE "equipment_operation_type" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(128) NOT NULL
 )
 ;
-CREATE TABLE "techsup_run_repair" (
+CREATE TABLE "repair" (
     "id" integer NOT NULL PRIMARY KEY,
     "equipment_assisment" varchar(512) NOT NULL,
+    "detail_model_id" integer NOT NULL REFERENCES "detail_model" ("id"),
+    "equpment_operation_id" integer NOT NULL REFERENCES "equipment_operation" ("id"),
+    "task_id" integer NOT NULL
+)
+;
+CREATE TABLE "rights_group" (
+    "id" integer NOT NULL PRIMARY KEY,
+    "name" varchar(128) NOT NULL,
+    "rights" varchar(8) NOT NULL
+)
+;
+CREATE TABLE "task_equipment" (
+    "id" integer NOT NULL PRIMARY KEY,
+    "task_id" integer NOT NULL,
+    "equipment_id" integer NOT NULL REFERENCES "equipment" ("id"),
+    UNIQUE ("task_id", "equipment_id")
+)
+;
+CREATE TABLE "task" (
+    "id" integer NOT NULL PRIMARY KEY,
+    "name" varchar(128) NOT NULL,
+    "priority_id" integer NOT NULL,
+    "client_id" integer NOT NULL REFERENCES "employee" ("id"),
+    "owner_id" integer NOT NULL REFERENCES "employee" ("id")
+)
+;
+CREATE TABLE "task_operation" (
+    "id" integer NOT NULL PRIMARY KEY,
     "work_price" real NOT NULL,
-    "detail_price" real NOT NULL,
-    "detail_model_id" integer NOT NULL REFERENCES "techsup_run_detailmodel" ("id"),
-    "equpment_operation_id" integer NOT NULL REFERENCES "techsup_run_equipmentoperation" ("id")
+    "date" date NOT NULL,
+    "task_id" integer NOT NULL REFERENCES "task" ("id"),
+    "technic_id" integer NOT NULL REFERENCES "employee" ("id"),
+    "state_id" integer NOT NULL
 )
 ;
-CREATE TABLE "techsup_run_repairworkers" (
-    "id" integer NOT NULL PRIMARY KEY,
-    "repair_id" integer NOT NULL REFERENCES "techsup_run_repair" ("id"),
-    "employee_id" integer NOT NULL REFERENCES "techsup_run_employee" ("id")
-)
-;
-CREATE TABLE "techsup_run_rightsgroup" (
-    "id" integer NOT NULL PRIMARY KEY,
-    "name" varchar(128) NOT NULL,
-    "rigths" varchar(8) NOT NULL
-)
-;
-CREATE TABLE "techsup_run_task" (
-    "id" integer NOT NULL PRIMARY KEY,
-    "name" varchar(128) NOT NULL,
-    "priority_id" integer NOT NULL
-)
-;
-CREATE TABLE "techsup_run_taskoperation" (
-    "id" integer NOT NULL PRIMARY KEY,
-    "task_id" integer NOT NULL REFERENCES "techsup_run_task" ("id"),
-    "employee_id" integer NOT NULL REFERENCES "techsup_run_employee" ("id"),
-    "technic_id" integer NOT NULL REFERENCES "techsup_run_employee" ("id"),
-    "state_id" integer NOT NULL,
-    "date" date NOT NULL
-)
-;
-CREATE TABLE "techsup_run_taskpriority" (
+CREATE TABLE "task_priority" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(128) NOT NULL
 )
 ;
-CREATE TABLE "techsup_run_taskstate" (
+CREATE TABLE "task_state" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(128) NOT NULL
 )
 ;
-CREATE INDEX "techsup_run_department_5d8a0cda" ON "techsup_run_department" ("activity_sphere_id");
-CREATE INDEX "techsup_run_detailmodel_6d3536b6" ON "techsup_run_detailmodel" ("node_category_id");
-CREATE INDEX "techsup_run_employee_bf07f040" ON "techsup_run_employee" ("role_id");
-CREATE INDEX "techsup_run_employee_bda51c3c" ON "techsup_run_employee" ("group_id");
-CREATE INDEX "techsup_run_employeeequipmentcommunication_359f2ab4" ON "techsup_run_employeeequipmentcommunication" ("employee_id");
-CREATE INDEX "techsup_run_employeeequipmentcommunication_57fa5429" ON "techsup_run_employeeequipmentcommunication" ("equipment_id");
-CREATE INDEX "techsup_run_employeeoperation_777d41c8" ON "techsup_run_employeeoperation" ("type_id");
-CREATE INDEX "techsup_run_employeeoperation_359f2ab4" ON "techsup_run_employeeoperation" ("employee_id");
-CREATE INDEX "techsup_run_employeeoperation_2ae7390" ON "techsup_run_employeeoperation" ("department_id");
-CREATE INDEX "techsup_run_equipment_57abcf91" ON "techsup_run_equipment" ("equipment_model_id");
-CREATE INDEX "techsup_run_equipmentoperation_57fa5429" ON "techsup_run_equipmentoperation" ("equipment_id");
-CREATE INDEX "techsup_run_equipmentoperation_75a10a68" ON "techsup_run_equipmentoperation" ("eq_oper_type_id");
-CREATE INDEX "techsup_run_repair_6e891d2b" ON "techsup_run_repair" ("detail_model_id");
-CREATE INDEX "techsup_run_repair_9a8b2091" ON "techsup_run_repair" ("equpment_operation_id");
-CREATE INDEX "techsup_run_repairworkers_fca3e68b" ON "techsup_run_repairworkers" ("repair_id");
-CREATE INDEX "techsup_run_repairworkers_359f2ab4" ON "techsup_run_repairworkers" ("employee_id");
-CREATE INDEX "techsup_run_task_b62206ec" ON "techsup_run_task" ("priority_id");
-CREATE INDEX "techsup_run_taskoperation_c00fe455" ON "techsup_run_taskoperation" ("task_id");
-CREATE INDEX "techsup_run_taskoperation_359f2ab4" ON "techsup_run_taskoperation" ("employee_id");
-CREATE INDEX "techsup_run_taskoperation_28293043" ON "techsup_run_taskoperation" ("technic_id");
-CREATE INDEX "techsup_run_taskoperation_b9608dc2" ON "techsup_run_taskoperation" ("state_id");
+CREATE INDEX "department_1dea4842" ON "department" ("activity_sphere_id");
+CREATE INDEX "detail_model_b583a629" ON "detail_model" ("category_id");
+CREATE INDEX "employee_84566833" ON "employee" ("role_id");
+CREATE INDEX "employee_0e939a4f" ON "employee" ("group_id");
+CREATE INDEX "employee_operation_94757cae" ON "employee_operation" ("type_id");
+CREATE INDEX "employee_operation_dcc97e32" ON "employee_operation" ("employee_id");
+CREATE INDEX "employee_operation_bf691be4" ON "employee_operation" ("department_id");
+CREATE INDEX "equipment_83ff7b4a" ON "equipment" ("equipment_model_id");
+CREATE INDEX "equipment_operation_997b9956" ON "equipment_operation" ("equipment_id");
+CREATE INDEX "equipment_operation_7ba3dec2" ON "equipment_operation" ("eq_oper_type_id");
+CREATE INDEX "repair_3c11de5c" ON "repair" ("detail_model_id");
+CREATE INDEX "repair_2d280302" ON "repair" ("equpment_operation_id");
+CREATE INDEX "repair_57746cc8" ON "repair" ("task_id");
+CREATE INDEX "task_8fb0ef36" ON "task" ("priority_id");
+CREATE INDEX "task_2bfe9d72" ON "task" ("client_id");
+CREATE INDEX "task_5e7b1936" ON "task" ("owner_id");
+CREATE INDEX "task_operation_57746cc8" ON "task_operation" ("task_id");
+CREATE INDEX "task_operation_043f54d9" ON "task_operation" ("technic_id");
+CREATE INDEX "task_operation_d5582625" ON "task_operation" ("state_id");
+
 COMMIT;
