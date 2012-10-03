@@ -1,21 +1,21 @@
-import Department
-import DepartmentActivitySphere
-import DetailModel
-import DetailCategory
-import Employee
-import EmployeeOperation
-import EmployeeOperationType
-import EmployeeRole
-import Equipment
-import EquipmentModel
-import EquipmentOperation
-import EquipmentOperationType
-import Repair
-import RightsGroup
-import Task
-import TaskOperation
-import TaskPriority
-import TaskState
+import DepartmentActivitySphere # --.
+import Department               # <-'            --.
+import DetailCategory           # --.              |
+import DetailModel              # <-'              |  --.
+import EmployeeRole             # --.              |    |
+import RightsGroup              #   |  --.         |    |
+import Employee                 # <-'  <-'  --.    |    |
+import EmployeeOperationType    # --.         |    |    |
+import EmployeeOperation        # <-'       <-'  <-'    |  --.
+import EquipmentModel           # --.                   |    |
+import Equipment                # <-'  --.              |    |
+import EquipmentOperationType   # --.    |              |    |
+import EquipmentOperation       # <-'  <-'       --.    |    |
+import TaskPriority             #           --.    |    |    |
+import Task                     # --.  --.  <-'    |    |    |
+import Repair                   # <-'    |       <-'  <-'    |
+import TaskState                # --.    |                   |
+import TaskOperation            # <-'  <-'                 <-'
 
 all_models = [Department.Department,
               DepartmentActivitySphere.DepartmentActivitySphere,
