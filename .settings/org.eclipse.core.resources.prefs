@@ -5,6 +5,7 @@ encoding//techsup_run/models/DepartmentActivitySphere.py=utf-8
 encoding//techsup_run/models/Employee.py=utf-8
 encoding//techsup_run/models/EmployeeRole.py=utf-8
 encoding//techsup_run/models/Equipment.py=utf-8
+encoding//techsup_run/models/EquipmentOperation.py=utf-8
 encoding//techsup_run/models/EquipmentOperationType.py=utf-8
 encoding//techsup_run/models/Repair.py=utf-8
 encoding//techsup_run/models/RightsGroup.py=utf-8
