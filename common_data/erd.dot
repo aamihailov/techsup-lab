@@ -16,6 +16,18 @@ digraph name {
 
 
 
+subgraph cluster_techsup_run_models {
+  label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+        <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER"
+        ><FONT FACE="Helvetica Bold" COLOR="Black" POINT-SIZE="12"
+        >techsup_run</FONT></TD></TR>
+        </TABLE>
+        >
+  color=olivedrab4
+  style="rounded"
+
+
     techsup_run_models_DepartmentActivitySphere_DepartmentActivitySphere [label=<
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
@@ -90,6 +102,13 @@ digraph name {
         ><FONT COLOR="#7B7B7B" FACE="Helvetica Bold">BooleanField</FONT
         ></TD></TR>
         
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">activity_sphere</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
     
     </TABLE>
     >]
@@ -138,6 +157,13 @@ digraph name {
         ></TD>
         <TD ALIGN="LEFT"
         ><FONT FACE="Helvetica Bold">CharField</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">category</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
         ></TD></TR>
         
     
@@ -257,6 +283,20 @@ digraph name {
         ><FONT FACE="Helvetica Bold">CharField</FONT
         ></TD></TR>
         
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">role</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">group</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
     
     </TABLE>
     >]
@@ -305,6 +345,27 @@ digraph name {
         ></TD>
         <TD ALIGN="LEFT"
         ><FONT FACE="Helvetica Bold">DateField</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">type</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">employee</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">department</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
         ></TD></TR>
         
     
@@ -371,6 +432,20 @@ digraph name {
         ><FONT FACE="Helvetica Bold">CharField</FONT
         ></TD></TR>
         
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">equipment_model</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">owner</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ManyToManyField</FONT
+        ></TD></TR>
+        
     
     </TABLE>
     >]
@@ -428,6 +503,20 @@ digraph name {
         ><FONT FACE="Helvetica Bold">DateField</FONT
         ></TD></TR>
         
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">equipment</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">eq_oper_type</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
     
     </TABLE>
     >]
@@ -478,6 +567,34 @@ digraph name {
         ><FONT FACE="Helvetica Bold">CharField</FONT
         ></TD></TR>
         
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">priority</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">client</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">owner</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">equipment</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ManyToManyField</FONT
+        ></TD></TR>
+        
     
     </TABLE>
     >]
@@ -501,6 +618,27 @@ digraph name {
         ></TD>
         <TD ALIGN="LEFT"
         ><FONT FACE="Helvetica Bold">CharField</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">detail_model</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">equpment_operation</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">task</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
         ></TD></TR>
         
     
@@ -560,134 +698,179 @@ digraph name {
         ><FONT FACE="Helvetica Bold">DateField</FONT
         ></TD></TR>
         
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">task</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">technic</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">state</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
     
     </TABLE>
     >]
 
 
+}
 
 
 
 
-  
+subgraph cluster_django_extensions_models {
+  label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+        <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER"
+        ><FONT FACE="Helvetica Bold" COLOR="Black" POINT-SIZE="12"
+        >django_extensions</FONT></TD></TR>
+        </TABLE>
+        >
+  color=olivedrab4
+  style="rounded"
+
+
+
+}
+
+
 
   
+    
   
-  techsup_run_models_Department_Department -> techsup_run_models_DepartmentActivitySphere_DepartmentActivitySphere
-  [label="activity_sphere (department)"] [arrowhead=none, arrowtail=dot];
+    
+    
+    techsup_run_models_Department_Department -> techsup_run_models_DepartmentActivitySphere_DepartmentActivitySphere
+    [label="activity_sphere"] ;
+    
+  
+    
+  
+    
+    
+    techsup_run_models_DetailModel_DetailModel -> techsup_run_models_DetailCategory_DetailCategory
+    [label="category"] ;
+    
+  
+    
+  
+    
+  
+    
+    
+    techsup_run_models_Employee_Employee -> techsup_run_models_EmployeeRole_EmployeeRole
+    [label="role"] ;
+    
+    
+    techsup_run_models_Employee_Employee -> techsup_run_models_RightsGroup_RightsGroup
+    [label="group"] ;
+    
+  
+    
+  
+    
+    
+    techsup_run_models_EmployeeOperation_EmployeeOperation -> techsup_run_models_EmployeeOperationType_EmployeeOperationType
+    [label="type"] ;
+    
+    
+    techsup_run_models_EmployeeOperation_EmployeeOperation -> techsup_run_models_Employee_Employee
+    [label="employee"] ;
+    
+    
+    techsup_run_models_EmployeeOperation_EmployeeOperation -> techsup_run_models_Department_Department
+    [label="department"] ;
+    
+  
+    
+  
+    
+    
+    techsup_run_models_Equipment_Equipment -> techsup_run_models_EquipmentModel_EquipmentModel
+    [label="equipment_model"] ;
+    
+    
+    techsup_run_models_Equipment_Equipment -> techsup_run_models_Employee_Employee
+    [label="owner"] [arrowhead=normal arrowtail=normal];
+    
+  
+    
+  
+    
+    
+    techsup_run_models_EquipmentOperation_EquipmentOperation -> techsup_run_models_Equipment_Equipment
+    [label="equipment"] ;
+    
+    
+    techsup_run_models_EquipmentOperation_EquipmentOperation -> techsup_run_models_EquipmentOperationType_EquipmentOperationType
+    [label="eq_oper_type"] ;
+    
+  
+    
+  
+    
+    
+    techsup_run_models_Task_Task -> techsup_run_models_TaskPriority_TaskPriority
+    [label="priority"] ;
+    
+    
+    techsup_run_models_Task_Task -> techsup_run_models_Employee_Employee
+    [label="client"] ;
+    
+    
+    techsup_run_models_Task_Task -> techsup_run_models_Employee_Employee
+    [label="owner"] ;
+    
+    
+    techsup_run_models_Task_Task -> techsup_run_models_Equipment_Equipment
+    [label="equipment"] [arrowhead=normal arrowtail=normal];
+    
+  
+    
+    
+    techsup_run_models_Repair_Repair -> techsup_run_models_DetailModel_DetailModel
+    [label="detail_model"] ;
+    
+    
+    techsup_run_models_Repair_Repair -> techsup_run_models_EquipmentOperation_EquipmentOperation
+    [label="equpment_operation"] ;
+    
+    
+    techsup_run_models_Repair_Repair -> techsup_run_models_TaskOperation_TaskOperation
+    [label="task"] ;
+    
+  
+    
+  
+    
+    
+    techsup_run_models_TaskOperation_TaskOperation -> techsup_run_models_Task_Task
+    [label="task"] ;
+    
+    
+    techsup_run_models_TaskOperation_TaskOperation -> techsup_run_models_Employee_Employee
+    [label="technic"] ;
+    
+    
+    techsup_run_models_TaskOperation_TaskOperation -> techsup_run_models_TaskState_TaskState
+    [label="state"] ;
+    
   
 
-  
 
-  
-  
-  techsup_run_models_DetailModel_DetailModel -> techsup_run_models_DetailCategory_DetailCategory
-  [label="category (detailmodel)"] [arrowhead=none, arrowtail=dot];
-  
-
-  
-
-  
-
-  
-  
-  techsup_run_models_Employee_Employee -> techsup_run_models_EmployeeRole_EmployeeRole
-  [label="role (employee)"] [arrowhead=none, arrowtail=dot];
-  
-  
-  techsup_run_models_Employee_Employee -> techsup_run_models_RightsGroup_RightsGroup
-  [label="group (employee)"] [arrowhead=none, arrowtail=dot];
-  
-
-  
-
-  
-  
-  techsup_run_models_EmployeeOperation_EmployeeOperation -> techsup_run_models_EmployeeOperationType_EmployeeOperationType
-  [label="type (employeeoperation)"] [arrowhead=none, arrowtail=dot];
-  
-  
-  techsup_run_models_EmployeeOperation_EmployeeOperation -> techsup_run_models_Employee_Employee
-  [label="employee (employeeoperation)"] [arrowhead=none, arrowtail=dot];
-  
-  
-  techsup_run_models_EmployeeOperation_EmployeeOperation -> techsup_run_models_Department_Department
-  [label="department (employeeoperation)"] [arrowhead=none, arrowtail=dot];
-  
-
-  
-
-  
-  
-  techsup_run_models_Equipment_Equipment -> techsup_run_models_EquipmentModel_EquipmentModel
-  [label="equipment_model (equipment)"] [arrowhead=none, arrowtail=dot];
-  
-  
-  techsup_run_models_Equipment_Equipment -> techsup_run_models_Employee_Employee
-  [label="owner (equipment)"] [arrowhead=dot arrowtail=dot, dir=both];
-  
-
-  
-
-  
-  
-  techsup_run_models_EquipmentOperation_EquipmentOperation -> techsup_run_models_Equipment_Equipment
-  [label="equipment (equipmentoperation)"] [arrowhead=none, arrowtail=dot];
-  
-  
-  techsup_run_models_EquipmentOperation_EquipmentOperation -> techsup_run_models_EquipmentOperationType_EquipmentOperationType
-  [label="eq_oper_type (equipmentoperation)"] [arrowhead=none, arrowtail=dot];
-  
-
-  
-
-  
-  
-  techsup_run_models_Task_Task -> techsup_run_models_TaskPriority_TaskPriority
-  [label="priority (task)"] [arrowhead=none, arrowtail=dot];
-  
-  
-  techsup_run_models_Task_Task -> techsup_run_models_Employee_Employee
-  [label="client (client_id)"] [arrowhead=none, arrowtail=dot];
-  
-  
-  techsup_run_models_Task_Task -> techsup_run_models_Employee_Employee
-  [label="owner (owner_id)"] [arrowhead=none, arrowtail=dot];
-  
-  
-  techsup_run_models_Task_Task -> techsup_run_models_Equipment_Equipment
-  [label="equipment (task)"] [arrowhead=dot arrowtail=dot, dir=both];
-  
-
-  
-  
-  techsup_run_models_Repair_Repair -> techsup_run_models_DetailModel_DetailModel
-  [label="detail_model (repair)"] [arrowhead=none, arrowtail=dot];
-  
-  
-  techsup_run_models_Repair_Repair -> techsup_run_models_EquipmentOperation_EquipmentOperation
-  [label="equpment_operation (repair)"] [arrowhead=none, arrowtail=dot];
-  
-  
-  techsup_run_models_Repair_Repair -> techsup_run_models_TaskOperation_TaskOperation
-  [label="task (repair)"] [arrowhead=none, arrowtail=dot];
-  
-
-  
-
-  
-  
-  techsup_run_models_TaskOperation_TaskOperation -> techsup_run_models_Task_Task
-  [label="task (taskoperation)"] [arrowhead=none, arrowtail=dot];
-  
-  
-  techsup_run_models_TaskOperation_TaskOperation -> techsup_run_models_Employee_Employee
-  [label="technic (technic_id)"] [arrowhead=none, arrowtail=dot];
-  
-  
-  techsup_run_models_TaskOperation_TaskOperation -> techsup_run_models_TaskState_TaskState
-  [label="state (taskoperation)"] [arrowhead=none, arrowtail=dot];
   
 
 
 }
+
