@@ -6,7 +6,8 @@ import settings as s
 
 # Модель оборудования
 class EquipmentModel(models.Model):
-    name  = models.CharField(max_length=s.EQ_MODEL_NAME_LENGTH)
+    name      = models.CharField(max_length=s.EQ_MODEL_NAME_LENGTH)
+    category  = models.ForeignKey('EquipmentCategory')
     
     class Meta:
         app_label = 'techsup_run'

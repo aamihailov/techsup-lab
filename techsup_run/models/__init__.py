@@ -7,7 +7,8 @@ import RightsGroup              #   |  --.         |    |                | f
 import Employee                 # <-'  <-'  --.    |    |                |
 import EmployeeOperationType    # --.         |    |    |                | f
 import EmployeeOperation        # <-'       <-'  <-'    |  --.           |
-import EquipmentModel           # --.                   |    |           |
+import EquipmentCategory        #      --.              |    |           |
+import EquipmentModel           # --.  <-'              |    |           |
 import Equipment                # <-'  --.              |    |           |
 import EquipmentOperationType   # --.    |              |    |           | f
 import EquipmentOperation       # <-'  <-'       --.    |    |           |
@@ -26,6 +27,7 @@ all_models = [Department.Department,
               EmployeeOperationType.EmployeeOperationType,
               EmployeeRole.EmployeeRole,
               Equipment.Equipment,
+              EquipmentCategory.EquipmentCategory,
               EquipmentModel.EquipmentModel,
               EquipmentOperation.EquipmentOperation,
               EquipmentOperationType.EquipmentOperationType,

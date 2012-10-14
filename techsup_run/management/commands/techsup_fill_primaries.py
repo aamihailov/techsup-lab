@@ -63,7 +63,8 @@ class EquipmentOperationTypeFill(BaseFill):
                      u'Списание',
                      u'Ремонт',
                      u'Замена детали',
-                     u'Перемещение на склад'
+                     u'Перемещение на склад',
+                     u'Помещение на ремонт'
                     ]
         
 class TaskPriorityFill(BaseFill):

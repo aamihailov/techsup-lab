@@ -11,4 +11,4 @@ class DetailModel(models.Model):
     
     class Meta:
         app_label = 'techsup_run'
-        db_table = 'detail_model'
+        db_table  = 'detail_model'
