@@ -4,7 +4,7 @@ from django.db import models
 
 # Операции с сотрудниками
 class EmployeeOperation(models.Model):
-    when        = models.DateTimeField()
+    date        = models.DateField()
     type        = models.ForeignKey('EmployeeOperationType')
     employee    = models.ForeignKey('Employee')
     department  = models.ForeignKey('Department')

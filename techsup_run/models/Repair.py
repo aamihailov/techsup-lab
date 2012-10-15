@@ -7,7 +7,7 @@ import settings as s
 # Ремонт
 class Repair(models.Model):
     comment              = models.CharField(max_length=s.EQ_ASS_NAME_LENGTH)
-    when                 = models.DateTimeField()
+    datetime             = models.DateTimeField()
     detail_model         = models.ForeignKey('DetailModel')
     equipment_operation  = models.ForeignKey('EquipmentOperation')
     task                 = models.ForeignKey('TaskOperation')
