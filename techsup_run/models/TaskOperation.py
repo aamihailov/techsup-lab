@@ -4,7 +4,7 @@ from django.db import models
 
 # Операции с заявкой
 class TaskOperation(models.Model):
-    work_price  = models.FloatField()
+    work_price  = models.FloatField(null=True)
     when        = models.DateTimeField()
     task        = models.ForeignKey('Task')
     technic     = models.ForeignKey('Employee', related_name='technic_id')

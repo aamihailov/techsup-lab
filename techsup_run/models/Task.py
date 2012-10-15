@@ -10,7 +10,7 @@ class Task(models.Model):
     when      = models.DateTimeField()
     priority  = models.ForeignKey('TaskPriority')
     client    = models.ForeignKey('Employee', related_name='client_id')
-    owner     = models.ForeignKey('Employee', related_name='owner_id')
+    owner     = models.ForeignKey('Employee', related_name='owner_id', null=True)
     equipment = models.ManyToManyField('Equipment')
         
     class Meta:

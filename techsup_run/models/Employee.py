@@ -14,8 +14,9 @@ class Employee(models.Model):
     password    = models.CharField(max_length=s.EMPLOYEE_PASSWORD_LENGTH)
     role        = models.ForeignKey('EmployeeRole')
     group       = models.ForeignKey('RightsGroup')
-
+     
     class Meta:
         app_label = 'techsup_run'
         db_table = 'employee'
+        unique_together = (('name', 'phone'), ('login', 'password'))
     

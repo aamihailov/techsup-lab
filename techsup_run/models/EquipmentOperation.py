@@ -4,7 +4,7 @@ from django.db import models
 
 # Операции с оборудованием
 class EquipmentOperation(models.Model):
-    detail_price = models.FloatField()
+    detail_price = models.FloatField(null=True)
     when         = models.DateTimeField()
     equipment    = models.ForeignKey('Equipment')
     eq_oper_type = models.ForeignKey('EquipmentOperationType')

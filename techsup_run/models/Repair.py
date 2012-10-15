@@ -9,7 +9,7 @@ class Repair(models.Model):
     comment              = models.CharField(max_length=s.EQ_ASS_NAME_LENGTH)
     when                 = models.DateTimeField()
     detail_model         = models.ForeignKey('DetailModel')
-    equpment_operation   = models.ForeignKey('EquipmentOperation')
+    equipment_operation  = models.ForeignKey('EquipmentOperation')
     task                 = models.ForeignKey('TaskOperation')
     
     class Meta:
