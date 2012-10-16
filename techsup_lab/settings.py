@@ -16,7 +16,7 @@ DATABASES = {
         'NAME': 'techsup',                    # Or path to database file if using sqlite3.
         'USER': 'techsup',                    # Not used with sqlite3.
         'PASSWORD': '123123',                 # Not used with sqlite3.
-        'HOST': 'amihailov.pro',
+        'HOST': 'localhost',
         'PORT': '',
     }
 }
