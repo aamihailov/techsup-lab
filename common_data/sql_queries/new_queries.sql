@@ -864,3 +864,37 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
+DROP PROCEDURE IF EXISTS add_equipment_owner;
+CREATE PROCEDURE add_equipment_owner(
+                               IN in_name       VARCHAR( 128 ),
+                               IN in_phone      VARCHAR( 32 ),
+                               IN in_serial_number VARCHAR( 128 )
+                             )
+BEGIN
+
+START TRANSACTION;
+
+-- добавить пользователя оборудованием
+
+INSERT INTO equipment_owner ( equipment_id, employee_id )
+    VALUES (
+        (
+            SELECT id
+            FROM equipment
+            WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+        ),
+        (
+            SELECT id
+            FROM employee
+            WHERE LOWER( employee.name )  LIKE in_name AND
+                  LOWER( employee.phone ) LIKE in_phone
+        )
+    );
+
+COMMIT;
+
+END$$
+
+-----------------------------------------------------------------------------------------------
+
+
