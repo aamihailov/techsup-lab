@@ -3097,1081 +3097,1079 @@ INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
   (1531, "Кабель HDMI (M) - HDMI (M), 1.5m, Philips, высокоскоростной", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1532, "Кабель HDMI (M) - HDMI (M), 1.5m, Philips, высокоскоростной", 18);
+  (1532, "Кабель HDMI (M) - HDMI (M), 1.5m, Philips, высокоскоростной с поддержкой Ethernet", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1533, "Кабель HDMI (M) - HDMI (M), 1.5m, Philips, высокоскоростной с поддержкой Ethernet", 18);
+  (1533, "Кабель HDMI (M) - HDMI (M), 1.5m, Philips, высокоскоростной, плоский", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1534, "Кабель HDMI (M) - HDMI (M), 1.5m, Philips, высокоскоростной, плоский", 18);
+  (1534, "Кабель HDMI (M) - HDMI (M), 1m, Philips, высокоскоростной", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1535, "Кабель HDMI (M) - HDMI (M), 1m, Philips, высокоскоростной", 18);
+  (1535, "Кабель HDMI (M) - HDMI (M), 3m, Philips", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1536, "Кабель HDMI (M) - HDMI (M), 3m, Philips", 18);
+  (1536, "Кабель HDMI (M) - HDMI (M), 5m, Philips", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1537, "Кабель HDMI (M) - HDMI (M), 5m, Philips", 18);
+  (1537, "Кабель HDMI (M) - mini HDMI (HDMI type C), 1.5m, Philips, высокоскоростной", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1538, "Кабель HDMI (M) - mini HDMI (HDMI type C), 1.5m, Philips, высокоскоростной", 18);
+  (1538, "Кабель ODT(Toslink, M) - ODT(Toslink, M) + переходник 3,5мм (Mini Toslink), Philips, оптический, вх/вых. 1.5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1539, "Кабель ODT(Toslink, M) - ODT(Toslink, M) + переходник 3,5мм (Mini Toslink), Philips, оптический, вх/вых. 1.5m", 18);
+  (1539, "Кабель SCART 21 pin (M) - SCART 21 pin (M), Philips, 3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1540, "Кабель SCART 21 pin (M) - SCART 21 pin (M), Philips, 3m", 18);
+  (1540, "Кабель удлинительный USB 2.0 А вилка - А розетка 1.5m, Philips", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1541, "Кабель удлинительный USB 2.0 А вилка - А розетка 1.5m, Philips", 18);
+  (1541, "Кабель соединительный USB 2.0 A вилка - micro-USB вилка 5pin, 1.2m, витой", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1542, "Кабель соединительный USB 2.0 A вилка - micro-USB вилка 5pin, 1.2m, витой", 18);
+  (1542, "Кабель соединительный USB 2.0 A вилка - micro-USB вилка 5pin, 1.2m, цветной", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1543, "Кабель соединительный USB 2.0 A вилка - micro-USB вилка 5pin, 1.2m, цветной", 18);
+  (1543, "Адаптер-разветвитель USB -> iPhone+microUSB+miniUSB+картридер microSD/M2, QUMO, USB2.0", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1544, "Адаптер-разветвитель USB -> iPhone+microUSB+miniUSB+картридер microSD/M2, QUMO, USB2.0", 18);
+  (1544, "Адаптер-разветвитель USB -> USB+microUSB+miniUSB+картридер microSD/M2, QUMO UNIQ-2AR, USB2.0", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1545, "Адаптер-разветвитель USB -> USB+microUSB+miniUSB+картридер microSD/M2, QUMO UNIQ-2AR, USB2.0", 18);
+  (1545, "Адаптер-разветвитель USB -> USBx2+microUSB+miniUSB, QUMO UNIQ-3A, USB2.0", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1546, "Адаптер-разветвитель USB -> USBx2+microUSB+miniUSB, QUMO UNIQ-3A, USB2.0", 18);
+  (1546, "Кабель HDMI (M) - HDMI (M),  1.8m, Sven, ver. 1.4, плоский", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1547, "Кабель HDMI (M) - HDMI (M),  1.8m, Sven, ver. 1.4, плоский", 18);
+  (1547, "Кабель HDMI (M) - HDMI (M),  3m, Sven, ver. 1.4, плоский", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1548, "Кабель HDMI (M) - HDMI (M),  3m, Sven, ver. 1.4, плоский", 18);
+  (1548, "Кабель HDMI (M) - HDMI (M), 1.8m, Sven, подвижный коннектор", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1549, "Кабель HDMI (M) - HDMI (M), 1.8m, Sven, подвижный коннектор", 18);
+  (1549, "Кабель HDMI (M) - HDMI (M), 3m, Sven", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1550, "Кабель HDMI (M) - HDMI (M), 3m, Sven", 18);
+  (1550, "Кабель HDMI (M) - HDMI (M), 5m, Sven, V1.3", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1551, "Кабель HDMI (M) - HDMI (M), 5m, Sven, V1.3", 18);
+  (1551, "Кабель HDMI (M) - mini HDMI (HDMI type C), 1.8m, Sven", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1552, "Кабель HDMI (M) - mini HDMI (HDMI type C), 1.8m, Sven", 18);
+  (1552, "Кабель USB2.0 A (вилка) - B (вилка), 1.8m, Sven", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1553, "Кабель USB2.0 A (вилка) - B (вилка), 1.8m, Sven", 18);
+  (1553, "Кабель USB2.0 A (вилка) - B (вилка), 3m, Sven", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1554, "Кабель USB2.0 A (вилка) - B (вилка), 3m, Sven", 18);
+  (1554, "Кабель USB2.0 A (вилка) - B (вилка), 5m, Sven", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1555, "Кабель USB2.0 A (вилка) - B (вилка), 5m, Sven", 18);
+  (1555, "Кабель соединительный USB 2.0 A вилка - micro-USB вилка 5pin, 1.5m/1.8m, Sven", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1556, "Кабель соединительный USB 2.0 A вилка - micro-USB вилка 5pin, 1.5m/1.8m, Sven", 18);
+  (1556, "Кабель соединительный USB 2.0 A вилка - mini-USB 5pin вилка, 1.8m, Sven", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1557, "Кабель соединительный USB 2.0 A вилка - mini-USB 5pin вилка, 1.8m, Sven", 18);
+  (1557, "Кабель удлинительный USB 2.0 А вилка - А розетка, 1.8m, Sven", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1558, "Кабель удлинительный USB 2.0 А вилка - А розетка, 1.8m, Sven", 18);
+  (1558, "Кабель удлинительный USB 2.0 А вилка - А розетка, 3m, Sven", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1559, "Кабель удлинительный USB 2.0 А вилка - А розетка, 3m, Sven", 18);
+  (1559, "Кабель удлинительный USB 2.0 А вилка - А розетка, 5m, Sven", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1560, "Кабель удлинительный USB 2.0 А вилка - А розетка, 5m, Sven", 18);
+  (1560, "Адаптер USB A (вилка) -> LPT (прямое подключение к LPT порту принтера) 1.8m/3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1561, "Адаптер USB A (вилка) -> LPT (прямое подключение к LPT порту принтера) 1.8m/3m", 18);
+  (1561, "Защитный колпачок RJ45", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1562, "Защитный колпачок RJ45", 18);
+  (1562, "Инструмент HT-318 для зачистки и разделки витой пары, тип 110", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1563, "Инструмент HT-318 для зачистки и разделки витой пары, тип 110", 18);
+  (1563, "Инструмент HT-500/HT-500R для обжима коннекторов RJ-45, RJ-12, проф.", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1564, "Инструмент HT-500/HT-500R для обжима коннекторов RJ-45, RJ-12, проф.", 18);
+  (1564, "Инструмент HT-568/568R для обжима коннекторов RJ45, RJ11/12", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1565, "Инструмент HT-568/568R для обжима коннекторов RJ45, RJ11/12", 18);
+  (1565, "Инструмент T-210/НТ-210С для обжима коннекторов RJ-45", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1566, "Инструмент T-210/НТ-210С для обжима коннекторов RJ-45", 18);
+  (1566, "Инструмент T-430/HT-110B с ножом, для разделки витой пары в розетку, тип 110, регулировка ударн.эфф.", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1567, "Инструмент T-430/HT-110B с ножом, для разделки витой пары в розетку, тип 110, регулировка ударн.эфф.", 18);
+  (1567, "Кабель @FireWire@ IEEE 1394 4P вилка-4P вилка 1.8m/3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1568, "Кабель @FireWire@ IEEE 1394 4P вилка-4P вилка 1.8m/3m", 18);
+  (1568, "Кабель @FireWire@ IEEE 1394 4P вилка-6P вилка 5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1569, "Кабель @FireWire@ IEEE 1394 4P вилка-6P вилка 5m", 18);
+  (1569, "Кабель @FireWire@ IEEE 1394 4P вилка-6P вилка, 1.5m/1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1570, "Кабель @FireWire@ IEEE 1394 4P вилка-6P вилка, 1.5m/1.8m", 18);
+  (1570, "Кабель 0-модемный универсальный 25f, 9f <---> 25f, 9f 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1571, "Кабель 0-модемный универсальный 25f, 9f <---> 25f, 9f 1.8m", 18);
+  (1571, "Кабель DVI-D вилка - DVI-D вилка, 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1572, "Кабель DVI-D вилка - DVI-D вилка, 1.8m", 18);
+  (1572, "Кабель DVI-D вилка - DVI-D вилка, 3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1573, "Кабель DVI-D вилка - DVI-D вилка, 3m", 18);
+  (1573, "Кабель DVI-D вилка - DVI-D вилка, 5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1574, "Кабель DVI-D вилка - DVI-D вилка, 5m", 18);
+  (1574, "Кабель eSATA 100/180 см", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1575, "Кабель eSATA 100/180 см", 18);
+  (1575, "Кабель eSATA 50см", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1576, "Кабель eSATA 50см", 18);
+  (1576, "Кабель eSATA-SATA 50/100см", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1577, "Кабель eSATA-SATA 50/100см", 18);
+  (1577, "Кабель FTP, 4 пары, одножильный (solid) , экранированный, кат. 5e, катушка 305m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1578, "Кабель FTP, 4 пары, одножильный (solid) , экранированный, кат. 5e, катушка 305m", 18);
+  (1578, "Кабель FTP, 4 пары, одножильный (solid), экранированный, кат. 5e, для внешней прокладки, катушка 305m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1579, "Кабель FTP, 4 пары, одножильный (solid), экранированный, кат. 5e, для внешней прокладки, катушка 305m", 18);
+  (1579, "Кабель HDMI (M) - DVI (M), 10m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1580, "Кабель HDMI (M) - DVI (M), 10m", 18);
+  (1580, "Кабель HDMI (M) - DVI (M), 2m/3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1581, "Кабель HDMI (M) - DVI (M), 2m/3m", 18);
+  (1581, "Кабель HDMI (M) - DVI (M), 5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1582, "Кабель HDMI (M) - DVI (M), 5m", 18);
+  (1582, "Кабель HDMI (M) - HDMI (M),  2m, ver.1.4, TiTech, поддержка 3D, поворотные коннекторы 360гр.", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1583, "Кабель HDMI (M) - HDMI (M),  2m, ver.1.4, TiTech, поддержка 3D, поворотные коннекторы 360гр.", 18);
+  (1583, "Кабель HDMI (M) - HDMI (M), 1.8m/2m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1584, "Кабель HDMI (M) - HDMI (M), 1.8m/2m", 18);
+  (1584, "Кабель HDMI (M) - HDMI (M), 1.8m/2m, ver. 1.4, поддержка 3D", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1585, "Кабель HDMI (M) - HDMI (M), 1.8m/2m, ver. 1.4, поддержка 3D", 18);
+  (1585, "Кабель HDMI (M) - HDMI (M), 10m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1586, "Кабель HDMI (M) - HDMI (M), 10m", 18);
+  (1586, "Кабель HDMI (M) - HDMI (M), 15m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1587, "Кабель HDMI (M) - HDMI (M), 15m", 18);
+  (1587, "Кабель HDMI (M) - HDMI (M), 15m, ver. 1.4, поддержка 3D", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1588, "Кабель HDMI (M) - HDMI (M), 15m, ver. 1.4, поддержка 3D", 18);
+  (1588, "Кабель HDMI (M) - HDMI (M), 3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1589, "Кабель HDMI (M) - HDMI (M), 3m", 18);
+  (1589, "Кабель HDMI (M) - HDMI (M), 3m, ver. 1.4", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1590, "Кабель HDMI (M) - HDMI (M), 3m, ver. 1.4", 18);
+  (1590, "Кабель HDMI (M) - HDMI (M), 5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1591, "Кабель HDMI (M) - HDMI (M), 5m", 18);
+  (1591, "Кабель HDMI (M) - HDMI (M), 5m, ver. 1.4", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1592, "Кабель HDMI (M) - HDMI (M), 5m, ver. 1.4", 18);
+  (1592, "Кабель HDMI (M) - HDMI (M), 7.5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1593, "Кабель HDMI (M) - HDMI (M), 7.5m", 18);
+  (1593, "Кабель HDMI (M) - HDMI (M), 7.5m, ver. 1.4", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1594, "Кабель HDMI (M) - HDMI (M), 7.5m, ver. 1.4", 18);
+  (1594, "Кабель HDMI (M) - HDMI (M),10m, ver. 1.4, поддержка 3D", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1595, "Кабель HDMI (M) - HDMI (M),10m, ver. 1.4, поддержка 3D", 18);
+  (1595, "Кабель HDMI (M) - mini HDMI (HDMI type C), 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1596, "Кабель HDMI (M) - mini HDMI (HDMI type C), 1.8m", 18);
+  (1596, "Кабель HDMI А вилка-D вилка (micro HDMI) 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1597, "Кабель HDMI А вилка-D вилка (micro HDMI) 1.8m", 18);
+  (1597, "Кабель HDMI А вилка-D вилка (micro HDMI) v1.4 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1598, "Кабель HDMI А вилка-D вилка (micro HDMI) v1.4 1.8m", 18);
+  (1598, "Кабель HDMI А вилка-D вилка (micro HDMI), Sparks, с ф. фильтрами, 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1599, "Кабель HDMI А вилка-D вилка (micro HDMI), Sparks, с ф. фильтрами, 1.8m", 18);
+  (1599, "Кабель mini HDMI (HDMI type C)  - mini HDMI (HDMI type C) 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1600, "Кабель mini HDMI (HDMI type C)  - mini HDMI (HDMI type C) 1.8m", 18);
+  (1600, "Кабель mini HDMI (HDMI type C)  - mini HDMI (HDMI type C) 3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1601, "Кабель mini HDMI (HDMI type C)  - mini HDMI (HDMI type C) 3m", 18);
+  (1601, "Кабель USB Am -> 2xPS/2", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1602, "Кабель USB Am -> 2xPS/2", 18);
+  (1602, "Кабель USB Am -> COM port 9pin (добавляет в систему новый COM порт)", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1603, "Кабель USB Am -> COM port 9pin (добавляет в систему новый COM порт)", 18);
+  (1603, "Кабель USB2.0  A (вилка) - B (вилка), 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1604, "Кабель USB2.0  A (вилка) - B (вилка), 1.8m", 18);
+  (1604, "Кабель USB2.0  A (вилка) - B (вилка), 3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1605, "Кабель USB2.0  A (вилка) - B (вилка), 3m", 18);
+  (1605, "Кабель USB2.0  A (вилка) - B (вилка), 5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1606, "Кабель USB2.0  A (вилка) - B (вилка), 5m", 18);
+  (1606, "Кабель USB2.0 A (вилка) - B (вилка), 3m, профессиональный", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1607, "Кабель USB2.0 A (вилка) - B (вилка), 3m, профессиональный", 18);
+  (1607, "Кабель USB2.0 A (вилка) - B (вилка), 5m, профессиональный", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1608, "Кабель USB2.0 A (вилка) - B (вилка), 5m, профессиональный", 18);
+  (1608, "Кабель UTP, 4 пары, многожильный (stranded), кат. 5e, катушка 305m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1609, "Кабель UTP, 4 пары, многожильный (stranded), кат. 5e, катушка 305m", 18);
+  (1609, "Кабель UTP, 4 пары, одножильный (solid), кат. 5e, 1 метр", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1610, "Кабель UTP, 4 пары, одножильный (solid), кат. 5e, 1 метр", 18);
+  (1610, "Кабель UTP, 4 пары, одножильный (solid), кат. 5e, для внешней прокладки (outdoor), катушка 305m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1611, "Кабель UTP, 4 пары, одножильный (solid), кат. 5e, для внешней прокладки (outdoor), катушка 305m", 18);
+  (1611, "Кабель UTP, 4 пары, одножильный (solid), кат. 6e, катушка 305m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1612, "Кабель UTP, 4 пары, одножильный (solid), кат. 6e, катушка 305m", 18);
+  (1612, "Кабель для связи двух компьютеров Gembird/Konoos Am-Am USB2.0 [UANC22]", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1613, "Кабель для связи двух компьютеров Gembird/Konoos Am-Am USB2.0 [UANC22]", 18);
+  (1613, "Кабель соединительный 3.5 Jack (M) - 2xRCA (M), 1.5m, стерео, аудио", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1614, "Кабель соединительный 3.5 Jack (M) - 2xRCA (M), 1.5m, стерео, аудио", 18);
+  (1614, "Кабель соединительный 3.5 Jack (M) - 2xRCA (M), 10m, стерео, аудио", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1615, "Кабель соединительный 3.5 Jack (M) - 2xRCA (M), 10m, стерео, аудио", 18);
+  (1615, "Кабель соединительный 3.5 Jack (M) - 2xRCA (M), 15m, стерео, аудио", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1616, "Кабель соединительный 3.5 Jack (M) - 2xRCA (M), 15m, стерео, аудио", 18);
+  (1616, "Кабель соединительный 3.5 Jack (M) - 2xRCA (M), 2.5m/3m, стерео, аудио", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1617, "Кабель соединительный 3.5 Jack (M) - 2xRCA (M), 2.5m/3m, стерео, аудио", 18);
+  (1617, "Кабель соединительный 3.5 Jack (M) - 2xRCA (M), 5m, стерео, аудио", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1618, "Кабель соединительный 3.5 Jack (M) - 2xRCA (M), 5m, стерео, аудио", 18);
+  (1618, "Кабель соединительный 3.5 Jack (M) - 3.5 Jack (M), 1.2m/1.5m, стерео, аудио", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1619, "Кабель соединительный 3.5 Jack (M) - 3.5 Jack (M), 1.2m/1.5m, стерео, аудио", 18);
+  (1619, "Кабель соединительный 3.5 Jack (M) - 3.5 Jack (M), 5m, стерео, аудио", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1620, "Кабель соединительный 3.5 Jack (M) - 3.5 Jack (M), 5m, стерео, аудио", 18);
+  (1620, "Кабель соединительный SVGA (вилка) - SVGA (вилка), 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1621, "Кабель соединительный SVGA (вилка) - SVGA (вилка), 1.8m", 18);
+  (1621, "Кабель соединительный SVGA (вилка) - SVGA (вилка), 3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1622, "Кабель соединительный SVGA (вилка) - SVGA (вилка), 3m", 18);
+  (1622, "Кабель соединительный SVGA (вилка) - SVGA (вилка), 5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1623, "Кабель соединительный SVGA (вилка) - SVGA (вилка), 5m", 18);
+  (1623, "Кабель соединительный SVGA (вилка) - SVGA (вилка),10m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1624, "Кабель соединительный SVGA (вилка) - SVGA (вилка),10m", 18);
+  (1624, "Кабель соединительный SVGA (вилка) - SVGA (вилка),20m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1625, "Кабель соединительный SVGA (вилка) - SVGA (вилка),20m", 18);
+  (1625, "Кабель соединительный SVGA (вилка) - SVGA (вилка),30m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1626, "Кабель соединительный SVGA (вилка) - SVGA (вилка),30m", 18);
+  (1626, "Кабель соединительный USB 2.0 A вилка - micro-USB вилка 5pin, 1.2m/1.5m/1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1627, "Кабель соединительный USB 2.0 A вилка - micro-USB вилка 5pin, 1.2m/1.5m/1.8m", 18);
+  (1627, "Кабель соединительный USB 2.0 A вилка - mini-USB 5pin вилка, 0.3m/0.5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1628, "Кабель соединительный USB 2.0 A вилка - mini-USB 5pin вилка, 0.3m/0.5m", 18);
+  (1628, "Кабель соединительный USB 2.0 A вилка - mini-USB 5pin вилка, 1.2m/1.5m/1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1629, "Кабель соединительный USB 2.0 A вилка - mini-USB 5pin вилка, 1.2m/1.5m/1.8m", 18);
+  (1629, "Кабель соединительный USB 2.0 A вилка - mini-USB 5pin вилка, 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1630, "Кабель соединительный USB 2.0 A вилка - mini-USB 5pin вилка, 1.8m", 18);
+  (1630, "Кабель соединительный USB 2.0 A вилка - miсro-USB вилка 5pin, 0.3m/0.5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1631, "Кабель соединительный USB 2.0 A вилка - miсro-USB вилка 5pin, 0.3m/0.5m", 18);
+  (1631, "Кабель соединительный USB 2.0 A вилка x2 - mini-USB вилка 5pin 1.2m/1.5m/1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1632, "Кабель соединительный USB 2.0 A вилка x2 - mini-USB вилка 5pin 1.2m/1.5m/1.8m", 18);
+  (1632, "Кабель соединительный USB3.0 Am -> Micro-B 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1633, "Кабель соединительный USB3.0 Am -> Micro-B 1.8m", 18);
+  (1633, "Кабель соединительный USB3.0 Am -> Micro-USB (B) (10 pin) 3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1634, "Кабель соединительный USB3.0 Am -> Micro-USB (B) (10 pin) 3m", 18);
+  (1634, "Кабель телефонный, 1 метр", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1635, "Кабель телефонный, 1 метр", 18);
+  (1635, "Кабель удлинительный 3.5 Jack (M) - 3.5 Jack (F), 1.5m, стерео, аудио", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1636, "Кабель удлинительный 3.5 Jack (M) - 3.5 Jack (F), 1.5m, стерео, аудио", 18);
+  (1636, "Кабель удлинительный 3.5 Jack (M) - 3.5 Jack (F), 3m, стерео, аудио", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1637, "Кабель удлинительный 3.5 Jack (M) - 3.5 Jack (F), 3m, стерео, аудио", 18);
+  (1637, "Кабель удлинительный 3.5 Jack (M) - 3.5 Jack (F), 5m, стерео, аудио", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1638, "Кабель удлинительный 3.5 Jack (M) - 3.5 Jack (F), 5m, стерео, аудио", 18);
+  (1638, "Кабель удлинительный PS/2 (6F-6M) 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1639, "Кабель удлинительный PS/2 (6F-6M) 1.8m", 18);
+  (1639, "Кабель удлинительный PS/2 (6F-6M) 3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1640, "Кабель удлинительный PS/2 (6F-6M) 3m", 18);
+  (1640, "Кабель удлинительный SVGA (вилка) - SVGA (розетка), 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1641, "Кабель удлинительный SVGA (вилка) - SVGA (розетка), 1.8m", 18);
+  (1641, "Кабель удлинительный SVGA (вилка) - SVGA (розетка), 3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1642, "Кабель удлинительный SVGA (вилка) - SVGA (розетка), 3m", 18);
+  (1642, "Кабель удлинительный SVGA (вилка) - SVGA (розетка), 5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1643, "Кабель удлинительный SVGA (вилка) - SVGA (розетка), 5m", 18);
+  (1643, "Кабель удлинительный SVGA (вилка) - SVGA (розетка),10m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1644, "Кабель удлинительный SVGA (вилка) - SVGA (розетка),10m", 18);
+  (1644, "Кабель удлинительный SVGA (вилка) - SVGA (розетка),20m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1645, "Кабель удлинительный SVGA (вилка) - SVGA (розетка),20m", 18);
+  (1645, "Кабель удлинительный USB 2.0 А вилка - А розетка, 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1646, "Кабель удлинительный USB 2.0 А вилка - А розетка, 1.8m", 18);
+  (1646, "Кабель удлинительный USB 2.0 А вилка - А розетка, 1.8m, профессиональный", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1647, "Кабель удлинительный USB 2.0 А вилка - А розетка, 1.8m, профессиональный", 18);
+  (1647, "Кабель удлинительный USB 2.0 А вилка - А розетка, 3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1648, "Кабель удлинительный USB 2.0 А вилка - А розетка, 3m", 18);
+  (1648, "Кабель удлинительный USB 2.0 А вилка - А розетка, 3m, профессиональный", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1649, "Кабель удлинительный USB 2.0 А вилка - А розетка, 3m, профессиональный", 18);
+  (1649, "Кабель удлинительный USB 2.0 А вилка - А розетка, 5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1650, "Кабель удлинительный USB 2.0 А вилка - А розетка, 5m", 18);
+  (1650, "Кабель удлинительный USB 2.0 А вилка - А розетка, 5m, профессиональный", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1651, "Кабель удлинительный USB 2.0 А вилка - А розетка, 5m, профессиональный", 18);
+  (1651, "Кабель удлинительный USB 2.0 А вилка х2 - А розетка 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1652, "Кабель удлинительный USB 2.0 А вилка х2 - А розетка 1.8m", 18);
+  (1652, "Кабель удлинительный USB 3.0 А вилка - А розетка, 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1653, "Кабель удлинительный USB 3.0 А вилка - А розетка, 1.8m", 18);
+  (1653, "Кабель удлинительный USB 3.0 А вилка - А розетка, 3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1654, "Кабель удлинительный USB 3.0 А вилка - А розетка, 3m", 18);
+  (1654, "Кабель удлинительный USB 3.0 А вилка - А розетка, 5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1655, "Кабель удлинительный USB 3.0 А вилка - А розетка, 5m", 18);
+  (1655, "Кабель Удлинительный Активный USB Am-Af 5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1656, "Кабель Удлинительный Активный USB Am-Af 5m", 18);
+  (1656, "Кабель-переходник AgeStar/5bites/V-Comm (конвертер USB2.0 - SATA/IDE (2.5@/3.5@))", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1657, "Кабель-переходник AgeStar/5bites/V-Comm (конвертер USB2.0 - SATA/IDE (2.5@/3.5@))", 18);
+  (1657, "Кросс-патч-корд UTP кат. 5/5e. Длина  2m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1658, "Кросс-патч-корд UTP кат. 5/5e. Длина  2m", 18);
+  (1658, "Кросс-патч-корд UTP кат. 5/5e. Длина  3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1659, "Кросс-патч-корд UTP кат. 5/5e. Длина  3m", 18);
+  (1659, "Кросс-патч-корд UTP кат. 5/5e. Длина  5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1660, "Кросс-патч-корд UTP кат. 5/5e. Длина  5m", 18);
+  (1660, "Кросс-патч-корд UTP кат. 5/5e. Длина 10m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1661, "Кросс-патч-корд UTP кат. 5/5e. Длина 10m", 18);
+  (1661, "Кросс-патч-корд UTP кат. 5/5e. Длина 15m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1662, "Кросс-патч-корд UTP кат. 5/5e. Длина 15m", 18);
+  (1662, "Настенная Розетка под Plug RJ45 кат.5 [8Р8С]", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1663, "Настенная Розетка под Plug RJ45 кат.5 [8Р8С]", 18);
+  (1663, "Настенная Розетка под Plug RJ45 кат.5 двойная  [8Р8С]", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1664, "Настенная Розетка под Plug RJ45 кат.5 двойная  [8Р8С]", 18);
+  (1664, "Настенная Телефонная розетка RJ11  [6P4C]", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1665, "Настенная Телефонная розетка RJ11  [6P4C]", 18);
+  (1665, "Настенная Телефонная розетка RJ11 двойная  [6P4C]", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1666, "Настенная Телефонная розетка RJ11 двойная  [6P4C]", 18);
+  (1666, "Патч-корд UTP кат. 5/5e. Длина  0.5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1667, "Патч-корд UTP кат. 5/5e. Длина  0.5m", 18);
+  (1667, "Патч-корд UTP кат. 5/5e. Длина  1.5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1668, "Патч-корд UTP кат. 5/5e. Длина  1.5m", 18);
+  (1668, "Патч-корд UTP кат. 5/5e. Длина  1m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1669, "Патч-корд UTP кат. 5/5e. Длина  1m", 18);
+  (1669, "Патч-корд UTP кат. 5/5e. Длина  2m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1670, "Патч-корд UTP кат. 5/5e. Длина  2m", 18);
+  (1670, "Патч-корд UTP кат. 5/5e. Длина  3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1671, "Патч-корд UTP кат. 5/5e. Длина  3m", 18);
+  (1671, "Патч-корд UTP кат. 5/5e. Длина  5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1672, "Патч-корд UTP кат. 5/5e. Длина  5m", 18);
+  (1672, "Патч-корд UTP кат. 5/5e. Длина  7.5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1673, "Патч-корд UTP кат. 5/5e. Длина  7.5m", 18);
+  (1673, "Патч-корд UTP кат. 5/5e. Длина 10m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1674, "Патч-корд UTP кат. 5/5e. Длина 10m", 18);
+  (1674, "Патч-корд UTP кат. 5/5e. Длина 15m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1675, "Патч-корд UTP кат. 5/5e. Длина 15m", 18);
+  (1675, "Патч-корд UTP кат. 5/5e. Длина 20m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1676, "Патч-корд UTP кат. 5/5e. Длина 20m", 18);
+  (1676, "Переходник DVI-D 19F to HDMI 19M", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1677, "Переходник DVI-D 19F to HDMI 19M", 18);
+  (1677, "Переходник DVI-D 19M to HDMI 19M", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1678, "Переходник DVI-D 19M to HDMI 19M", 18);
+  (1678, "Переходник DVI-I --> VGA(15F)", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1679, "Переходник DVI-I --> VGA(15F)", 18);
+  (1679, "Переходник HDMI 19F to DVI-D/DVI-I 25M", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1680, "Переходник HDMI 19F to DVI-D/DVI-I 25M", 18);
+  (1680, "Переходник HDMI 19F to micro HDMI (type D) 19M", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1681, "Переходник HDMI 19F to micro HDMI (type D) 19M", 18);
+  (1681, "Переходник HDMI 19M -> DVI-D/DVI-I 25F", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1682, "Переходник HDMI 19M -> DVI-D/DVI-I 25F", 18);
+  (1682, "Переходник micro-USB (M)  to HDMI (F), MHL- cable, 20cm,", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1683, "Переходник micro-USB (M)  to HDMI (F), MHL- cable, 20cm,", 18);
+  (1683, "Переходник питания для Serial ATA HDD", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1684, "Переходник питания для Serial ATA HDD", 18);
+  (1684, "Переходник питания для видеокарт, 6-pin", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1685, "Переходник питания для видеокарт, 6-pin", 18);
+  (1685, "Переходник питания для видеокарт, 8-pin", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1686, "Переходник питания для видеокарт, 8-pin", 18);
+  (1686, "Проходной адаптер RJ-45, категория 5e (8P8C), 2 розетки RJ-45", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1687, "Проходной адаптер RJ-45, категория 5e (8P8C), 2 розетки RJ-45", 18);
+  (1687, "Разъем Plug RJ11 4P4C", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1688, "Разъем Plug RJ11 4P4C", 18);
+  (1688, "Разъем Plug RJ11/RJ12 6P4C/6P6C", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1689, "Разъем Plug RJ11/RJ12 6P4C/6P6C", 18);
+  (1689, "Разъем Plug RJ45 5E 8P8C", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1690, "Разъем Plug RJ45 5E 8P8C", 18);
+  (1690, "Сетевой шнур 1.8m для аудио и видео техники", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1691, "Сетевой шнур 1.8m для аудио и видео техники", 18);
+  (1691, "Сетевой шнур компьютер - розетка  1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1692, "Сетевой шнур компьютер - розетка  1.8m", 18);
+  (1692, "Сетевой шнур компьютер - розетка  1.8m питания PC-186-ML12 с заземлением для ноутбуков", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1693, "Сетевой шнур компьютер - розетка  1.8m питания PC-186-ML12 с заземлением для ноутбуков", 18);
+  (1693, "Сетевой шнур компьютер - розетка  3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1694, "Сетевой шнур компьютер - розетка  3m", 18);
+  (1694, "Сетевой шнур компьютер - розетка  5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1695, "Сетевой шнур компьютер - розетка  5m", 18);
+  (1695, "Сетевой шнур от сисблока к монитору 1.8m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1696, "Сетевой шнур от сисблока к монитору 1.8m", 18);
+  (1696, "Сетевой шнур от сисблока к монитору 3m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1697, "Сетевой шнур от сисблока к монитору 3m", 18);
+  (1697, "Сетевой шнур от сисблока к монитору 5m", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1698, "Сетевой шнур от сисблока к монитору 5m", 18);
+  (1698, "Стяжка 100мм пакет 100шт", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1699, "Стяжка 100мм пакет 100шт", 18);
+  (1699, "Тестер LAN RJ45 [LT-200]", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1700, "Тестер LAN RJ45 [LT-200]", 18);
+  (1700, "Тестер LAN RJ45/BNC [Gembird/NCT-1/ST-248/45/XT-248)", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1701, "Тестер LAN RJ45/BNC [Gembird/NCT-1/ST-248/45/XT-248)", 18);
+  (1701, "Тестер универсальный LT-100 [LT - CT013, LY-CT013] (BNC, RJ11/RJ12/RJ45)", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1702, "Тестер универсальный LT-100 [LT - CT013, LY-CT013] (BNC, RJ11/RJ12/RJ45)", 18);
+  (1702, "Шлейф FDD", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1703, "Шлейф FDD", 18);
+  (1703, "Шлейф IDE UDMA 66/100/133 Cable", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1704, "Шлейф IDE UDMA 66/100/133 Cable", 18);
+  (1704, "Шлейф SATA-150   45/60см", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1705, "Шлейф SATA-150   45/60см", 18);
+  (1705, "Шлейф SATA-150   50см (Г-образный коннектор)", 18);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1706, "Шлейф SATA-150   50см (Г-образный коннектор)", 18);
-INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1707, "Шлейф SATA-150  100см", 18);
+  (1706, "Шлейф SATA-150  100см", 18);
 INSERT INTO `detail_category` ( `id`, `name` ) VALUES
   (19, "Серверные комплектующие");
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1708, "Память 2GB 1333MHz DDR3 ECC REG W/PAR CL9 DIMM [KVR1333D3S4R9S/2G]", 19);
+  (1707, "Память 2GB 1333MHz DDR3 ECC REG W/PAR CL9 DIMM [KVR1333D3S4R9S/2G]", 19);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1709, "Память 2GB 1333MHz DDR3 ECC CL9 DIMM [NT2GC72C89B2NF] Nanya", 19);
+  (1708, "Память 2GB 1333MHz DDR3 ECC CL9 DIMM [NT2GC72C89B2NF] Nanya", 19);
 INSERT INTO `detail_category` ( `id`, `name` ) VALUES
   (20, "Системные блоки");
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1710, "Компьютер DNS Extreme XL [0155504] FX-4170 (4.2 GHz)/8GB/GTX660 (2048)/1TB/DVD±RW/CR", 20);
+  (1709, "Компьютер DNS Extreme XL [0155504] FX-4170 (4.2 GHz)/8GB/GTX660 (2048)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1711, "Компьютер DNS Extreme XL [0155652] Core i5-3550 (3.3GHz)/8GB/HD7850 (2048)/1TB/DVD±RW/CR", 20);
+  (1710, "Компьютер DNS Extreme XL [0155652] Core i5-3550 (3.3GHz)/8GB/HD7850 (2048)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1712, "Компьютер DNS Extreme XL [0155653] Core i5-3570K (3.4GHz)/8GB/GTX560Ti (1024)/1TB/DVD±RW", 20);
+  (1711, "Компьютер DNS Extreme XL [0155653] Core i5-3570K (3.4GHz)/8GB/GTX560Ti (1024)/1TB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1713, "Компьютер DNS Extreme XL [0157777] Core i5-3570K (3.4GHz)/8GB/GTX660 (2048)/1TB/DVD±RW", 20);
+  (1712, "Компьютер DNS Extreme XL [0157777] Core i5-3570K (3.4GHz)/8GB/GTX660 (2048)/1TB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1714, "Компьютер DNS Extreme [0132822] Core i3-2100 (3.1 GHz)/4GB/GTX550 Ti (1024)/1Tb/DVD±RW/CR", 20);
+  (1713, "Компьютер DNS Extreme [0132822] Core i3-2100 (3.1 GHz)/4GB/GTX550 Ti (1024)/1Tb/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1715, "Компьютер DNS Extreme [0138327] Core i5-2310 (2.9GHz)/4GB/1TB/DVD±RW/CR", 20);
+  (1714, "Компьютер DNS Extreme [0138327] Core i5-2310 (2.9GHz)/4GB/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1716, "Компьютер DNS Extreme [0143895] FX-4100 (3.6 GHz)/4GB/GTX 550Ti (1024)/1TB/DVD±RW/CR", 20);
+  (1715, "Компьютер DNS Extreme [0143895] FX-4100 (3.6 GHz)/4GB/GTX 550Ti (1024)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1717, "Компьютер DNS Extreme [0148060] Core i5-3450 (3.1GHz)/4GB/GTX550 Ti (1024)/1TB/DVD±RW/CR", 20);
+  (1716, "Компьютер DNS Extreme [0148060] Core i5-3450 (3.1GHz)/4GB/GTX550 Ti (1024)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1718, "Компьютер DNS Extreme [0148609] Core i5-3450 (3.1GHz)/4GB/HD7750 (1024)/1TB/DVD±RW/CR", 20);
+  (1717, "Компьютер DNS Extreme [0148609] Core i5-3450 (3.1GHz)/4GB/HD7750 (1024)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1719, "Компьютер DNS Extreme [0150406] Athlon II X4 651 (3.0 GHz)/4GB/HD7750 (1024)/1Tb/DVD±RW/CR", 20);
+  (1718, "Компьютер DNS Extreme [0150406] Athlon II X4 651 (3.0 GHz)/4GB/HD7750 (1024)/1Tb/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1720, "Компьютер DNS Extreme [0150444] Core i3-2120 (3.3GHz)/4GB/HD7750 (1024)/1Tb/DVD±RW/CR", 20);
+  (1719, "Компьютер DNS Extreme [0150444] Core i3-2120 (3.3GHz)/4GB/HD7750 (1024)/1Tb/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1721, "Компьютер DNS Extreme [0154477] Core i5-2310(2.9GHz)/4GB/GT630 (1024)/1Tb/DVD±RW/CR", 20);
+  (1720, "Компьютер DNS Extreme [0154477] Core i5-2310(2.9GHz)/4GB/GT630 (1024)/1Tb/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1722, "Компьютер DNS Extreme [0155285] A8-3870K (3.0 GHz)/4GB/HD7570 (1024)+HD6550D/1TB/DVD±RW/CR", 20);
+  (1721, "Компьютер DNS Extreme [0155285] A8-3870K (3.0 GHz)/4GB/HD7570 (1024)+HD6550D/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1723, "Компьютер DNS Extreme [0155562] FX-4100 (3.6 GHz)/4GB/HD7770 (1024)/1TB/DVD±RW/CR", 20);
+  (1722, "Компьютер DNS Extreme [0155562] FX-4100 (3.6 GHz)/4GB/HD7770 (1024)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1724, "Компьютер DNS Extreme [0155799] Core i3-3240 (3.4GHz)/4GB/HD7750 (1024)/1Tb/DVD±RW/CR", 20);
+  (1723, "Компьютер DNS Extreme [0155799] Core i3-3240 (3.4GHz)/4GB/HD7750 (1024)/1Tb/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1725, "Компьютер DNS Extreme [0155813] Core i5-3330 (3.0GHz)/4GB/1TB/DVD±RW/CR", 20);
+  (1724, "Компьютер DNS Extreme [0155813] Core i5-3330 (3.0GHz)/4GB/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1726, "Компьютер DNS Extreme [0156439] Athlon II X4 641 (2.8 GHz)/4GB/HD7750 (1024)/1Tb/DVD±RW/CR", 20);
+  (1725, "Компьютер DNS Extreme [0156439] Athlon II X4 641 (2.8 GHz)/4GB/HD7750 (1024)/1Tb/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1727, "Компьютер DNS Extreme [0157735] Core i5-3330 (3.0GHz)/4GB/GT630 (1024)/1Tb/DVD±RW/CR", 20);
+  (1726, "Компьютер DNS Extreme [0157735] Core i5-3330 (3.0GHz)/4GB/GT630 (1024)/1Tb/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1728, "Компьютер DNS Extreme [0157768] FX-4100 (3.6 GHz)/4GB/GTX 650 (1024)/1TB/DVD±RW/CR", 20);
+  (1727, "Компьютер DNS Extreme [0157768] FX-4100 (3.6 GHz)/4GB/GTX 650 (1024)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1729, "Компьютер DNS Home XL [0154537] Athlon II X4 651 (3.0 GHz)/4GB/GT630 (1024)/500GB/DVD±RW", 20);
+  (1728, "Компьютер DNS Home XL [0154537] Athlon II X4 651 (3.0 GHz)/4GB/GT630 (1024)/500GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1730, "Компьютер DNS Home XL [0155272] Core i3-2120 (3.3GHz)/4GB/HD7570 (1024)/500Gb/DVD±RW", 20);
+  (1729, "Компьютер DNS Home XL [0155272] Core i3-2120 (3.3GHz)/4GB/HD7570 (1024)/500Gb/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1731, "Компьютер DNS Home XL [0155663] Core i3-3240 (3.4GHz)/4GB/GT 630 (1024)/500GB/DVD±RW/CR", 20);
+  (1730, "Компьютер DNS Home XL [0155663] Core i3-3240 (3.4GHz)/4GB/GT 630 (1024)/500GB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1732, "Компьютер DNS Home XL [0156621] A6-3670K (2.7 GHz)/4GB/HD6530D/500GB/DVD±RW", 20);
+  (1731, "Компьютер DNS Home XL [0156621] A6-3670K (2.7 GHz)/4GB/HD6530D/500GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1733, "Компьютер DNS Home XL [0157734] Core i3-3240 (3.4GHz)/4GB/HD7570 (1024)/500GB/DVD±RW/CR", 20);
+  (1732, "Компьютер DNS Home XL [0157734] Core i3-3240 (3.4GHz)/4GB/HD7570 (1024)/500GB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1734, "Компьютер DNS Home XL [0157974] Athlon II X2 250 (3.0 GHz)/4GB/GT440 (1024)/500GB/DVD±RW", 20);
+  (1733, "Компьютер DNS Home XL [0157974] Athlon II X2 250 (3.0 GHz)/4GB/GT440 (1024)/500GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1735, "Компьютер DNS Home [0135996] A4-3300 (2.5 GHz)/4GB/HD6410D/500GB/DVD±RW/CR", 20);
+  (1734, "Компьютер DNS Home [0135996] A4-3300 (2.5 GHz)/4GB/HD6410D/500GB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1736, "Компьютер DNS Home [0140295] Core i3-2125 (3.3 GHz)/2GB/500GB/DVD±RW/CR", 20);
+  (1735, "Компьютер DNS Home [0140295] Core i3-2125 (3.3 GHz)/2GB/500GB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1737, "Компьютер DNS Home [0147940] A8-3870K (3.0 GHz)/4GB/HD6550D/500GB/DVD±RW/CR", 20);
+  (1736, "Компьютер DNS Home [0147940] A8-3870K (3.0 GHz)/4GB/HD6550D/500GB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1738, "Компьютер DNS Home [0155260] Pentium G620 (2.6GHz)/2GB/GT630 (1024)/500GB/DVD±RW/CR", 20);
+  (1737, "Компьютер DNS Home [0155260] Pentium G620 (2.6GHz)/2GB/GT630 (1024)/500GB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1739, "Компьютер DNS Home [0155268] Athlon II X2 250 (3.0 GHz)/2GB/HD7570 (1024)/500GB/DVD±RW/CR", 20);
+  (1738, "Компьютер DNS Home [0155268] Athlon II X2 250 (3.0 GHz)/2GB/HD7570 (1024)/500GB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1740, "Компьютер DNS Home [0155569] Pentium G840 (2.8GHz)/2GB/HD7750 (1024)/500GB/DVD±RW/CR", 20);
+  (1739, "Компьютер DNS Home [0155569] Pentium G840 (2.8GHz)/2GB/HD7750 (1024)/500GB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1741, "Компьютер DNS Home [0155658] Athlon II X2 250 (3.0 GHz)/2GB/GT 630 (1024)/500GB/DVD±RW/CR", 20);
+  (1740, "Компьютер DNS Home [0155658] Athlon II X2 250 (3.0 GHz)/2GB/GT 630 (1024)/500GB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1742, "Компьютер DNS Home [0155800] Core i3-3225 (3.3 GHz)/2GB/500GB/DVD±RW/CR", 20);
+  (1741, "Компьютер DNS Home [0155800] Core i3-3225 (3.3 GHz)/2GB/500GB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1743, "Компьютер DNS Office XL [0142546] Core i3-2120 (3.3 GHz)/2GB/250GB/DVD±RW", 20);
+  (1742, "Компьютер DNS Office XL [0142546] Core i3-2120 (3.3 GHz)/2GB/250GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1744, "Компьютер DNS Office XL [0149295] FX-4100 (3.6 GHz)/2GB/250GB/DVD±RW", 20);
+  (1743, "Компьютер DNS Office XL [0149295] FX-4100 (3.6 GHz)/2GB/250GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1745, "Компьютер DNS Office XL [0149296] Pentium G620 (2.6 GHz)/2GB/250GB/DVD±RW", 20);
+  (1744, "Компьютер DNS Office XL [0149296] Pentium G620 (2.6 GHz)/2GB/250GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1746, "Компьютер DNS Office XL [0155797] Core i3-3240 (3.4 GHz)/2GB/500GB/DVD±RW", 20);
+  (1745, "Компьютер DNS Office XL [0155797] Core i3-3240 (3.4 GHz)/2GB/500GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1747, "Компьютер DNS Office XL [0155863] FX-4100 (3.6 GHz)/2GB/500GB/DVD±RW", 20);
+  (1746, "Компьютер DNS Office XL [0155863] FX-4100 (3.6 GHz)/2GB/500GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1748, "Компьютер DNS Office XL [0155865] Pentium G620 (2.6 GHz)/2GB/500GB/DVD±RW", 20);
+  (1747, "Компьютер DNS Office XL [0155865] Pentium G620 (2.6 GHz)/2GB/500GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1749, "Компьютер DNS Office [0141173] Celeron G530 (2.4 GHz)/2Gb/250GB/DVD±RW", 20);
+  (1748, "Компьютер DNS Office [0141173] Celeron G530 (2.4 GHz)/2Gb/250GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1750, "Компьютер DNS Office [0141175] Core i3-2100 (3.1 GHz)/2GB/250GB/DVD±RW", 20);
+  (1749, "Компьютер DNS Office [0141175] Core i3-2100 (3.1 GHz)/2GB/250GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1751, "Компьютер DNS Office [0141176] Athlon II X2 250 (3.0 GHz)/2GB/250GB/DVD±RW", 20);
+  (1750, "Компьютер DNS Office [0141176] Athlon II X2 250 (3.0 GHz)/2GB/250GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1752, "Компьютер DNS Office [0141862] Celeron G440 (1.60GHz)/1Gb/250GB", 20);
+  (1751, "Компьютер DNS Office [0141862] Celeron G440 (1.60GHz)/1Gb/250GB", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1753, "Компьютер DNS Office [0142366] Sempron 145 (2.8GHz)/1Gb/250GB", 20);
+  (1752, "Компьютер DNS Office [0142366] Sempron 145 (2.8GHz)/1Gb/250GB", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1754, "Компьютер DNS Office [0155795] Core i3-3220 (3.3 GHz)/2GB/500GB/DVD±RW", 20);
+  (1753, "Компьютер DNS Office [0155795] Core i3-3220 (3.3 GHz)/2GB/500GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1755, "Компьютер DNS Office [0155834] Athlon II X2 250 (3.0 GHz)/2GB/500GB/DVD±RW", 20);
+  (1754, "Компьютер DNS Office [0155834] Athlon II X2 250 (3.0 GHz)/2GB/500GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1756, "Компьютер DNS Office [0155835] Celeron G530 (2.4 GHz)/2Gb/500GB/DVD±RW", 20);
+  (1755, "Компьютер DNS Office [0155835] Celeron G530 (2.4 GHz)/2Gb/500GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1757, "Компьютер DNS Office [0155866] Celeron G440 (1.60GHz)/1Gb/500GB", 20);
+  (1756, "Компьютер DNS Office [0155866] Celeron G440 (1.60GHz)/1Gb/500GB", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1758, "Компьютер DNS Office [0155867] Athlon II X2 250 (3.0 GHz)/2GB/500GB/DVD±RW", 20);
+  (1757, "Компьютер DNS Office [0155867] Athlon II X2 250 (3.0 GHz)/2GB/500GB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1759, "Компьютер DNS Office [0157083] Sempron 145 (2.8GHz)/1Gb/500GB", 20);
+  (1758, "Компьютер DNS Office [0157083] Sempron 145 (2.8GHz)/1Gb/500GB", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1760, "Компьютер DNS Prestige XL [0131107] Core i7-2600 (3.4GHz)/8GB/GTX 570 (1280)/1TB/DVD±RW/CR", 20);
+  (1759, "Компьютер DNS Prestige XL [0131107] Core i7-2600 (3.4GHz)/8GB/GTX 570 (1280)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1761, "Компьютер DNS Prestige XL [0139570] FX-8150 (3.6 GHz)/8GB/GTX570 (1280)/1TB/DVD±RW/CR", 20);
+  (1760, "Компьютер DNS Prestige XL [0139570] FX-8150 (3.6 GHz)/8GB/GTX570 (1280)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1762, "Компьютер DNS Prestige XL [0142600] FX-6100 (3.3 GHz)/8GB/GTX560Ti (1024)/1TB/DVD±RW", 20);
+  (1761, "Компьютер DNS Prestige XL [0142600] FX-6100 (3.3 GHz)/8GB/GTX560Ti (1024)/1TB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1763, "Компьютер DNS Prestige XL [0146205] Core i5-2500 (3.3GHz)/8GB/HD6930 (1024)/1TB/DVD±RW/CR", 20);
+  (1762, "Компьютер DNS Prestige XL [0146205] Core i5-2500 (3.3GHz)/8GB/HD6930 (1024)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1764, "Компьютер DNS Prestige XL [0148610] Core i5-3570K (3.4GHz)/8GB/GTX560Ti (1024)/1TB/DVD±RW", 20);
+  (1763, "Компьютер DNS Prestige XL [0148610] Core i5-3570K (3.4GHz)/8GB/GTX560Ti (1024)/1TB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1765, "Компьютер DNS Prestige XL [0149300] Core i5-3570K (3.4GHz)/8GB/HD6930 (1024)/1TB/DVD±RW/CR", 20);
+  (1764, "Компьютер DNS Prestige XL [0149300] Core i5-3570K (3.4GHz)/8GB/HD6930 (1024)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1766, "Компьютер DNS Prestige XL [0150358] Core i7-3770 (3.4GHz)/8GB/GTX 570 (1280)/1TB/DVD±RW/CR", 20);
+  (1765, "Компьютер DNS Prestige XL [0150358] Core i7-3770 (3.4GHz)/8GB/GTX 570 (1280)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1767, "Компьютер DNS Prestige XL [0151139] Core i7-3770 (3.4GHz)/8GB/HD7870 (2048)/1TB/DVD±RW/CR", 20);
+  (1766, "Компьютер DNS Prestige XL [0151139] Core i7-3770 (3.4GHz)/8GB/HD7870 (2048)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1768, "Компьютер DNS Prestige XL [0151166] FX-8150 (3.6 GHz)/8GB/HD7870 (2048)/1TB/DVD±RW/CR", 20);
+  (1767, "Компьютер DNS Prestige XL [0151166] FX-8150 (3.6 GHz)/8GB/HD7870 (2048)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1769, "Компьютер DNS Prestige XL [0151769] Core i5-3570K (3.4GHz)/8GB/HD7850 (2048)/1TB/DVD±RW/CR", 20);
+  (1768, "Компьютер DNS Prestige XL [0151769] Core i5-3570K (3.4GHz)/8GB/HD7850 (2048)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1770, "Компьютер DNS Prestige XL [0153201] FX-4170 (4.2 GHz)/8GB/GTX560 (1024)/1TB/DVD±RW/CR", 20);
+  (1769, "Компьютер DNS Prestige XL [0153201] FX-4170 (4.2 GHz)/8GB/GTX560 (1024)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1771, "Компьютер DNS Prestige XL [0154486] FX-6200 (3.8 GHz)/8GB/HD7850 (2048)/1TB/DVD±RW", 20);
+  (1770, "Компьютер DNS Prestige XL [0154486] FX-6200 (3.8 GHz)/8GB/HD7850 (2048)/1TB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1772, "Компьютер DNS Prestige XL [0156795] Core i7-3770 (3.4GHz)/8GB/GTX 660 Ti (2048)/1TB/DVD±RW/CR", 20);
+  (1771, "Компьютер DNS Prestige XL [0156795] Core i7-3770 (3.4GHz)/8GB/GTX 660 Ti (2048)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1773, "Компьютер DNS Prestige XL [0157736] FX-8120 (3.1 GHz)/8GB/GTX 660 Ti (2048)/1TB/DVD±RW/CR", 20);
+  (1772, "Компьютер DNS Prestige XL [0157736] FX-8120 (3.1 GHz)/8GB/GTX 660 Ti (2048)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1774, "Компьютер DNS Prestige [0148061] Core i5-3450 (3.1GHz)/8GB/HD7770 (1024)/1TB/DVD±RW/CR", 20);
+  (1773, "Компьютер DNS Prestige [0148061] Core i5-3450 (3.1GHz)/8GB/HD7770 (1024)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1775, "Компьютер DNS Prestige [0148062] Core i5-3550 (3.3GHz)/8GB/GTX560 (1024)/1TB/DVD±RW", 20);
+  (1774, "Компьютер DNS Prestige [0148062] Core i5-3550 (3.3GHz)/8GB/GTX560 (1024)/1TB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1776, "Компьютер DNS Prestige [0151768]  Athlon II X4 640 (3.0 GHz)/8GB/GTX560 (1024)/1TB/DVD±RW/CR", 20);
+  (1775, "Компьютер DNS Prestige [0151768]  Athlon II X4 640 (3.0 GHz)/8GB/GTX560 (1024)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1777, "Компьютер DNS Prestige [0151770] Core i5-3550 (3.3GHz)/8GB/HD7850 (2048)/1TB/DVD±RW/CR", 20);
+  (1776, "Компьютер DNS Prestige [0151770] Core i5-3550 (3.3GHz)/8GB/HD7850 (2048)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1778, "Компьютер DNS Prestige [0153693]  FX-8120 (3.1 GHz)/8GB/HD7850 (2048)/1TB/DVD±RW/CR", 20);
+  (1777, "Компьютер DNS Prestige [0153693]  FX-8120 (3.1 GHz)/8GB/HD7850 (2048)/1TB/DVD±RW/CR", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1779, "Компьютер DNS Prestige [0155651] Athlon II X4 641 (2.8 GHz)/8GB/GTX560 (1024)/1TB/DVD±RW", 20);
+  (1778, "Компьютер DNS Prestige [0155651] Athlon II X4 641 (2.8 GHz)/8GB/GTX560 (1024)/1TB/DVD±RW", 20);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1780, "Компьютер Extreme XL [0155656] Core i5-3550 (3.3GHz)/8GB/GTX560 (1024)/1TB/DVD±RW", 20);
+  (1779, "Компьютер Extreme XL [0155656] Core i5-3550 (3.3GHz)/8GB/GTX560 (1024)/1TB/DVD±RW", 20);
 INSERT INTO `detail_category` ( `id`, `name` ) VALUES
   (21, "Мониторы");
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1781, "Монитор Acer 17@ V173DOb/Vb/Ab/Db/Bb/b/cb  [1280x1024, 7000:1, 5мс, 160гор/160вер, D-Sub, TCO03]", 21);
+  (1780, "Монитор Acer 17@ V173DOb/Vb/Ab/Db/Bb/b/cb  [1280x1024, 7000:1, 5мс, 160гор/160вер, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1782, "Монитор Acer 17@ V173DObmd [1280x1024, 20000:1, 5мс, 160гор/160вер, 1Вт х2, D-Sub, DVI, TCO03]", 21);
+  (1781, "Монитор Acer 17@ V173DObmd [1280x1024, 20000:1, 5мс, 160гор/160вер, 1Вт х2, D-Sub, DVI, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1783, "Монитор Acer 18.5@ P196HQVb [1366x768, 5000:1, 5 мс, 160гор/160вер, D-Sub]", 21);
+  (1782, "Монитор Acer 18.5@ P196HQVb [1366x768, 5000:1, 5 мс, 160гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1784, "Монитор Acer 18.5@ V193HQDB/HQDOB/HQVBb/HQVb/HQ/HQb/HQAb [1366x768, 5000:1, 5мс, D-Sub, TCO03]", 21);
+  (1783, "Монитор Acer 18.5@ V193HQDB/HQDOB/HQVBb/HQVb/HQ/HQb/HQAb [1366x768, 5000:1, 5мс, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1785, "Монитор Acer 18.5@ V193HQLAOb/HQLb [LED, 1366x768, 10000:1, 5мс, 170гор/160вер, D-Sub, TCO03]", 21);
+  (1784, "Монитор Acer 18.5@ V193HQLAOb/HQLb [LED, 1366x768, 10000:1, 5мс, 170гор/160вер, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1786, "Монитор Acer 19@ V193DOb/Db/B/Ab/Bb/Vb [1280x1024, 10000:1, 5мс, D-Sub, TCO03]", 21);
+  (1785, "Монитор Acer 19@ V193DOb/Db/B/Ab/Bb/Vb [1280x1024, 10000:1, 5мс, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1787, "Монитор Acer 19@ V193DObd/Dbd [1280x1024, DC 50000:1, 5мс, 160гор/160вер, DVI, D-Sub, TCO03]", 21);
+  (1786, "Монитор Acer 19@ V193DObd/Dbd [1280x1024, DC 50000:1, 5мс, 160гор/160вер, DVI, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1788, "Монитор Acer 19@ V193DObm/Dbm/Bm/Bbm/Abm [1280x1024, 10000:1, 5мс, 160гор/160вер, 2 х 1Вт, D-Sub, TCO03]", 21);
+  (1787, "Монитор Acer 19@ V193DObm/Dbm/Bm/Bbm/Abm [1280x1024, 10000:1, 5мс, 160гор/160вер, 2 х 1Вт, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1789, "Монитор Acer 19@ V193DObmd/Dbdm/Dbmd/Abmd/Abdm/BbmD [1280x1024, 10000:1,5мс, 160гор/160вер, 2х1Вт, DVI, D-Sub,TCO03]", 21);
+  (1788, "Монитор Acer 19@ V193DObmd/Dbdm/Dbmd/Abmd/Abdm/BbmD [1280x1024, 10000:1,5мс, 160гор/160вер, 2х1Вт, DVI, D-Sub,TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1790, "Монитор Acer 19@ V193WEOb/WVCb/Wb/Wab/WBb/WDb/WEb [1440x900, 50000:1, 5мс, 160гор/160вер, D-Sub, TCO03]", 21);
+  (1789, "Монитор Acer 19@ V193WEOb/WVCb/Wb/Wab/WBb/WDb/WEb [1440x900, 50000:1, 5мс, 160гор/160вер, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1791, "Монитор Acer 20@ E200HVb [1600x900, 5000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
+  (1790, "Монитор Acer 20@ E200HVb [1600x900, 5000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1792, "Монитор Acer 20@ G206HLBb  [LED, 1600x900, 100M:1, 5мс, 170гор/160вер, D-Sub]", 21);
+  (1791, "Монитор Acer 20@ G206HLBb  [LED, 1600x900, 100M:1, 5мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1793, "Монитор Acer 20@ G206HLBbd  [LED, 1600x900, 100M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1792, "Монитор Acer 20@ G206HLBbd  [LED, 1600x900, 100M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1794, "Монитор Acer 20@ P206HVb [1600x900, 5000:1, 5мс, D-Sub, TCO03]", 21);
+  (1793, "Монитор Acer 20@ P206HVb [1600x900, 5000:1, 5мс, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1795, "Монитор Acer 20@ S200HLBbd [LED, 1600x900, DC 100M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1794, "Монитор Acer 20@ S200HLBbd [LED, 1600x900, DC 100M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1796, "Монитор Acer 20@ V203HLAObd [LED, 1600x900, DC 12M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1795, "Монитор Acer 20@ V203HLAObd [LED, 1600x900, DC 12M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1797, "Монитор Acer 20@ V203HVab/HVCb/HCOb/Hcb/Hb/Hab [1600x900, DC 10000:1, 5мс, 170гор/160вер, D-Sub, TCO03]", 21);
+  (1796, "Монитор Acer 20@ V203HVab/HVCb/HCOb/Hcb/Hb/Hab [1600x900, DC 10000:1, 5мс, 170гор/160вер, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1798, "Монитор Acer 21.5@ G226HQLBbd  [LED, 1920x1080, 100M:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1797, "Монитор Acer 21.5@ G226HQLBbd  [LED, 1920x1080, 100M:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1799, "Монитор Acer 21.5@ P226HQbd/HQVbd [1920x1080, DC 5000:1, 5мс, 160гор/160вер, DVI, D-Sub, TCO03]", 21);
+  (1798, "Монитор Acer 21.5@ P226HQbd/HQVbd [1920x1080, DC 5000:1, 5мс, 160гор/160вер, DVI, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1800, "Монитор Acer 21.5@ S220HQLbd/S220HQLВbd [LED, 1920x1080, 100M:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1799, "Монитор Acer 21.5@ S220HQLbd/S220HQLВbd [LED, 1920x1080, 100M:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1801, "Монитор Acer 21.5@ S221HQLbd/S221HQLDbd [LED, 1920x1080, DC 12M:1, 5мс, 160гор/160вер, DVI, D-Sub, TCO03]", 21);
+  (1800, "Монитор Acer 21.5@ S221HQLbd/S221HQLDbd [LED, 1920x1080, DC 12M:1, 5мс, 160гор/160вер, DVI, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1802, "Монитор Acer 21.5@ V223HQBb/HQVb/HQBOb/HQ/HQb [1920x1080, DC 20000:1, 5мс, D-Sub, TCO03]", 21);
+  (1801, "Монитор Acer 21.5@ V223HQBb/HQVb/HQBOb/HQ/HQb [1920x1080, DC 20000:1, 5мс, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1803, "Монитор Acer 21.5@ V223HQVbd  [TN, 1920x1080, DC 20000:1, 5мс, DVI, D-Sub, TCO03]", 21);
+  (1802, "Монитор Acer 21.5@ V223HQVbd  [TN, 1920x1080, DC 20000:1, 5мс, DVI, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1804, "Монитор Acer 22@ V223WEOb/WEb/Wb/Wab/Wbb/WDb  [1680x1050, 2500:1, 5мс, 170гор/160вер, D-Sub, TCO03]", 21);
+  (1803, "Монитор Acer 22@ V223WEOb/WEb/Wb/Wab/Wbb/WDb  [1680x1050, 2500:1, 5мс, 170гор/160вер, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1805, "Монитор Acer 22@ V223WEObd/WEbd/WAbd/WDbd [1680x1050, 2500:1, 5мс, 170гор/160вер, DVI, D-Sub, TCO03]", 21);
+  (1804, "Монитор Acer 22@ V223WEObd/WEbd/WAbd/WDbd [1680x1050, 2500:1, 5мс, 170гор/160вер, DVI, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1806, "Монитор Acer 23@ A231Hbd [1920x1080, 5 мс, 80000:1, 160гор/160вер, D-Sub, DVI]", 21);
+  (1805, "Монитор Acer 23@ A231Hbd [1920x1080, 5 мс, 80000:1, 160гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1807, "Монитор Acer 23@ A231Hbmd [1920x1080, 5 мс, 80000:1, 160гор/160вер, 1Вт х2, D-Sub, DVI]", 21);
+  (1806, "Монитор Acer 23@ A231Hbmd [1920x1080, 5 мс, 80000:1, 160гор/160вер, 1Вт х2, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1808, "Монитор Acer 23@ G236HLBbd  [LED, 1920x1080, 100M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1807, "Монитор Acer 23@ G236HLBbd  [LED, 1920x1080, 100M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1809, "Монитор Acer 23@ S230HLBbd [LED, 1920x1080, 100М:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1808, "Монитор Acer 23@ S230HLBbd [LED, 1920x1080, 100М:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1810, "Монитор Acer 23@ S231HLbd [LED, 1920x1080, 12M:1, 5 мс, 170гор/160вер, DVI, D-Sub]", 21);
+  (1809, "Монитор Acer 23@ S231HLbd [LED, 1920x1080, 12M:1, 5 мс, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1811, "Монитор Acer 23@ S231HLbid  [LED, 1920x1080, 12M:1, 5 мс, 170гор/160вер, HDMI, DVI, D-Sub]", 21);
+  (1810, "Монитор Acer 23@ S231HLbid  [LED, 1920x1080, 12M:1, 5 мс, 170гор/160вер, HDMI, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1812, "Монитор Acer 23@ S232HLAbid/S232HLCbid [LED, 1920x1080, 2мс, 12М:1, 170гор/160вер, DVI, HDMI, D-Sub]", 21);
+  (1811, "Монитор Acer 23@ S232HLAbid/S232HLCbid [LED, 1920x1080, 2мс, 12М:1, 170гор/160вер, DVI, HDMI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1813, "Монитор Acer 23@ S235HLbii [LED, 1920x1080, 170гор/160вер, HDMIx2, D-Sub]", 21);
+  (1812, "Монитор Acer 23@ S235HLbii [LED, 1920x1080, 170гор/160вер, HDMIx2, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1814, "Монитор Acer 23@ V233HAOb/HAb/Hb [1920x1080, DC 40000:1, 5мс, 160гор/160вер, D-Sub, TCO03]", 21);
+  (1813, "Монитор Acer 23@ V233HAOb/HAb/Hb [1920x1080, DC 40000:1, 5мс, 160гор/160вер, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1815, "Монитор Acer 23@ V233HAObd/HAbd/Hbd [1920x1080, DC 40000:1, 5мс, 160гор/160вер, DVI, D-Sub, TCO03]", 21);
+  (1814, "Монитор Acer 23@ V233HAObd/HAbd/Hbd [1920x1080, DC 40000:1, 5мс, 160гор/160вер, DVI, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1816, "Монитор Acer 23.6@ GR235Hbmii [3D, очки в комплекте, 1920x1080, 100M:1, 2мс, HDMIx2,  1Вт х2]", 21);
+  (1815, "Монитор Acer 23.6@ GR235Hbmii [3D, очки в комплекте, 1920x1080, 100M:1, 2мс, HDMIx2,  1Вт х2]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1817, "Монитор Acer 24@ P246Hbd/P246HAbd [1920x1080, 80000:1, 5 мс, 170гор/160вер, DVI, D-Sub]", 21);
+  (1816, "Монитор Acer 24@ P246Hbd/P246HAbd [1920x1080, 80000:1, 5 мс, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1818, "Монитор Acer 24@ S240HLbd [LED, 1920x1080, 100M:1, 5мс, 170гор/160вер, DVI, D-Sub]", 21);
+  (1817, "Монитор Acer 24@ S240HLbd [LED, 1920x1080, 100M:1, 5мс, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1819, "Монитор Acer 24@ S242HLAbid/S242HLCbid [LED, 1920x1080, 12M:1, 2 мс, 170гор/160вер, D-Sub, HDMI, DVI]", 21);
+  (1818, "Монитор Acer 24@ S242HLAbid/S242HLCbid [LED, 1920x1080, 12M:1, 2 мс, 170гор/160вер, D-Sub, HDMI, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1820, "Монитор Acer 24@ S243HLAbmii/S243HLbmii [LED, 1920x1080, DC 8M:1, 2мс, 170гор/170вер, D-Sub, HDMI x2, TCO03]", 21);
+  (1819, "Монитор Acer 24@ S243HLAbmii/S243HLbmii [LED, 1920x1080, DC 8M:1, 2мс, 170гор/170вер, D-Sub, HDMI x2, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1821, "Монитор Acer 24@ V243HАOb/HАb/Hb [1920x1080, DC 40000:1, 2мс, 170гор/160вер, D-Sub, TCO03]", 21);
+  (1820, "Монитор Acer 24@ V243HАOb/HАb/Hb [1920x1080, DC 40000:1, 2мс, 170гор/160вер, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1822, "Монитор Acer 24@ V243HАObd/HАbd [1920x1080, DC 80000:1, 2мс, 170гор/160вер, DVI, D-Sub, TCO03]", 21);
+  (1821, "Монитор Acer 24@ V243HАObd/HАbd [1920x1080, DC 80000:1, 2мс, 170гор/160вер, DVI, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1823, "Монитор Acer 27@ H274HLbmid [LED, 1920x1080, 100M:1, 5 мс, 170гор/160вер, 1Вт х2, HDMI, DVI, D-Sub]", 21);
+  (1822, "Монитор Acer 27@ H274HLbmid [LED, 1920x1080, 100M:1, 5 мс, 170гор/160вер, 1Вт х2, HDMI, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1824, "Монитор Acer 27@ HN274Hbmiiid/HBbmiiid [3D, очки в комплекте, 1920x1080, 12M:1, 2 мс, 170гор/160вер, 1Вт х2, HDMIx3]", 21);
+  (1823, "Монитор Acer 27@ HN274Hbmiiid/HBbmiiid [3D, очки в комплекте, 1920x1080, 12M:1, 2 мс, 170гор/160вер, 1Вт х2, HDMIx3]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1825, "Монитор Acer 27@ S273HLbmii/S273HLAbmii [LED, 1920x1080, 12M:1, 2мс, 170гор/170вер, D-Sub, HDMI x2, 1 Вт х 2]", 21);
+  (1824, "Монитор Acer 27@ S273HLbmii/S273HLAbmii [LED, 1920x1080, 12M:1, 2мс, 170гор/170вер, D-Sub, HDMI x2, 1 Вт х 2]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1826, "Монитор Asus 21.5@ ML229H [LED, IPS, 1920x1080, 50M:1, 5мс, 178гор/178вер, D-Sub, HDMI]", 21);
+  (1825, "Монитор Asus 21.5@ ML229H [LED, IPS, 1920x1080, 50M:1, 5мс, 178гор/178вер, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1827, "Монитор Asus 23@ MS238H [LED, 1920x1080, 10M:1, 5 мс, 170гор/160вер, D-Sub, HDMI]", 21);
+  (1826, "Монитор Asus 23@ MS238H [LED, 1920x1080, 10M:1, 5 мс, 170гор/160вер, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1828, "Монитор Asus 23.6@ VE247H [1920x1080, 10M:1, 2мс, 170гор/160вер, 2Вт х2, DVI, HDMI, D-Sub]", 21);
+  (1827, "Монитор Asus 23.6@ VE247H [1920x1080, 10M:1, 2мс, 170гор/160вер, 2Вт х2, DVI, HDMI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1829, "Монитор Asus 24@ ML248H [LED, 1920x1080, 10M:1, 2мс, 170гор/160вер, D-Sub, HDMI]", 21);
+  (1828, "Монитор Asus 24@ ML248H [LED, 1920x1080, 10M:1, 2мс, 170гор/160вер, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1830, "Монитор Asus 27@ 27T1EH [TV, LED, 1920x1080, 10M, 170гор/160вер, 5мс, 7 Вт х 2, D-Sub, DVI, HDMI, DVB-T]", 21);
+  (1829, "Монитор Asus 27@ 27T1EH [TV, LED, 1920x1080, 10M, 170гор/160вер, 5мс, 7 Вт х 2, D-Sub, DVI, HDMI, DVB-T]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1831, "Монитор Asus 27@ VE278Q  [LED, 1920x1080, 10M:1, 170гор/160вер, 3 Вт х2, D-Sub, DVI, HDMI, PiP]", 21);
+  (1830, "Монитор Asus 27@ VE278Q  [LED, 1920x1080, 10M:1, 170гор/160вер, 3 Вт х2, D-Sub, DVI, HDMI, PiP]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1832, "Монитор Asus 27@ VG278H  [3D, LED, 1920x1080, 50M:1, 170гор/160вер, 2мс, 3 Вт x 2, HDMI, DVI-D, D-Sub]", 21);
+  (1831, "Монитор Asus 27@ VG278H  [3D, LED, 1920x1080, 50M:1, 170гор/160вер, 2мс, 3 Вт x 2, HDMI, DVI-D, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1833, "Монитор BenQ 17@ G700AD/G702AD [1280x1024, 700:1, 5мс, 160гор/160вер, D-Sub, TCO03]", 21);
+  (1832, "Монитор BenQ 17@ G700AD/G702AD [1280x1024, 700:1, 5мс, 160гор/160вер, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1834, "Монитор BenQ 18.5@ G950A [1366x768, DC50000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
+  (1833, "Монитор BenQ 18.5@ G950A [1366x768, DC50000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1835, "Монитор BenQ 18.5@ GL950AM [LED, 1366x768, DC50000:1, 5 мс, 170гор/160вер, D-Sub, 1Вт х2]", 21);
+  (1834, "Монитор BenQ 18.5@ GL950AM [LED, 1366x768, DC50000:1, 5 мс, 170гор/160вер, D-Sub, 1Вт х2]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1836, "Монитор BenQ 19@ GL951AM [LED, 1440x900, DC 12M:1, 5мс, 170гор/160вер, 1Вт х2, D-Sub]", 21);
+  (1835, "Монитор BenQ 19@ GL951AM [LED, 1440x900, DC 12M:1, 5мс, 170гор/160вер, 1Вт х2, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1837, "Монитор BenQ 20@ G2025HDA [1600x900, 1000:1(DC 40000:1), 5мс, 170гор/160вер, D-Sub, TCO03]", 21);
+  (1836, "Монитор BenQ 20@ G2025HDA [1600x900, 1000:1(DC 40000:1), 5мс, 170гор/160вер, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1838, "Монитор BenQ 21.5@ G2250 [1920x1080, DC 50000:1, 5мс, 170гор/160вер, DVI, D-Sub]", 21);
+  (1837, "Монитор BenQ 21.5@ G2250 [1920x1080, DC 50000:1, 5мс, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1839, "Монитор BenQ 21.5@ GL2240M [LED, 1920x1080, 1000:1(DC 12M:1), 5мс, 170гор/160вер, DVI, D-Sub, 1Вт х2, TCO03]", 21);
+  (1838, "Монитор BenQ 21.5@ GL2240M [LED, 1920x1080, 1000:1(DC 12M:1), 5мс, 170гор/160вер, DVI, D-Sub, 1Вт х2, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1840, "Монитор BenQ 21.5@ GL2250M [LED, 1920x1080, 12M:1, 5мс, 170гор/160вер, 1Вт х2, DVI, D-Sub]", 21);
+  (1839, "Монитор BenQ 21.5@ GL2250M [LED, 1920x1080, 12M:1, 5мс, 170гор/160вер, 1Вт х2, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1841, "Монитор BenQ 21.5@ GW2250HM  [VA+LED, 1920x1080, 5000:1 (20M:1), 178/178, 4ms, 1 Вт x 2, HDMI, DVI, D-Sub]", 21);
+  (1840, "Монитор BenQ 21.5@ GW2250HM  [VA+LED, 1920x1080, 5000:1 (20M:1), 178/178, 4ms, 1 Вт x 2, HDMI, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1842, "Монитор BenQ 21.5@ GW2250M  [VA+LED, 1920x1080, 5000:1 (20M:1), 178/178, 4ms, 1 Вт x 2, DVI, D-Sub]", 21);
+  (1841, "Монитор BenQ 21.5@ GW2250M  [VA+LED, 1920x1080, 5000:1 (20M:1), 178/178, 4ms, 1 Вт x 2, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1843, "Монитор BenQ 21.5@ VW2220 [LED, 1920x1080, 5000:1(DCR 20M:1), 8мс, 178гор/178вер, DVI, D-Sub]", 21);
+  (1842, "Монитор BenQ 21.5@ VW2220 [LED, 1920x1080, 5000:1(DCR 20M:1), 8мс, 178гор/178вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1844, "Монитор BenQ 22@ G2251TM [1680x1050, DC50000:1, 5мс, 160гор/160вер, 1Вт х2, DVI, D-Sub, поворот]", 21);
+  (1843, "Монитор BenQ 22@ G2251TM [1680x1050, DC50000:1, 5мс, 160гор/160вер, 1Вт х2, DVI, D-Sub, поворот]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1845, "Монитор BenQ 23@ G2320HDBL [LED, 1920x1080, 1000:1(DC 40000:1), 5мс, 170гор/160вер, DVI, D-Sub]", 21);
+  (1844, "Монитор BenQ 23@ G2320HDBL [LED, 1920x1080, 1000:1(DC 40000:1), 5мс, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1846, "Монитор BenQ 24@ G2420HD [1920x1080, 1000:1(DC 40000:1), 5мс, 170гор/160вер, DVI,  HDMI, D-Sub, TCO03]", 21);
+  (1845, "Монитор BenQ 24@ G2420HD [1920x1080, 1000:1(DC 40000:1), 5мс, 170гор/160вер, DVI,  HDMI, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1847, "Монитор BenQ 24@ G2450 [1920x1080, DC 50000:1, 5мс, 170гор/160вер, DVI, D-Sub]", 21);
+  (1846, "Монитор BenQ 24@ G2450 [1920x1080, DC 50000:1, 5мс, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1848, "Монитор BenQ 24@ GL2450 [LED, 1920x1080, 12M:1, 5мс, 170гор/160вер, DVI, D-Sub]", 21);
+  (1847, "Монитор BenQ 24@ GL2450 [LED, 1920x1080, 12M:1, 5мс, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1849, "Монитор BenQ 24@ GL2450HM [LED, 1920x1080, 12M:1, 2мс(GtG), 170гор/160вер, 1Вт х2, DVI, D-Sub, HDMI]", 21);
+  (1848, "Монитор BenQ 24@ GL2450HM [LED, 1920x1080, 12M:1, 2мс(GtG), 170гор/160вер, 1Вт х2, DVI, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1850, "Монитор BenQ 24@ GW2450HM  [VA+LED, 1920x1080, 5000:1 (20M:1), 178/178, 4ms, 1 Вт x 2, HDMI, DVI, D-Sub]", 21);
+  (1849, "Монитор BenQ 24@ GW2450HM  [VA+LED, 1920x1080, 5000:1 (20M:1), 178/178, 4ms, 1 Вт x 2, HDMI, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1851, "Монитор BenQ 24@ V2420 [LED, 1920x1080, 1000:1(DC 10M:1), 5мс, 170гор/160вер, DVI, D-Sub]", 21);
+  (1850, "Монитор BenQ 24@ V2420 [LED, 1920x1080, 1000:1(DC 10M:1), 5мс, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1852, "Монитор BenQ 24@ XL2410T [LED, nV 3D Ready, 1920x1080, 1000:1(DC 10M:1), 2мс, 170гор/160вер, DVI, D-Sub, HDMI, USB]", 21);
+  (1851, "Монитор BenQ 24@ XL2410T [LED, nV 3D Ready, 1920x1080, 1000:1(DC 10M:1), 2мс, 170гор/160вер, DVI, D-Sub, HDMI, USB]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1853, "Монитор BenQ 24@ XL2420T [LED, nV 3D Ready, 1920x1080, 1000:1(DC 12M:1), 2мс, 170гор/160вер, DVI, D-Sub, HDMIx2, DP]", 21);
+  (1852, "Монитор BenQ 24@ XL2420T [LED, nV 3D Ready, 1920x1080, 1000:1(DC 12M:1), 2мс, 170гор/160вер, DVI, D-Sub, HDMIx2, DP]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1854, "Монитор BenQ 27@ G2750 [1920x1080, DC 50000:1, 5мс, 170гор/160вер, DVI, D-Sub]", 21);
+  (1853, "Монитор BenQ 27@ G2750 [1920x1080, DC 50000:1, 5мс, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1855, "Монитор Dell 23@ UltraSharp U2312HM [IPS, LED, 1920x1080, 2M:1, 178гор/178вер, 8мс, DVI,DisplayPort,D-Sub, USBx4]", 21);
+  (1854, "Монитор Dell 23@ UltraSharp U2312HM [IPS, LED, 1920x1080, 2M:1, 178гор/178вер, 8мс, DVI,DisplayPort,D-Sub, USBx4]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1856, "Монитор Dell 24@ UltraSharp U2410 [IPS, 1920x1200, 80000:1, 178гор/178вер, DVI, HDMI, PIP,  cardreader, TCO03]", 21);
+  (1855, "Монитор Dell 24@ UltraSharp U2410 [IPS, 1920x1200, 80000:1, 178гор/178вер, DVI, HDMI, PIP,  cardreader, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1857, "Монитор Dell 24@ UltraSharp U2412M [IPS, LED, 1920x1200, 2M:1, 178гор/178вер, 8мс, DVI,DisplayPort,D-Sub, USBx4]", 21);
+  (1856, "Монитор Dell 24@ UltraSharp U2412M [IPS, LED, 1920x1200, 2M:1, 178гор/178вер, 8мс, DVI,DisplayPort,D-Sub, USBx4]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1858, "Монитор Dell 27@ UltraSharp U2711 [IPS, 2560x1440, 80000:1, 178гор/178вер, DVI, HDMI, PIP,  cardreader, TCO03]", 21);
+  (1857, "Монитор Dell 27@ UltraSharp U2711 [IPS, 2560x1440, 80000:1, 178гор/178вер, DVI, HDMI, PIP,  cardreader, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1859, "Монитор DNS 15.6@ G161 [LCD, 1366x768, 1000:1, 5 мс, 160гор/160вер, D-Sub, DVI]", 21);
+  (1858, "Монитор DNS 15.6@ G161 [LCD, 1366x768, 1000:1, 5 мс, 160гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1860, "Монитор DNS 15.6@ V160 [LED,1366x768, 1000:1, 5 мс, 90гор/50вер, D-Sub, DVI]", 21);
+  (1859, "Монитор DNS 15.6@ V160 [LED,1366x768, 1000:1, 5 мс, 90гор/50вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1861, "Монитор DNS 15.6@ WD1610 [LCD, 1366x768, 1000:1, 5 мс, 160гор/160вер, D-Sub, DVI]", 21);
+  (1860, "Монитор DNS 15.6@ WD1610 [LCD, 1366x768, 1000:1, 5 мс, 160гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1862, "Монитор DNS 17@ HG170 [LCD, 1280x1024, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1861, "Монитор DNS 17@ HG170 [LCD, 1280x1024, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1863, "Монитор DNS 18.5@ G190 [LCD, 1366x768, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1862, "Монитор DNS 18.5@ G190 [LCD, 1366x768, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1864, "Монитор DNS 18.5@ H195 [LED, 1366x768, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1863, "Монитор DNS 18.5@ H195 [LED, 1366x768, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1865, "Монитор DNS 18.5@ HG180 [LED, 1366x768, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI, Protective glass]", 21);
+  (1864, "Монитор DNS 18.5@ HG180 [LED, 1366x768, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI, Protective glass]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1866, "Монитор DNS 18.5@ MP185 [LED, 1366x768, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1865, "Монитор DNS 18.5@ MP185 [LED, 1366x768, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1867, "Монитор DNS 18.5@ V1956 [LED 1366x768, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1866, "Монитор DNS 18.5@ V1956 [LED 1366x768, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1868, "Монитор DNS 19@ H194D [LED, 1440x900, 1000:1, 5 мс, 160гор/160вер, D-Sub, DVI]", 21);
+  (1867, "Монитор DNS 19@ H194D [LED, 1440x900, 1000:1, 5 мс, 160гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1869, "Монитор DNS 19@ V1928 [LCD, 1440x900, 1000:1, 5 мс, 160гор/160вер, D-Sub, DVI]", 21);
+  (1868, "Монитор DNS 19@ V1928 [LCD, 1440x900, 1000:1, 5 мс, 160гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1870, "Монитор DNS 19@ V1953 [LCD, 1280x1024, 1000:1, 5 мс, 160гор/160вер, D-Sub, DVI]", 21);
+  (1869, "Монитор DNS 19@ V1953 [LCD, 1280x1024, 1000:1, 5 мс, 160гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1871, "Монитор DNS 19@ WD1980 [LCD, 1440x900, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1870, "Монитор DNS 19@ WD1980 [LCD, 1440x900, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1872, "Монитор DNS 20@ H201 [LED, 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1871, "Монитор DNS 20@ H201 [LED, 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1873, "Монитор DNS 20@ JL200HD [LED, 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1872, "Монитор DNS 20@ JL200HD [LED, 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1874, "Монитор DNS 20@ V2056 [LED 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1873, "Монитор DNS 20@ V2056 [LED 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1875, "Монитор DNS 21.5@ G222L [LED, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1874, "Монитор DNS 21.5@ G222L [LED, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1876, "Монитор DNS 21.5@ G223L [LED, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1875, "Монитор DNS 21.5@ G223L [LED, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1877, "Монитор DNS 21.5@ H2121 [LED, Full HD, 1920x1080, 1000:1, 2мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1876, "Монитор DNS 21.5@ H2121 [LED, Full HD, 1920x1080, 1000:1, 2мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1878, "Монитор DNS 21.5@ H2122 [LED, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1877, "Монитор DNS 21.5@ H2122 [LED, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1879, "Монитор DNS 21.5@ H220 [LCD, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1878, "Монитор DNS 21.5@ H220 [LCD, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1880, "Монитор DNS 21.5@ H223 [LED, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1879, "Монитор DNS 21.5@ H223 [LED, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1881, "Монитор DNS 21.5@ JL220 [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1880, "Монитор DNS 21.5@ JL220 [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1882, "Монитор DNS 21.5@ V2256 [LED, Full HD, 1920x1080, 1000:1, 2мс, 176гор/170вер, D-Sub, DVI]", 21);
+  (1881, "Монитор DNS 21.5@ V2256 [LED, Full HD, 1920x1080, 1000:1, 2мс, 176гор/170вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1883, "Монитор DNS 23@ H230 [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1882, "Монитор DNS 23@ H230 [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1884, "Монитор DNS 23@ H231 [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1883, "Монитор DNS 23@ H231 [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1885, "Монитор DNS 23@ MP230 [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1884, "Монитор DNS 23@ MP230 [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1886, "Монитор DNS 23@ V2356 [LED, Full HD, 1920x1080, 1000:1, 2 мс, 176гор/170вер, D-Sub, DVI]", 21);
+  (1885, "Монитор DNS 23@ V2356 [LED, Full HD, 1920x1080, 1000:1, 2 мс, 176гор/170вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1887, "Монитор DNS 23@ WD2301 [IPS,LED, Full HD, 1920x1080, 1000:1, 5 мс, 178гор/178вер, D-Sub, DVI, 2 х 2Вт]", 21);
+  (1886, "Монитор DNS 23@ WD2301 [IPS,LED, Full HD, 1920x1080, 1000:1, 5 мс, 178гор/178вер, D-Sub, DVI, 2 х 2Вт]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1888, "Монитор DNS 23.6@ G236L [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1887, "Монитор DNS 23.6@ G236L [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1889, "Монитор DNS 23.6@ JL240U [LED, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1888, "Монитор DNS 23.6@ JL240U [LED, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1890, "Монитор DNS 23.6@ JL240W [LED, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1889, "Монитор DNS 23.6@ JL240W [LED, Full HD, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1891, "Монитор DNS 23.6@ JL241B [LED,Full HD,1920x1080,1000:1,5мс,170гор/160вер,D-Sub,DVI,HDMI,PC Audio,Earphone,2x1Вт,Черный]", 21);
+  (1890, "Монитор DNS 23.6@ JL241B [LED,Full HD,1920x1080,1000:1,5мс,170гор/160вер,D-Sub,DVI,HDMI,PC Audio,Earphone,2x1Вт,Черный]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1892, "Монитор DNS 23.6@ JL241W [LED,Full HD,1920x1080,1000:1,5мс,170гор/160вер,D-Sub,DVI,HDMI,PC Audio,Earphone,2x1Вт,Белый]", 21);
+  (1891, "Монитор DNS 23.6@ JL241W [LED,Full HD,1920x1080,1000:1,5мс,170гор/160вер,D-Sub,DVI,HDMI,PC Audio,Earphone,2x1Вт,Белый]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1893, "Монитор DNS 23.6@ V2456 [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1892, "Монитор DNS 23.6@ V2456 [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1894, "Монитор DNS 23.6@ WD2360 [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1893, "Монитор DNS 23.6@ WD2360 [LED, Full HD, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1895, "Монитор DNS 27@ G270L [LED, Full HD, 1920x1080, 1200:1, 170гор/160вер, 5 мс, D-Sub, DVI]", 21);
+  (1894, "Монитор DNS 27@ G270L [LED, Full HD, 1920x1080, 1200:1, 170гор/160вер, 5 мс, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1896, "Монитор DNS 27@ SG270 [IPS, LED, 2560x1440, 1000:1(DCR 5000000:1), 178гор/178вер, 6 мс, DVI, 2 x 5Вт]", 21);
+  (1895, "Монитор DNS 27@ SG270 [IPS, LED, 2560x1440, 1000:1(DCR 5000000:1), 178гор/178вер, 6 мс, DVI, 2 x 5Вт]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1897, "Монитор DNS 27@ V2756 [LED, Full HD, 1920x1080, 1200:1, 170гор/160вер, 5 мс, D-Sub, DVI]", 21);
+  (1896, "Монитор DNS 27@ V2756 [LED, Full HD, 1920x1080, 1200:1, 170гор/160вер, 5 мс, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1898, "Монитор Envision 18.5@ H976WDL [LED, 1366x768, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1897, "Монитор Envision 18.5@ H976WDL [LED, 1366x768, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1899, "Монитор Envision 18.5@ P971wL [LED, 1366x768, 1000:1(DC 10M:1), 5мс, 170гор/160вер, D-Sub]", 21);
+  (1898, "Монитор Envision 18.5@ P971wL [LED, 1366x768, 1000:1(DC 10M:1), 5мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1900, "Монитор Envision 20@ H2076DL [LED, 1600x900, DC 5M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1899, "Монитор Envision 20@ H2076DL [LED, 1600x900, DC 5M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1901, "Монитор Envision 21.5@ H2276WDL [LED, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1900, "Монитор Envision 21.5@ H2276WDL [LED, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1902, "Монитор Envision 21.5@ P2271whL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI, 2 x 2Вт]", 21);
+  (1901, "Монитор Envision 21.5@ P2271whL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI, 2 x 2Вт]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1903, "Монитор Envision 21.5@ P2271wL [LED, Full HD, 1920x1080, DC 10M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1902, "Монитор Envision 21.5@ P2271wL [LED, Full HD, 1920x1080, DC 10M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1904, "Монитор Envision 21.5@ P2273whL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI, 2 x 2Вт]", 21);
+  (1903, "Монитор Envision 21.5@ P2273whL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI, 2 x 2Вт]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1905, "Монитор Envision 21.5@ P2273wL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1904, "Монитор Envision 21.5@ P2273wL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1906, "Монитор Envision 21.5@ P2278WHL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, HDMIx2, Earphone]", 21);
+  (1905, "Монитор Envision 21.5@ P2278WHL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, HDMIx2, Earphone]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1907, "Монитор Envision 23.6@ H2476WDHAL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI, 2 x 1Вт]", 21);
+  (1906, "Монитор Envision 23.6@ H2476WDHAL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI, 2 x 1Вт]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1908, "Монитор Envision 23.6@ P2473whL [LED, FullHD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI, 2 x 1Вт]", 21);
+  (1907, "Монитор Envision 23.6@ P2473whL [LED, FullHD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI, 2 x 1Вт]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1909, "Монитор Envision 23.6@ P2473wL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1908, "Монитор Envision 23.6@ P2473wL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1910, "Монитор Envision 24@ P2471hL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI, 2 x 1Вт]", 21);
+  (1909, "Монитор Envision 24@ P2471hL [LED, Full HD, 1920x1080, DC 50M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI, 2 x 1Вт]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1911, "Монитор Envision 24@ P2478MDHL [MVA,LED,Full HD,1920x1080,DC 50M:1, 12мс,178гор/178вер,D-Sub,DVI,HDMI, Earphone]", 21);
+  (1910, "Монитор Envision 24@ P2478MDHL [MVA,LED,Full HD,1920x1080,DC 50M:1, 12мс,178гор/178вер,D-Sub,DVI,HDMI, Earphone]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1912, "Монитор Envision 27@ G2770hL [LED, Full HD, 1920x1080, DC 50000:1, 2мс, 170гор/160вер, D-Sub, DVI, HDMI, 2 x 2Вт]", 21);
+  (1911, "Монитор Envision 27@ G2770hL [LED, Full HD, 1920x1080, DC 50000:1, 2мс, 170гор/160вер, D-Sub, DVI, HDMI, 2 x 2Вт]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1913, "Монитор Envision 27@ H2776MHAL [MVA, LED, Full HD, 1920x1080, DC 50M:1, 12мс, 178гор/178вер, D-Sub, HDMIx2, 2 x 1Вт]", 21);
+  (1912, "Монитор Envision 27@ H2776MHAL [MVA, LED, Full HD, 1920x1080, DC 50M:1, 12мс, 178гор/178вер, D-Sub, HDMIx2, 2 x 1Вт]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1914, "Монитор LG  17@ Flatron L1742S/SE [1280х1024, 700:1, 5мс, 160гор/160вер, TCO03]", 21);
+  (1913, "Монитор LG  17@ Flatron L1742S/SE [1280х1024, 700:1, 5мс, 160гор/160вер, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1915, "Монитор LG  18.5@ Flatron E1942C  [LED, 1366x768, DC 5M:1, 200кд/м2, 5мс, 170гор/160вер, D-Sub]", 21);
+  (1914, "Монитор LG  18.5@ Flatron E1942C  [LED, 1366x768, DC 5M:1, 200кд/м2, 5мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1916, "Монитор LG  20@ Flatron E2041S [LED, 1600x900, 1000:1, 5мс, 170гор/160вер,  D-Sub]", 21);
+  (1915, "Монитор LG  20@ Flatron E2041S [LED, 1600x900, 1000:1, 5мс, 170гор/160вер,  D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1917, "Монитор LG  20@ Flatron E2042C  [LED, 1600x900, DC 5M:1, 200кд/м2, 5мс, 170гор/160вер,  D-Sub]", 21);
+  (1916, "Монитор LG  20@ Flatron E2042C  [LED, 1600x900, DC 5M:1, 200кд/м2, 5мс, 170гор/160вер,  D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1918, "Монитор LG  21.5@ Flatron E2211S [LED, 1920x1080, DC 5M:1, 5мс, 170гор/160вер, D-Sub]", 21);
+  (1917, "Монитор LG  21.5@ Flatron E2211S [LED, 1920x1080, DC 5M:1, 5мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1919, "Монитор LG  21.5@ Flatron E2241S [LED, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub]", 21);
+  (1918, "Монитор LG  21.5@ Flatron E2241S [LED, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1920, "Монитор LG  21.5@ Flatron E2242C  [LED, 1920x1080, 5M:1, 200кд/м2, 5мс, 170гор/160вер, D-Sub]", 21);
+  (1919, "Монитор LG  21.5@ Flatron E2242C  [LED, 1920x1080, 5M:1, 200кд/м2, 5мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1921, "Монитор LG  21.5@ Flatron E2242T  [LED, 1920x1080, 5M:1, 250кд/м2, 5мс, 170гор/160вер, D-Sub, DVI-D]", 21);
+  (1920, "Монитор LG  21.5@ Flatron E2242T  [LED, 1920x1080, 5M:1, 250кд/м2, 5мс, 170гор/160вер, D-Sub, DVI-D]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1922, "Монитор LG  21.5@ Flatron E2251S [LED, 1920x1080, 5М:1, 5 мс, 170гор/160вер, D-Sub]", 21);
+  (1921, "Монитор LG  21.5@ Flatron E2251S [LED, 1920x1080, 5М:1, 5 мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1923, "Монитор LG  21.5@ Flatron E2251T [LED, 1920x1080, 5М:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1922, "Монитор LG  21.5@ Flatron E2251T [LED, 1920x1080, 5М:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1924, "Монитор LG  21.5@ Flatron IPS225T [IPS, LED, 1920x1080, 1000:1, 14 мс, 178гор/178вер, DVI, D-Sub]", 21);
+  (1923, "Монитор LG  21.5@ Flatron IPS225T [IPS, LED, 1920x1080, 1000:1, 14 мс, 178гор/178вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1925, "Монитор LG  21.5@ Flatron IPS226V [IPS, LED, 1920x1080, 1000:1, 5 мс, 178гор/178вер, DVI, D-Sub, HDMI]", 21);
+  (1924, "Монитор LG  21.5@ Flatron IPS226V [IPS, LED, 1920x1080, 1000:1, 5 мс, 178гор/178вер, DVI, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1926, "Монитор LG  21.5@ Flatron M2250D [TV, LED, 1920x1080, 5мс, 5M:1, 170гор/160вер, D-Sub, DVI, HDMI]", 21);
+  (1925, "Монитор LG  21.5@ Flatron M2250D [TV, LED, 1920x1080, 5мс, 5M:1, 170гор/160вер, D-Sub, DVI, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1927, "Монитор LG  21.5@ Flatron W2243S/W2243C [1920x1080, DC 30000:1, 5мс, 176гор/170вер, D-Sub]", 21);
+  (1926, "Монитор LG  21.5@ Flatron W2243S/W2243C [1920x1080, DC 30000:1, 5мс, 176гор/170вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1928, "Монитор LG  22@ Flatron E2210S [1680x1050, 1000:1, 5мс, 170гор/160вер, D-Sub]", 21);
+  (1927, "Монитор LG  22@ Flatron E2210S [1680x1050, 1000:1, 5мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1929, "Монитор LG  22@ Flatron E2210T [1680x1050, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1928, "Монитор LG  22@ Flatron E2210T [1680x1050, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1930, "Монитор LG  23@ Flatron D2342P [3D, LED, 1920x1080, 5M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI]", 21);
+  (1929, "Монитор LG  23@ Flatron D2342P [3D, LED, 1920x1080, 5M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1931, "Монитор LG  23@ Flatron DM2350D [TV, LED, 1920x1080, 7M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI]", 21);
+  (1930, "Монитор LG  23@ Flatron DM2350D [TV, LED, 1920x1080, 7M:1, 5мс, 170гор/160вер, D-Sub, DVI, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1932, "Монитор LG  23@ Flatron E2341T [LED, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1931, "Монитор LG  23@ Flatron E2341T [LED, 1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1933, "Монитор LG  23@ Flatron E2342T  [LED, 1920x1080, 5M:1, 250кд/м2, 5мс, 170гор/160вер, D-Sub, DVI-D]", 21);
+  (1932, "Монитор LG  23@ Flatron E2342T  [LED, 1920x1080, 5M:1, 250кд/м2, 5мс, 170гор/160вер, D-Sub, DVI-D]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1934, "Монитор LG  23@ Flatron E2351VR [LED, 1920x1080, DC 5M:1, 5мс, 170гор/160вер, DVI, D-Sub, HDMI]", 21);
+  (1933, "Монитор LG  23@ Flatron E2351VR [LED, 1920x1080, DC 5M:1, 5мс, 170гор/160вер, DVI, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1935, "Монитор LG  23@ Flatron E2381VR [LED, 1920x1080, DC 5M:1, 5мс, 170гор/160вер, DVI, HDMI, D-Sub, Super+resolution]", 21);
+  (1934, "Монитор LG  23@ Flatron E2381VR [LED, 1920x1080, DC 5M:1, 5мс, 170гор/160вер, DVI, HDMI, D-Sub, Super+resolution]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1936, "Монитор LG  23@ Flatron IPS235T [IPS, LED, 1920x1080, 5M:1, 5 мс, 178гор/178вер, DVI, D-Sub]", 21);
+  (1935, "Монитор LG  23@ Flatron IPS235T [IPS, LED, 1920x1080, 5M:1, 5 мс, 178гор/178вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1937, "Монитор LG  23@ Flatron IPS236V [IPS, LED, 1920x1080, 1000:1, 8 мс, 178гор/178вер, DVI, D-Sub, HDMI]", 21);
+  (1936, "Монитор LG  23@ Flatron IPS236V [IPS, LED, 1920x1080, 1000:1, 8 мс, 178гор/178вер, DVI, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1938, "Монитор LG  24@ Flatron E2441T [LED, 1920x1080, 5M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1937, "Монитор LG  24@ Flatron E2441T [LED, 1920x1080, 5M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1939, "Монитор LG  24@ Flatron E2442T [LED, 1920x1080, 5M:1, 5мс, 170гор/160вер, DVI, D-Sub]", 21);
+  (1938, "Монитор LG  24@ Flatron E2442T [LED, 1920x1080, 5M:1, 5мс, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1940, "Монитор LG  27@ Flatron DM2780D [TV, LED, 1920x1080, 7M:1, 5мс, 1Вт х2, DVI, HDMI, D-Sub]", 21);
+  (1939, "Монитор LG  27@ Flatron DM2780D [TV, LED, 1920x1080, 7M:1, 5мс, 1Вт х2, DVI, HDMI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1941, "Монитор Nec 23@  EA232Wmi black [IPS, 1920x1080, 1000:1. 14 мс, 178гор/178вер, 1Вт х2,  DVI, D-Sub, TCO 5.0]", 21);
+  (1940, "Монитор Nec 23@  EA232Wmi black [IPS, 1920x1080, 1000:1. 14 мс, 178гор/178вер, 1Вт х2,  DVI, D-Sub, TCO 5.0]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1942, "Монитор Nec 23@ PA231W black [IPS, 1920x1080, 1000:1, 8мс, 178гор/178вер, DVI, DisplayPort, D-Sub, USB-хаб, PiP]", 21);
+  (1941, "Монитор Nec 23@ PA231W black [IPS, 1920x1080, 1000:1, 8мс, 178гор/178вер, DVI, DisplayPort, D-Sub, USB-хаб, PiP]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1943, "Монитор Nec 24@ P241W black", 21);
+  (1942, "Монитор Nec 24@ P241W black", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1944, "Монитор Nec 24@ PA241W black [P-IPS, 1920x1200, 1000:1, 8 мс, 178гор/178вер, DVI, D-Sub]", 21);
+  (1943, "Монитор Nec 24@ PA241W black [P-IPS, 1920x1200, 1000:1, 8 мс, 178гор/178вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1945, "Монитор Nec 27@ EA273WM Black-Black", 21);
+  (1944, "Монитор Nec 27@ EA273WM Black-Black", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1946, "Монитор Nec 27@ PA271W [P-IPS, 2560 x 1440]", 21);
+  (1945, "Монитор Nec 27@ PA271W [P-IPS, 2560 x 1440]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1947, "Монитор Samsung 17@ E1720NR [1280x1024, DC 50000:1, 5мс, 170гор/160вер, D-Sub]", 21);
+  (1946, "Монитор Samsung 17@ E1720NR [1280x1024, DC 50000:1, 5мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1948, "Монитор Samsung 18.5@ E1920N [1366x768, DC 50000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
+  (1947, "Монитор Samsung 18.5@ E1920N [1366x768, DC 50000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1949, "Монитор Samsung 18.5@ S19A100N [LED, 1366x768, 5М:1, 5мс. 90гор/65вер,D-Sub]", 21);
+  (1948, "Монитор Samsung 18.5@ S19A100N [LED, 1366x768, 5М:1, 5мс. 90гор/65вер,D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1950, "Монитор Samsung 18.5@ S19A10N [1366x768, DC 50000:1, 5мс, 170гор/160вер, D-Sub]", 21);
+  (1949, "Монитор Samsung 18.5@ S19A10N [1366x768, DC 50000:1, 5мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1951, "Монитор Samsung 18.5@ S19B150N [LED, 1366x768, 5 мс, 1000:1, 95гор/65вер, D-Sub]", 21);
+  (1950, "Монитор Samsung 18.5@ S19B150N [LED, 1366x768, 5 мс, 1000:1, 95гор/65вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1952, "Монитор Samsung 18.5@ S19B220B  [LED, 1366x768, 5 мс, 1000:1, 170гор/160вер, DVI, D-Sub]", 21);
+  (1951, "Монитор Samsung 18.5@ S19B220B  [LED, 1366x768, 5 мс, 1000:1, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1953, "Монитор Samsung 18.5@ S19B300N [LED, 1366x768, 5 мс, 1000:1, 170гор/160вер, D-Sub]", 21);
+  (1952, "Монитор Samsung 18.5@ S19B300N [LED, 1366x768, 5 мс, 1000:1, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1954, "Монитор Samsung 18.5@ S19B350N [LED, 1366x768, 5 мс, 1000:1, 170гор/160вер, D-Sub]", 21);
+  (1953, "Монитор Samsung 18.5@ S19B350N [LED, 1366x768, 5 мс, 1000:1, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1955, "Монитор Samsung 18.5@ S19B370B [LED, 1366x768, 5 мс, 1000:1, 170гор/160вер, D-Sub, DVI]", 21);
+  (1954, "Монитор Samsung 18.5@ S19B370B [LED, 1366x768, 5 мс, 1000:1, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1956, "Монитор Samsung 19@ S19A200NW [LED, 1440x900, 70000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
+  (1955, "Монитор Samsung 19@ S19A200NW [LED, 1440x900, 70000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1957, "Монитор Samsung 19@ S19A450BR [LED, 1280x1024, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1956, "Монитор Samsung 19@ S19A450BR [LED, 1280x1024, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1958, "Монитор Samsung 19@ S19A450BW [LED, 1440x900, 70000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1957, "Монитор Samsung 19@ S19A450BW [LED, 1440x900, 70000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1959, "Монитор Samsung 20@ S20B300B [LED, 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1958, "Монитор Samsung 20@ S20B300B [LED, 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1960, "Монитор Samsung 20@ S20B300N [LED, 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
+  (1959, "Монитор Samsung 20@ S20B300N [LED, 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1961, "Монитор Samsung 20@ S20B370B [LED, 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1960, "Монитор Samsung 20@ S20B370B [LED, 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1962, "Монитор Samsung 20@ S20B370N [LED, 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
+  (1961, "Монитор Samsung 20@ S20B370N [LED, 1600x900, 1000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1963, "Монитор Samsung 21.5@ S22A100N [LED, 1920x1080, 90гор/65вер, 600:1, 5 мс, D-Sub]", 21);
+  (1962, "Монитор Samsung 21.5@ S22A100N [LED, 1920x1080, 90гор/65вер, 600:1, 5 мс, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1964, "Монитор Samsung 21.5@ S22A200B [LED, 1920x1080, 1000:1, 170гор/160вер, DVI, D-Sub]", 21);
+  (1963, "Монитор Samsung 21.5@ S22A200B [LED, 1920x1080, 1000:1, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1965, "Монитор Samsung 21.5@ S22A350N [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
+  (1964, "Монитор Samsung 21.5@ S22A350N [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1966, "Монитор Samsung 21.5@ S22B150N [LED, 1920x1080, 90гор/65вер, 600:1, 5 мс, D-Sub]", 21);
+  (1965, "Монитор Samsung 21.5@ S22B150N [LED, 1920x1080, 90гор/65вер, 600:1, 5 мс, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1967, "Монитор Samsung 21.5@ S22B300B [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, DVI, D-Sub]", 21);
+  (1966, "Монитор Samsung 21.5@ S22B300B [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1968, "Монитор Samsung 21.5@ S22B300N [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
+  (1967, "Монитор Samsung 21.5@ S22B300N [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1969, "Монитор Samsung 21.5@ S22B350B [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1968, "Монитор Samsung 21.5@ S22B350B [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1970, "Монитор Samsung 21.5@ S22B350H [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, HDMI]", 21);
+  (1969, "Монитор Samsung 21.5@ S22B350H [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1971, "Монитор Samsung 21.5@ S22B350T [PLS, LED, 1920x1080, 5мс, 5M:1, 178гор/178вер, HDMI, D-Sub]", 21);
+  (1970, "Монитор Samsung 21.5@ S22B350T [PLS, LED, 1920x1080, 5мс, 5M:1, 178гор/178вер, HDMI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1972, "Монитор Samsung 21.5@ S22B370B [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1971, "Монитор Samsung 21.5@ S22B370B [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1973, "Монитор Samsung 21.5@ S22B370H [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, HDMI]", 21);
+  (1972, "Монитор Samsung 21.5@ S22B370H [LED, 1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1974, "Монитор Samsung 23@ C23A550U [LED, 1920x1080, 2мс, 170гор/160вер, HDMI, D-Sub, USB-хаб]", 21);
+  (1973, "Монитор Samsung 23@ C23A550U [LED, 1920x1080, 2мс, 170гор/160вер, HDMI, D-Sub, USB-хаб]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1975, "Монитор Samsung 23@ S23B300B [LED, 1920x1080, 5 мс, 1000:1, 170гор/160вер, DVI, D-Sub]", 21);
+  (1974, "Монитор Samsung 23@ S23B300B [LED, 1920x1080, 5 мс, 1000:1, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1976, "Монитор Samsung 23@ S23B300N [LED, 1920x1080, 5 мс, 1000:1, 170гор/160вер, D-Sub]", 21);
+  (1975, "Монитор Samsung 23@ S23B300N [LED, 1920x1080, 5 мс, 1000:1, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1977, "Монитор Samsung 23@ S23B350B [LED, 1920x1080, 5 мс, 1000:1, 170гор/160вер, DVI, D-Sub]", 21);
+  (1976, "Монитор Samsung 23@ S23B350B [LED, 1920x1080, 5 мс, 1000:1, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1978, "Монитор Samsung 23@ S23B350H [LED, 1920x1080, 2 мс, 1000:1, 170гор/160вер, HDMI, D-Sub]", 21);
+  (1977, "Монитор Samsung 23@ S23B350H [LED, 1920x1080, 2 мс, 1000:1, 170гор/160вер, HDMI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1979, "Монитор Samsung 23@ S23B370B [LED, 1920x1080, 5 мс, 1000:1, 170гор/160вер, DVI, D-Sub]", 21);
+  (1978, "Монитор Samsung 23@ S23B370B [LED, 1920x1080, 5 мс, 1000:1, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1980, "Монитор Samsung 23@ S23B370H [LED, 1920x1080, 5 мс, 1000:1, 170гор/160вер, HDMI, D-Sub]", 21);
+  (1979, "Монитор Samsung 23@ S23B370H [LED, 1920x1080, 5 мс, 1000:1, 170гор/160вер, HDMI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1981, "Монитор Samsung 23@ T23A750 [TV, LED, 1920x1080, 3 мс, 170гор/160вер, 7 Вт х2, HDMIx2, SCART, USB-плеер]", 21);
+  (1980, "Монитор Samsung 23@ T23A750 [TV, LED, 1920x1080, 3 мс, 170гор/160вер, 7 Вт х2, HDMIx2, SCART, USB-плеер]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1982, "Монитор Samsung 23.6@ S24B150BL [LED, 1920x1080, Mega DCR (Static 1000:1), 5мс, 90гор/65вер, DVI, D-Sub]", 21);
+  (1981, "Монитор Samsung 23.6@ S24B150BL [LED, 1920x1080, Mega DCR (Static 1000:1), 5мс, 90гор/65вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1983, "Монитор Samsung 23.6@ S24B300BL [LED, 1920x1080, 170гор/160вер, 5 мс, DVI, D-Sub]", 21);
+  (1982, "Монитор Samsung 23.6@ S24B300BL [LED, 1920x1080, 170гор/160вер, 5 мс, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1984, "Монитор Samsung 23.6@ S24B300HL [LED, 1920x1080, 170гор/160вер, 5 мс, D-Sub, HDMI]", 21);
+  (1983, "Монитор Samsung 23.6@ S24B300HL [LED, 1920x1080, 170гор/160вер, 5 мс, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1985, "Монитор Samsung 23.6@ S24B350BL [LED, 1920x1080, 170гор/160вер, 5 мс, DVI, D-Sub]", 21);
+  (1984, "Монитор Samsung 23.6@ S24B350BL [LED, 1920x1080, 170гор/160вер, 5 мс, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1986, "Монитор Samsung 23.6@ S24B350HL [LED, 1920x1080, 170гор/160вер, 2 мс GTG, D-Sub, HDMI]", 21);
+  (1985, "Монитор Samsung 23.6@ S24B350HL [LED, 1920x1080, 170гор/160вер, 2 мс GTG, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1987, "Монитор Samsung 24@ S24A350T [PVA, LED, 1920x1080, 8мс GTG, 178гор/178вер, D-Sub, HDMI]", 21);
+  (1986, "Монитор Samsung 24@ S24A350T [PVA, LED, 1920x1080, 8мс GTG, 178гор/178вер, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1988, "Монитор Samsung 24@ S24A450BW [LED, 1920x1200, 1000:1, 5 мс, 170гор/160вер, DVI, D-Sub]", 21);
+  (1987, "Монитор Samsung 24@ S24A450BW [LED, 1920x1200, 1000:1, 5 мс, 170гор/160вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1989, "Монитор Samsung 24@ S24A650D [LED, 1920x1080, 3000:1, 5 мс, 178гор/178вер, DVI x2, DisplayPort, D-Sub]", 21);
+  (1988, "Монитор Samsung 24@ S24A650D [LED, 1920x1080, 3000:1, 5 мс, 178гор/178вер, DVI x2, DisplayPort, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1990, "Монитор Samsung 24@ S24B300B [LED,1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1989, "Монитор Samsung 24@ S24B300B [LED,1920x1080, 1000:1, 5 мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1991, "Монитор Samsung 24@ S24B350H [LED,1920x1080, 1000:1, 2 мс, 170гор/160вер, D-Sub, HDMI]", 21);
+  (1990, "Монитор Samsung 24@ S24B350H [LED,1920x1080, 1000:1, 2 мс, 170гор/160вер, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1992, "Монитор Samsung 24@ S24B370H [LED,1920x1080, 1000:1, 2 мс, 170гор/160вер, D-Sub, HDMI]", 21);
+  (1991, "Монитор Samsung 24@ S24B370H [LED,1920x1080, 1000:1, 2 мс, 170гор/160вер, D-Sub, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1993, "Монитор Samsung 27@ C27A550U [LED, 1920x1080, 2мс, 170гор/160вер, HDMI, D-Sub, USB-хаб]", 21);
+  (1992, "Монитор Samsung 27@ C27A550U [LED, 1920x1080, 2мс, 170гор/160вер, HDMI, D-Sub, USB-хаб]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1994, "Монитор Samsung 27@ S27A650D [LED, 1920x1080, 3000:1, 8мс, 178гор/178вер, DVI, DisplayPort, D-Sub]", 21);
+  (1993, "Монитор Samsung 27@ S27A650D [LED, 1920x1080, 3000:1, 8мс, 178гор/178вер, DVI, DisplayPort, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1995, "Монитор Samsung 27@ S27B750V [LED, 1920x1080, 1000:1, 2 мс, 170гор/160вер, 5Вт x2, HDMIx2, D-Sub]", 21);
+  (1994, "Монитор Samsung 27@ S27B750V [LED, 1920x1080, 1000:1, 2 мс, 170гор/160вер, 5Вт x2, HDMIx2, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1996, "Монитор ViewSonic 18.5@ VA1931wa-LED [LED, 1366x768, 10M:1, 5мс, 170гор/160вер, D-Sub, TCO03]", 21);
+  (1995, "Монитор ViewSonic 18.5@ VA1931wa-LED [LED, 1366x768, 10M:1, 5мс, 170гор/160вер, D-Sub, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1997, "Монитор ViewSonic 18.5@ VA1936a-LED [LED, 1366x768, 10M:1, 5мс, 170гор/160вер, D-Sub]", 21);
+  (1996, "Монитор ViewSonic 18.5@ VA1936a-LED [LED, 1366x768, 10M:1, 5мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1998, "Монитор ViewSonic 21.5@ VA2231wa-LED [LED, 1920x1080, 10M:1, 5 мс, 170гор/160вер, D-Sub]", 21);
+  (1997, "Монитор ViewSonic 21.5@ VA2231wa-LED [LED, 1920x1080, 10M:1, 5 мс, 170гор/160вер, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (1999, "Монитор ViewSonic 21.5@ VA2248-LED [LED, 1920x1080, 10M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (1998, "Монитор ViewSonic 21.5@ VA2248-LED [LED, 1920x1080, 10M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2000, "Монитор ViewSonic 21.5@ VX2253MH-LED [LED, 1920x1080, 30M:1, 2мс, 170гор/160вер, 2Вт х 2, DVI, D-Sub]", 21);
+  (1999, "Монитор ViewSonic 21.5@ VX2253MH-LED [LED, 1920x1080, 30M:1, 2мс, 170гор/160вер, 2Вт х 2, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2001, "Монитор ViewSonic 23@ VX2336S-LED [E-IPS, LED, 1920x1080, 20M:1, 14мс(GtG), 178гор/178вер, DVI, D-Sub]", 21);
+  (2000, "Монитор ViewSonic 23@ VX2336S-LED [E-IPS, LED, 1920x1080, 20M:1, 14мс(GtG), 178гор/178вер, DVI, D-Sub]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2002, "Монитор ViewSonic 23.6@ V3D245 [3D, LED, 1920x1080, 20M:1, 170гор/160вер, 2мс, 2Вт х2, D-Sub, DVI, HDMI]", 21);
+  (2001, "Монитор ViewSonic 23.6@ V3D245 [3D, LED, 1920x1080, 20M:1, 170гор/160вер, 2мс, 2Вт х2, D-Sub, DVI, HDMI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2003, "Монитор ViewSonic 23.6@ VA2431wma [1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, 2 x 2 Вт, TCO03]", 21);
+  (2002, "Монитор ViewSonic 23.6@ VA2431wma [1920x1080, 1000:1, 5мс, 170гор/160вер, D-Sub, 2 x 2 Вт, TCO03]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2004, "Монитор ViewSonic 23.6@ VX2451MH-LED [LED, 1920x1080, 20M:1, 170гор/160вер, 2мс, 5Вт стерео, DVI, HDMI, D-Sub, черный]", 21);
+  (2003, "Монитор ViewSonic 23.6@ VX2451MH-LED [LED, 1920x1080, 20M:1, 170гор/160вер, 2мс, 5Вт стерео, DVI, HDMI, D-Sub, черный]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2005, "Монитор ViewSonic 23.6@ VX2451MHP-LED [LED, 1920x1080, 30M:1, 2мс, 170гор/160вер, 2.5Вт х2,  DVI, D-Sub, HDMI, белый]", 21);
+  (2004, "Монитор ViewSonic 23.6@ VX2451MHP-LED [LED, 1920x1080, 30M:1, 2мс, 170гор/160вер, 2.5Вт х2,  DVI, D-Sub, HDMI, белый]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2006, "Монитор ViewSonic 24@ VA2448-LED [LED, 1920x1080, 10M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
+  (2005, "Монитор ViewSonic 24@ VA2448-LED [LED, 1920x1080, 10M:1, 5мс, 170гор/160вер, D-Sub, DVI]", 21);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2007, "Монитор ViewSonic 24@ VX2453MH-LED", 21);
+  (2006, "Монитор ViewSonic 24@ VX2453MH-LED", 21);
 INSERT INTO `detail_category` ( `id`, `name` ) VALUES
   (22, "Крепления для мониторов");
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2008, "Универсальное крепление Kromax Office-3 [для 2-х ЖК мониторов, 10@-24@, настольный, 6 ст.свободы, VESA 75/100, до 12 кг]", 22);
+  (2007, "Универсальное крепление Kromax Office-3 [для 2-х ЖК мониторов, 10@-24@, настольный, 6 ст.свободы, VESA 75/100, до 12 кг]", 22);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2009, "Универсальное крепление Tuarex Alta-3002 [для ЖК мониторов, 13@-26@, настольный, 5 ст.свободы, VESA 75/100, до 15 кг]", 22);
+  (2008, "Универсальное крепление Tuarex Alta-3002 [для ЖК мониторов, 13@-26@, настольный, 5 ст.свободы, VESA 75/100, до 15 кг]", 22);
 INSERT INTO `detail_category` ( `id`, `name` ) VALUES
   (23, "Моноблоки");
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2010, "18.5@ Компьютер-моноблок Acer Aspire Z1650 Atom D2500(1.86)/2GB/320Gb/nVidia ION2/DVD-RW/WiFi/Cam/ Win7 Starter", 23);
+  (2009, "18.5@ Компьютер-моноблок Acer Aspire Z1650 Atom D2500(1.86)/2GB/320Gb/nVidia ION2/DVD-RW/WiFi/Cam/ Win7 Starter", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2011, "18.5@ Компьютер-моноблок Acer Aspire Z1650 Atom D2550(1.86)/2GB/500Gb/Intel HD/DVD-RW/WiFi/Cam/ Win7 Starter", 23);
+  (2010, "18.5@ Компьютер-моноблок Acer Aspire Z1650 Atom D2550(1.86)/2GB/500Gb/Intel HD/DVD-RW/WiFi/Cam/ Win7 Starter", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2012, "20.1@ Компьютер-моноблок Acer Aspire Z1800 (HD+) Pentium G630 (2.7)/3GB/500GB/Intel HD/DVD-RW/WiFi/Cam/Kb+M/Win7 HB", 23);
+  (2011, "20.1@ Компьютер-моноблок Acer Aspire Z1800 (HD+) Pentium G630 (2.7)/3GB/500GB/Intel HD/DVD-RW/WiFi/Cam/Kb+M/Win7 HB", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2013, "20.1@ Компьютер-моноблок Acer Aspire Z1800 (HD+) Pentium G630 (2.7/3GB/500GB/Intel HD/DVD-RW/WiFi/Cam/Kb+M/Win7 HB", 23);
+  (2012, "20.1@ Компьютер-моноблок Acer Aspire Z1800 (HD+) Pentium G630 (2.7/3GB/500GB/Intel HD/DVD-RW/WiFi/Cam/Kb+M/Win7 HB", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2014, "20.1@ Компьютер-моноблок Acer Aspire Z1800 (PW.SH5E1.011) (HD+) Core i3 2120 (3.3)/4GB/500GB/Intel HD 2000/DVD-RW/WiFi/Cam/Kb+M/Win7 HB", 23);
+  (2013, "20.1@ Компьютер-моноблок Acer Aspire Z1800 (PW.SH5E1.011) (HD+) Core i3 2120 (3.3)/4GB/500GB/Intel HD 2000/DVD-RW/WiFi/Cam/Kb+M/Win7 HB", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2015, "20.1@ Компьютер-моноблок Acer Aspire Z1850 (HD+) Pentium G630 (2.7)/2GB/500GB/Intel HD/DVD-RW/WiFi/Cam/Kb+M/Dos", 23);
+  (2014, "20.1@ Компьютер-моноблок Acer Aspire Z1850 (HD+) Pentium G630 (2.7)/2GB/500GB/Intel HD/DVD-RW/WiFi/Cam/Kb+M/Dos", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2016, "20.1@ Компьютер-моноблок Acer Aspire/PB A3410 (HD+) AMD E450 (1.65)/4GB/500GB/AMD HD6310/DVD-RW/WiFi/Cam/Kb+M/Win7 HP", 23);
+  (2015, "20.1@ Компьютер-моноблок Acer Aspire/PB A3410 (HD+) AMD E450 (1.65)/4GB/500GB/AMD HD6310/DVD-RW/WiFi/Cam/Kb+M/Win7 HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2017, "21.5@ Компьютер-моноблок Acer Aspire Z3620 (FHD) Core i3 2120 (3.3)/4GB/500GB/Intel HD 2000/DVD-RW/WiFi/BT/Cam/Kb+M/Win7 HB", 23);
+  (2016, "21.5@ Компьютер-моноблок Acer Aspire Z3620 (FHD) Core i3 2120 (3.3)/4GB/500GB/Intel HD 2000/DVD-RW/WiFi/BT/Cam/Kb+M/Win7 HB", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2018, "21.5@ Компьютер-моноблок Acer Aspire Z3620 (FHD) Core i3 2120 (3.3)/4GB/500Gb/NV GT520 1Gb/DVD-RW/WiFi/BT/Cam/Kb+M/Win7 HB", 23);
+  (2017, "21.5@ Компьютер-моноблок Acer Aspire Z3620 (FHD) Core i3 2120 (3.3)/4GB/500Gb/NV GT520 1Gb/DVD-RW/WiFi/BT/Cam/Kb+M/Win7 HB", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2019, "21.5@ Компьютер-моноблок Acer Aspire Z3620 (FHD) Pentium G620 (2.6)/2Gb/500Gb/Intel HD/DVD-RW/Kb+M/Dos", 23);
+  (2018, "21.5@ Компьютер-моноблок Acer Aspire Z3620 (FHD) Pentium G620 (2.6)/2Gb/500Gb/Intel HD/DVD-RW/Kb+M/Dos", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2020, "21.5@ Компьютер-моноблок Acer Aspire Z3760 (PW.SGZE1.006) (FHD) Core i3 2120 (3.3)/4GB/500Gb/NV GT520 1Gb/DVD-RW/WiFi/BT/Cam/Kb+M/Win7 HB", 23);
+  (2019, "21.5@ Компьютер-моноблок Acer Aspire Z3760 (PW.SGZE1.006) (FHD) Core i3 2120 (3.3)/4GB/500Gb/NV GT520 1Gb/DVD-RW/WiFi/BT/Cam/Kb+M/Win7 HB", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2021, "21.5@ Компьютер-моноблок Acer Aspire Z3770 (FHD) Core i3 2120 (3.3)/4GB/500Gb/NV GT520 1Gb/DVD-RW/WiFi/BT/Tuner/Cam/Kb+M/Win7 HP", 23);
+  (2020, "21.5@ Компьютер-моноблок Acer Aspire Z3770 (FHD) Core i3 2120 (3.3)/4GB/500Gb/NV GT520 1Gb/DVD-RW/WiFi/BT/Tuner/Cam/Kb+M/Win7 HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2022, "21.5@ Компьютер-моноблок Acer Aspire Z3770 (FHD) Core i3 2120 (3.3)/4GB/500Gb/NV GT620 2Gb/DVD-RW/WiFi/BT/Cam/Kb+M/Win7 HB", 23);
+  (2021, "21.5@ Компьютер-моноблок Acer Aspire Z3770 (FHD) Core i3 2120 (3.3)/4GB/500Gb/NV GT620 2Gb/DVD-RW/WiFi/BT/Cam/Kb+M/Win7 HB", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2023, "21.5@ Компьютер-моноблок Acer Aspire Z3770 (FHD) Core i5 2400s (2.5)/4Gb/500Gb/NV GT520 1Gb/DVDRW/WiF/BT/Tuner/Cam/Kb+M/Win7 HP", 23);
+  (2022, "21.5@ Компьютер-моноблок Acer Aspire Z3770 (FHD) Core i5 2400s (2.5)/4Gb/500Gb/NV GT520 1Gb/DVDRW/WiF/BT/Tuner/Cam/Kb+M/Win7 HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2024, "23@ Компьютер-моноблок Acer Aspire Z5771 (FHD/Touch) Core i3 2120(3.3)/4GB/1Tb/NV GT520 1Gb/DVD-RW/WiFi/BT/Cam/Tuner/Kb+M/Win7 HP", 23);
+  (2023, "23@ Компьютер-моноблок Acer Aspire Z5771 (FHD/Touch) Core i3 2120(3.3)/4GB/1Tb/NV GT520 1Gb/DVD-RW/WiFi/BT/Cam/Tuner/Kb+M/Win7 HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2025, "23@ Компьютер-моноблок Acer Aspire Z5771 (FHD/Touch) Core i3 2120(3.3)/4GB/1Tb/NV GT620 2Gb/DVD-RW/WiFi/BT/Cam/Kb+M/Win7 HP", 23);
+  (2024, "23@ Компьютер-моноблок Acer Aspire Z5771 (FHD/Touch) Core i3 2120(3.3)/4GB/1Tb/NV GT620 2Gb/DVD-RW/WiFi/BT/Cam/Kb+M/Win7 HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2026, "23@ Компьютер-моноблок Acer Aspire Z5771 (FHD/Touch) Core i5 2400S (2.5)/4GB/1Tb/NV GT520 1Gb/DVD-RW/WiFi/BT/Cam/Tuner/Kb+M/Win7 HP", 23);
+  (2025, "23@ Компьютер-моноблок Acer Aspire Z5771 (FHD/Touch) Core i5 2400S (2.5)/4GB/1Tb/NV GT520 1Gb/DVD-RW/WiFi/BT/Cam/Tuner/Kb+M/Win7 HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2027, "23@ Компьютер-моноблок Acer Aspire Z5771 (PW.SHME2.037) (FHD/Touch) Core i3 2120(3.3)/4GB/500Gb/Intel HD/DVD-RW/Wi-Fi/Cam/Kb+M/Win7 HP", 23);
+  (2026, "23@ Компьютер-моноблок Acer Aspire Z5771 (PW.SHME2.037) (FHD/Touch) Core i3 2120(3.3)/4GB/500Gb/Intel HD/DVD-RW/Wi-Fi/Cam/Kb+M/Win7 HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2028, "24@ Компьютер-моноблок Acer Aspire Z5801 (FHD/Touch) Core i5 2400s (2.5)/8GB/1Tb/NV GT530 2Gb/DVD-RW/WiFi/BT/Tuner/Cam/Kb+M/Win7 H", 23);
+  (2027, "24@ Компьютер-моноблок Acer Aspire Z5801 (FHD/Touch) Core i5 2400s (2.5)/8GB/1Tb/NV GT530 2Gb/DVD-RW/WiFi/BT/Tuner/Cam/Kb+M/Win7 H", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2029, "21.5@ Компьютер-моноБлок Apple iMac (MC309) (FHD) Core i5(2.5)/4Gb/500Gb/AMD HD6750 512Mb/DVD±RW/WiFi/BT/Cam/Kb+M/Mac OS", 23);
+  (2028, "21.5@ Компьютер-моноБлок Apple iMac (MC309) (FHD) Core i5(2.5)/4Gb/500Gb/AMD HD6750 512Mb/DVD±RW/WiFi/BT/Cam/Kb+M/Mac OS", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2030, "21.5@ Компьютер-моноБлок Apple iMac (MC812) (FHD) Core i5(2.7)/4Gb/1Tb/AMD HD6770 512Mb/DVD±RW/WiFi/BT/Cam/Kb+M/Mac OS X", 23);
+  (2029, "21.5@ Компьютер-моноБлок Apple iMac (MC812) (FHD) Core i5(2.7)/4Gb/1Tb/AMD HD6770 512Mb/DVD±RW/WiFi/BT/Cam/Kb+M/Mac OS X", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2031, "27@ Компьютер-моноблок Apple iMac (MC813) (WQHD) Core i5(2.7)/4Gb/1Tb/AMD HD6770 512Mb/DVD±RW/WiFi/BT/Cam/Kb+M/Mac OS X 10.6 Snow Leopard", 23);
+  (2030, "27@ Компьютер-моноблок Apple iMac (MC813) (WQHD) Core i5(2.7)/4Gb/1Tb/AMD HD6770 512Mb/DVD±RW/WiFi/BT/Cam/Kb+M/Mac OS X 10.6 Snow Leopard", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2032, "23.6@ Компьютер-моноблок Asus ET2410INTS (FHD/Touch) Core i3 2120 (3.3)/4Gb/1Tb/NV GT540M 1Gb/DVD±RW/Tuner/WiFi/Cam/Kb+M/Win7 HP", 23);
+  (2031, "23.6@ Компьютер-моноблок Asus ET2410INTS (FHD/Touch) Core i3 2120 (3.3)/4Gb/1Tb/NV GT540M 1Gb/DVD±RW/Tuner/WiFi/Cam/Kb+M/Win7 HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2033, "23.6@ Компьютер-моноблок Asus ET2410INTS (FHD/Touch) Core i3 2120 (3.3)/6Gb/1Tb/NV GT540M 1Gb/DVD±RW/Tuner/WiFi/Cam/Kb+M/Win7 HP", 23);
+  (2032, "23.6@ Компьютер-моноблок Asus ET2410INTS (FHD/Touch) Core i3 2120 (3.3)/6Gb/1Tb/NV GT540M 1Gb/DVD±RW/Tuner/WiFi/Cam/Kb+M/Win7 HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2034, "23@ Компьютер-моноблок Dell Inspiron One 2320 (FHD/Touch) Core i3-2100 (3.1 GHz)/4GB/NV GT 525M/1TB/DVD±RW/Wi-Fi/TV-tuner/Kb+M/Win 7HP", 23);
+  (2033, "23@ Компьютер-моноблок Dell Inspiron One 2320 (FHD/Touch) Core i3-2100 (3.1 GHz)/4GB/NV GT 525M/1TB/DVD±RW/Wi-Fi/TV-tuner/Kb+M/Win 7HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2035, "15.6@ Моноблок DNS Office [0156883] (HD Ready) Atom D2700 (2.13GHz)/2Gb/320GB/Wi-Fi/Cam", 23);
+  (2034, "15.6@ Моноблок DNS Office [0156883] (HD Ready) Atom D2700 (2.13GHz)/2Gb/320GB/Wi-Fi/Cam", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2036, "18.5@ Компьютер-моноблок DNS Office [0138657] (HD Ready) Atom D525 (1.8GHz)/1Gb/320GB/DVD±RW/Wi-Fi/Cam/Без Програмного Обеспечения", 23);
+  (2035, "18.5@ Компьютер-моноблок DNS Office [0138657] (HD Ready) Atom D525 (1.8GHz)/1Gb/320GB/DVD±RW/Wi-Fi/Cam/Без Програмного Обеспечения", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2037, "18.5@ Компьютер-моноблок DNS Office [0143628] (HD Ready) Celeron G530 (2.4GHz)/2Gb/250GB/DVD±RW/Wi-Fi/Cam", 23);
+  (2036, "18.5@ Компьютер-моноблок DNS Office [0143628] (HD Ready) Celeron G530 (2.4GHz)/2Gb/250GB/DVD±RW/Wi-Fi/Cam", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2038, "21.5@ Компьютер-моноблок DNS Home [0133651] (FHD) Pentium G840 (2.8 GHz)/2GB/320GB/DVD±RW/Cam/Wi-Fi/BT", 23);
+  (2037, "21.5@ Компьютер-моноблок DNS Home [0133651] (FHD) Pentium G840 (2.8 GHz)/2GB/320GB/DVD±RW/Cam/Wi-Fi/BT", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2039, "21.5@ Компьютер-моноблок DNS Home [0139081] (FHD) Core i3-2330M (2.20GHz)/2GB/320GB/DVD±RW/Cam/Wi-Fi", 23);
+  (2038, "21.5@ Компьютер-моноблок DNS Home [0139081] (FHD) Core i3-2330M (2.20GHz)/2GB/320GB/DVD±RW/Cam/Wi-Fi", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2040, "21.5@ Компьютер-моноблок DNS Home [0143629] (FHD/Touch) Core i3-2125 (3.3GHz)/4GB/500GB/DVD±RW/Cam/Wi-Fi/BT", 23);
+  (2039, "21.5@ Компьютер-моноблок DNS Home [0143629] (FHD/Touch) Core i3-2125 (3.3GHz)/4GB/500GB/DVD±RW/Cam/Wi-Fi/BT", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2041, "21.5@ Компьютер-моноблок DNS Home [0143904] (FHD/Touch) Pentium G620 (2.60 GHz)/2GB/320GB/DVD±RW/Cam/Wi-Fi/BT", 23);
+  (2040, "21.5@ Компьютер-моноблок DNS Home [0143904] (FHD/Touch) Pentium G620 (2.60 GHz)/2GB/320GB/DVD±RW/Cam/Wi-Fi/BT", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2042, "21.5@ Компьютер-моноблок DNS Home [0155857] (FHD) Core i3-2350M (2.30GHz)/2GB/320GB/DVD±RW/Cam/Wi-Fi", 23);
+  (2041, "21.5@ Компьютер-моноблок DNS Home [0155857] (FHD) Core i3-2350M (2.30GHz)/2GB/320GB/DVD±RW/Cam/Wi-Fi", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2043, "21.5@ Компьютер-моноблок DNS Home [0156885] (FHD) Core i5-3470 (3.2GHz)/4GB/500GB/DVD±RW/Cam/Wi-Fi", 23);
+  (2042, "21.5@ Компьютер-моноблок DNS Home [0156885] (FHD) Core i5-3470 (3.2GHz)/4GB/500GB/DVD±RW/Cam/Wi-Fi", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2044, "21.5@ Моноблок DNS Home [0149089] (FHD) Pentium G840 (2.8 GHz)/2Gb/320Gb/DVD±RW/Wi-Fi/Cam", 23);
+  (2043, "21.5@ Моноблок DNS Home [0149089] (FHD) Pentium G840 (2.8 GHz)/2Gb/320Gb/DVD±RW/Wi-Fi/Cam", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2045, "23@ Компьютер-моноблок DNS Extreme [0140181] (FHD) Core i5-2500S (2.7 GHz)/4GB/500GB/HD5730/DVD±RW/Cam/Wi-Fi", 23);
+  (2044, "23@ Компьютер-моноблок DNS Extreme [0140181] (FHD) Core i5-2500S (2.7 GHz)/4GB/500GB/HD5730/DVD±RW/Cam/Wi-Fi", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2046, "23@ Компьютер-моноблок DNS Extreme [0149808] (FHD) Core i3-2120 (3.3 GHz)/4GB/500GB/GT540M/DVD±RW/Cam/Wi-Fi", 23);
+  (2045, "23@ Компьютер-моноблок DNS Extreme [0149808] (FHD) Core i3-2120 (3.3 GHz)/4GB/500GB/GT540M/DVD±RW/Cam/Wi-Fi", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2047, "21.5@ Компьютер-моноблок DNS Home [0154834] (FHD) Core i3-2120 (3.3GHz)/4GB/500GB/DVD±RW/Cam/Wi-Fi/Win 7 HP", 23);
+  (2046, "21.5@ Компьютер-моноблок DNS Home [0154834] (FHD) Core i3-2120 (3.3GHz)/4GB/500GB/DVD±RW/Cam/Wi-Fi/Win 7 HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2048, "21.5@ Компьютер-моноблок DNS Home [0154833] (FHD/Touch) Pentium G630 (2.70 GHz)/4GB/500GB/DVD±RW/Cam/Wi-Fi/BT/Win 7 HP", 23);
+  (2047, "21.5@ Компьютер-моноблок DNS Home [0154833] (FHD/Touch) Pentium G630 (2.70 GHz)/4GB/500GB/DVD±RW/Cam/Wi-Fi/BT/Win 7 HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2049, "20.1@ Компьютер-моноблок HP 3420 LH163ES (HD+) Pentium G850 (2.9)/4GB/500GB/Intel HD/DVD-RW/WiFi/Cam/Kb+M/Dos", 23);
+  (2048, "20.1@ Компьютер-моноблок HP 3420 LH163ES (HD+) Pentium G850 (2.9)/4GB/500GB/Intel HD/DVD-RW/WiFi/Cam/Kb+M/Dos", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2050, "20.1@ Компьютер-моноблок HP 3420 LH164ES (HD+) Pentium G850 (2.9)/4GB/500GB/Intel HD/DVD-RW/WiFi/Cam/Kb+M/Win 7HB", 23);
+  (2049, "20.1@ Компьютер-моноблок HP 3420 LH164ES (HD+) Pentium G850 (2.9)/4GB/500GB/Intel HD/DVD-RW/WiFi/Cam/Kb+M/Win 7HB", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2051, "20.1@ Компьютер-моноблок HP 3420 LH165ES (HD+) Celeron G530 (2.4)/2GB/500GB/Intel HD/DVD-RW/WiFi/Cam/Kb+M/Dos", 23);
+  (2050, "20.1@ Компьютер-моноблок HP 3420 LH165ES (HD+) Celeron G530 (2.4)/2GB/500GB/Intel HD/DVD-RW/WiFi/Cam/Kb+M/Dos", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2052, "20@ Компьютер-моноблок Lenovo C320 (HD+) Celeron G530 (2.4)/2GB/500GB/HD7450 1024Mb/DVDRW/WiFi/Cam/KB+M/Dos", 23);
+  (2051, "20@ Компьютер-моноблок Lenovo C320 (HD+) Celeron G530 (2.4)/2GB/500GB/HD7450 1024Mb/DVDRW/WiFi/Cam/KB+M/Dos", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2053, "20@ Компьютер-моноблок Lenovo C320 (HD+) Celeron G530 (2.4)/2GB/500GB/Intel HD/DVDRW/WiFi/Cam/KB+M/Dos", 23);
+  (2052, "20@ Компьютер-моноблок Lenovo C320 (HD+) Celeron G530 (2.4)/2GB/500GB/Intel HD/DVDRW/WiFi/Cam/KB+M/Dos", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2054, "20@ Компьютер-моноблок Lenovo C320 (HD+) Pentium G630 (2.7)/4GB/320GB/HD7450 1024Mb/DVDRW/WiFi/Cam/KB+M/Dos", 23);
+  (2053, "20@ Компьютер-моноблок Lenovo C320 (HD+) Pentium G630 (2.7)/4GB/320GB/HD7450 1024Mb/DVDRW/WiFi/Cam/KB+M/Dos", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2055, "21.5@ Компьютер-моноблок Lenovo А320 (FHD) Core i3-2310 (2,1 GHz)/2GB/Intel HD3000/750GB/Wi-Fi/Tuner/Cam/W7HB/Kb+mouse", 23);
+  (2054, "21.5@ Компьютер-моноблок Lenovo А320 (FHD) Core i3-2310 (2,1 GHz)/2GB/Intel HD3000/750GB/Wi-Fi/Tuner/Cam/W7HB/Kb+mouse", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2056, "23@ Компьютер-моноблок Lenovo B520A1-i32124G1PU (FHD) Core i3-2120(3.3 GHz)/4GB/1TB/NV GT555 1Gb/DVDRW/Cam/WiFi/BT/KB+M/W7HB", 23);
+  (2055, "23@ Компьютер-моноблок Lenovo B520A1-i32124G1PU (FHD) Core i3-2120(3.3 GHz)/4GB/1TB/NV GT555 1Gb/DVDRW/Cam/WiFi/BT/KB+M/W7HB", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2057, "23@ Компьютер-моноблок Lenovo B540PA2 (FHD/Touch) Core i5-3450(3.1 GHz)/6GB/1Tb/NV GT650 2Gb/DVDRW/Cam/WiFi/BT/KB+M/W7HP", 23);
+  (2056, "23@ Компьютер-моноблок Lenovo B540PA2 (FHD/Touch) Core i5-3450(3.1 GHz)/6GB/1Tb/NV GT650 2Gb/DVDRW/Cam/WiFi/BT/KB+M/W7HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2058, "23@ Компьютер-моноблок Lenovo B540PA2 (FHD/Touch) Core i7-3770(3.4 GHz)/6GB/2Tb/NV GT650 2Gb/DVDRW/Cam/WiFi/BT/KB+M/W7HP", 23);
+  (2057, "23@ Компьютер-моноблок Lenovo B540PA2 (FHD/Touch) Core i7-3770(3.4 GHz)/6GB/2Tb/NV GT650 2Gb/DVDRW/Cam/WiFi/BT/KB+M/W7HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2059, "18,5@ Компьютер-моноблок MSI AE1920-207 (HD Ready/TouchPad) Atom D525(1.8GHz)/2GB/GMA3150/250GB/Cam/DVD-RW/KB+M/W7HP White", 23);
+  (2058, "18,5@ Компьютер-моноблок MSI AE1920-207 (HD Ready/TouchPad) Atom D525(1.8GHz)/2GB/GMA3150/250GB/Cam/DVD-RW/KB+M/W7HP White", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2060, "20@ Компьютер-моноблок MSI AE2050-237RU (HD+/Touch) AMD E450 (1.65)/4Gb/500Gb/AMD 6320/Cam/DVDRW/KB+M/W7HP", 23);
+  (2059, "20@ Компьютер-моноблок MSI AE2050-237RU (HD+/Touch) AMD E450 (1.65)/4Gb/500Gb/AMD 6320/Cam/DVDRW/KB+M/W7HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2061, "21.5@ Компьютер-моноблок MSI AE2210-245RU (FHD/Touch) Core i3-2120(3.3 GHz)/2GB/500Gb/NV GT540 1Gb/Cam/DVDRW/WiFi/KB+M/W7HP", 23);
+  (2060, "21.5@ Компьютер-моноблок MSI AE2210-245RU (FHD/Touch) Core i3-2120(3.3 GHz)/2GB/500Gb/NV GT540 1Gb/Cam/DVDRW/WiFi/KB+M/W7HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2062, "24@ Компьютер-моноблок MSI AE2410-041RU (FHD/Touch) Core i5-2410(2.3 GHz)/4GB/500Gb/NV GT540 1Gb/Cam/DVDRW/WiFi/KB+M/W7HP", 23);
+  (2061, "24@ Компьютер-моноблок MSI AE2410-041RU (FHD/Touch) Core i5-2410(2.3 GHz)/4GB/500Gb/NV GT540 1Gb/Cam/DVDRW/WiFi/KB+M/W7HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2063, "21.5@ Компьютер-моноблок Sony (VPCJ23S1R/B) (FHD/Touch) Core i3 2350M (2.30)/4096/750Gb/HD 6470 512Mb/DVD-SMulti/WiFi/BT/Cam/KB+M/Win7 HP", 23);
+  (2062, "21.5@ Компьютер-моноблок Sony (VPCJ23S1R/B) (FHD/Touch) Core i3 2350M (2.30)/4096/750Gb/HD 6470 512Mb/DVD-SMulti/WiFi/BT/Cam/KB+M/Win7 HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2064, "24@ Компьютер-моноблок Sony (VPCL22S1R/B) (FHD/Touch) Core i5 2430M (2.40)/4096/1Tb/NV GT540M 1Gb/Blu-Ray Combo/WiFi/BT/Cam/KB+M/MS Win 7HP", 23);
+  (2063, "24@ Компьютер-моноблок Sony (VPCL22S1R/B) (FHD/Touch) Core i5 2430M (2.40)/4096/1Tb/NV GT540M 1Gb/Blu-Ray Combo/WiFi/BT/Cam/KB+M/MS Win 7HP", 23);
 INSERT INTO `detail_model` ( `id`, `name`, `category_id` ) VALUES
-  (2065, "24@ Компьютер-моноблок Sony (VPCL22Z1R/B) (FHD/Touch/3D) Core i7 2670QM (2.20)/8192/2Tb/NV GT540M 1Gb/Blu-Ray Combo/WiFi/BT/Cam/Kb+M/MS Win7 HP", 23);
+  (2064, "24@ Компьютер-моноблок Sony (VPCL22Z1R/B) (FHD/Touch/3D) Core i7 2670QM (2.20)/8192/2Tb/NV GT540M 1Gb/Blu-Ray Combo/WiFi/BT/Cam/Kb+M/MS Win7 HP", 23);
 
