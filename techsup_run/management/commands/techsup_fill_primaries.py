@@ -67,16 +67,6 @@ class EquipmentOperationTypeFill(BaseFill):
                      u'Помещение на ремонт'
                     ]
         
-class EquipmentCategoryFill(BaseFill):
-    def __init__(self, *args, **kwargs):
-        self.T    = lambda val: tsm.EquipmentCategory.EquipmentCategory(name = val)
-        self.vals = [
-                     u'Рабочее место',
-                     u'Ноутбук',
-                     u'Оборудование для печати',
-                     u'Оборудование для выступлений'
-                    ]
-        
 class TaskPriorityFill(BaseFill):
     def __init__(self, *args, **kwargs):
         self.T    = lambda val: tsm.TaskPriority.TaskPriority(name = val)
@@ -108,7 +98,6 @@ class Command(BaseCommand):
                       EmployeeOperationTypeFill,
                       DepartmentActivitySphereFill,
                       EquipmentOperationTypeFill,
-                      EquipmentCategoryFill,
                       TaskPriorityFill,
                       TaskStateFill]
         for Filler in FillerList:
