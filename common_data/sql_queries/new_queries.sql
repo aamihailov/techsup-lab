@@ -783,3 +783,84 @@ COMMIT;
 
 END$$
 
+-----------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS delete_employee;
+CREATE PROCEDURE delete_employee(
+                                 IN in_name  VARCHAR( 128 ),
+                                 IN in_phone VARCHAR( 32 ),
+                                 IN in_department_name VARCHAR( 128 )
+                                )
+BEGIN
+
+START TRANSACTION;
+
+-- уволить сотрудника
+
+INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
+    VALUES ( 
+        ( SELECT CURDATE() ),
+        (
+            SELECT id
+            FROM employee_operation_type
+            WHERE LOWER( employee_operation_type.name ) = 'уволен'
+        ),
+        (
+            SELECT id
+            FROM employee
+            WHERE LOWER( employee.name )  LIKE in_name AND
+                  LOWER( employee.phone ) LIKE in_phone
+        ),
+        (
+            SELECT id
+            FROM department
+            WHERE LOWER( department.name ) LIKE in_department_name
+        )
+    ); 
+
+COMMIT;
+
+END$$
+
+-----------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS delete_employee_with_date;
+CREATE PROCEDURE delete_employee_with_date(
+                                 IN in_name  VARCHAR( 128 ),
+                                 IN in_phone VARCHAR( 32 ),
+                                 IN in_department_name VARCHAR( 128 ),
+			         in_date DATE
+                                )
+BEGIN
+
+START TRANSACTION;
+
+-- уволить сотрудника
+
+INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
+    VALUES ( 
+        in_date,
+        (
+            SELECT id
+            FROM employee_operation_type
+            WHERE LOWER( employee_operation_type.name ) = 'уволен'
+        ),
+        (
+            SELECT id
+            FROM employee
+            WHERE LOWER( employee.name )  LIKE in_name AND
+                  LOWER( employee.phone ) LIKE in_phone
+        ),
+        (
+            SELECT id
+            FROM department
+            WHERE LOWER( department.name ) LIKE in_department_name
+        )
+    ); 
+
+COMMIT;
+
+END$$
+
+-----------------------------------------------------------------------------------------------
+

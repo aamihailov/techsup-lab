@@ -1,18 +1,3 @@
-DROP PROCEDURE IF EXISTS add_employee_with_date;
-CREATE PROCEDURE add_employee_with_date(
-                               IN in_name       VARCHAR( 128 ),
-                               IN in_phone      VARCHAR( 32 ),
-                               IN in_email      VARCHAR( 75 ),
-                               IN in_addr       VARCHAR( 256 ),
-                               IN in_login      VARCHAR( 64 ),
-                               IN in_password   VARCHAR( 128 ),
-                               IN in_role_name  VARCHAR( 128 ),
-                               IN in_group_name VARCHAR( 128 ),
-                               IN in_department_name VARCHAR( 128 ),
-                               IN in_date DATE
-                             )
-BEGIN
-
 START TRANSACTION;
 
 -- принять сотрудника на работу
@@ -35,7 +20,7 @@ INSERT INTO employee ( name, phone, email, addr, login, password, role_id, group
 
 INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
     VALUES ( 
-        in_date,
+        ?,
         (
             SELECT id
             FROM employee_operation_type
@@ -44,16 +29,15 @@ INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
         (
             SELECT id
             FROM employee
-            WHERE LOWER( employee.name )  LIKE in_name AND
-                  LOWER( employee.phone ) LIKE in_phone
+            WHERE LOWER( employee.name )  LIKE ? AND
+                  LOWER( employee.phone ) LIKE ?
         ),
         (
             SELECT id
             FROM department
-            WHERE LOWER( department.name ) LIKE in_department_name
+            WHERE LOWER( department.name ) LIKE ?
         )
     ); 
 
 COMMIT;
 
-END$$
