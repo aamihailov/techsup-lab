@@ -14,4 +14,5 @@ class Command(Dumpdata):
         data = super(Command, self).handle(*args, **kwargs)
         if kwargs.get('pretty'):
             data = data.decode("unicode_escape").encode("utf8")
-        return data
+            return data
+    
