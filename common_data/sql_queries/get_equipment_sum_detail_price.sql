@@ -1,3 +1,5 @@
+START TRANSACTION;
+
 -- получить расходы по закупке деталей
 -- для конкретного оборудования
 
@@ -12,4 +14,6 @@ WHERE tmp.equipment_id = (
   FROM equipment
   WHERE LOWER( equipment.serial_number ) LIKE ?
 );
+
+COMMIT;
 

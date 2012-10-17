@@ -1,3 +1,5 @@
+START TRANSACTION;
+
 -- получить информацию об общем количестве
 -- выполненных заявок
 
@@ -25,4 +27,6 @@ FROM (
   ON priority_id = task_priority.id
 ) AS tmp1
 WHERE priority_id > 0;
+
+COMMIT;
 

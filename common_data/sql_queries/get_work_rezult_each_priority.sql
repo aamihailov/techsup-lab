@@ -1,3 +1,5 @@
+START TRANSACTION;
+
 -- получить информацию об общем количестве
 -- выполненных заявок по приоритетам
 
@@ -26,4 +28,6 @@ FROM (
 ) AS tmp1
 WHERE priority_id > 0
 GROUP BY priority_id, priority;
+
+COMMIT;
 

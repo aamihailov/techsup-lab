@@ -1,3 +1,5 @@
+START TRANSACTION;
+
 -- поместить оборудование на ремонт
 
 INSERT INTO task ( name, datetime, priority_id, client_id )
@@ -73,4 +75,6 @@ INSERT INTO equipment_operation( datetime, equipment_id, eq_oper_type_id )
             WHERE equipment_operation_type.name = 'помещение на ремонт'
           )
         );
+
+COMMIT;
 

@@ -6,6 +6,8 @@ CREATE PROCEDURE change_equipment_owner (
                                         )
 BEGIN
 
+START TRANSACTION;
+
 -- сменить пользователя оборудования
 
 INSERT INTO equipment_owner( equipment_id, employee_id )
@@ -22,6 +24,9 @@ INSERT INTO equipment_owner( equipment_id, employee_id )
                       employee.password = password
             ) 
         );
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -34,6 +39,8 @@ CREATE PROCEDURE change_task_owner(
                                   ) 
 BEGIN
 
+START TRANSACTION;
+
 -- изменить куратора заявки
 
 UPDATE task
@@ -44,6 +51,9 @@ UPDATE task
                   employee.password = password
         )
     WHERE task.id = task_id;
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -54,11 +64,16 @@ CREATE PROCEDURE delete_department(
                                   )
 BEGIN
 
+START TRANSACTION;
+
 -- удалить организацию
 
 UPDATE department
         SET exists_now = FALSE
         WHERE department.name  = name;
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -68,6 +83,8 @@ CREATE PROCEDURE get_equipment_operation(
                                          IN serial_number VARCHAR( 128 )
                                         )
 BEGIN
+
+START TRANSACTION;
 
 -- получить информацию о всех операциях 
 -- с конкретным оборудованием
@@ -125,6 +142,9 @@ RIGHT JOIN (
     ORDER BY equipment_operation.datetime
 ) AS temp_eq_oper
 ON temp_eq_oper.id = equipment_operation_id;
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -134,6 +154,8 @@ CREATE PROCEDURE get_equipment_owner(
                                      IN serial_number VARCHAR( 128 )
                                     )
 BEGIN
+
+START TRANSACTION;
 
 -- получить всех владельцев конкретного оборудования
 -- с последним изменением статуса (принят/уволен)
@@ -176,6 +198,8 @@ RIGHT JOIN (
 ON employee.id = tmp2.employee_id
 ORDER BY name;
 
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -185,6 +209,8 @@ CREATE PROCEDURE get_equipment_sum_detail_price(
                                                 IN serial_number VARCHAR( 128 )
                                                )
 BEGIN
+
+START TRANSACTION;
 
 -- получить расходы по закупке деталей
 -- для конкретного оборудования
@@ -200,6 +226,9 @@ WHERE tmp.equipment_id = (
     FROM equipment
     WHERE equipment.serial_number LIKE serial_number
 );
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -209,6 +238,8 @@ CREATE PROCEDURE get_equipment_sum_work_price(
                                               IN serial_number VARCHAR( 128 )
                                              )
 BEGIN
+
+START TRANSACTION;
 
 -- получить расходы на работу мастеров
 -- для конкретного оборудования
@@ -228,6 +259,9 @@ FROM (
     ) AS tmp
     ON tmp.task_id = task_operation.task_id
 ) AS tmp1;
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -239,12 +273,17 @@ CREATE PROCEDURE get_group_id(
                              )
 BEGIN
 
+START TRANSACTION;
+
 -- получить номер группы доступа для пользователя
 
 SELECT group_id
 FROM employee
 WHERE employee.login    LIKE login AND
       employee.password LIKE password;
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -252,6 +291,8 @@ END$$
 DROP PROCEDURE IF EXISTS get_task_queue_user;
 CREATE PROCEDURE get_task_queue_user( )
 BEGIN
+
+START TRANSACTION;
 
 -- просмотреть очередь заявок с последним
 -- изменённым статусом для пользователя
@@ -291,7 +332,10 @@ CREATE TEMPORARY TABLE tmp AS
     ON tmp.task_id = task.id
     INNER JOIN task_priority
     ON priority_id = task_priority.id
-    ORDER BY tmp.datetime;     
+    ORDER BY tmp.datetime;
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -305,6 +349,8 @@ CREATE PROCEDURE put_new_task(
                               IN password      VARCHAR ( 128 )
                              )
 BEGIN
+
+START TRANSACTION;
 
 -- добавить новую заявку
 
@@ -336,6 +382,9 @@ INSERT INTO task_equipment ( task_id, equipment_id )
                 WHERE equipment.serial_number LIKE serial_number
            )
           );
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -349,6 +398,8 @@ CREATE PROCEDURE put_equipment_repair(
                                       IN password      VARCHAR ( 128 )
                                     )
 BEGIN
+
+START TRANSACTION;
 
 -- поместить оборудование на ремонт
 
@@ -424,7 +475,11 @@ INSERT INTO equipment_operation( datetime, equipment_id, eq_oper_type_id )
                 FROM equipment_operation_type
                 WHERE equipment_operation_type.name = 'помещение на ремонт'
             )
-          );
+          )
+;
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -432,6 +487,8 @@ END$$
 DROP PROCEDURE IF EXISTS get_work_each_empl;
 CREATE PROCEDURE get_work_each_empl( )
 BEGIN
+
+START TRANSACTION;
 
 -- получить информацию об общем количестве выполненных заявок
 -- для кажого работника
@@ -461,6 +518,9 @@ FROM (
 ) AS tmp1
 WHERE priority_id > 0
 GROUP BY id, name;
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -468,6 +528,8 @@ END$$
 DROP PROCEDURE IF EXISTS get_work_each_prior_empl;
 CREATE PROCEDURE get_work_each_prior_empl( )
 BEGIN
+
+START TRANSACTION;
 
 -- получить информацию околичестве выполненных заявок
 -- для кажого работника по приоритетам заявок
@@ -497,6 +559,9 @@ FROM (
 ) AS tmp1
 WHERE priority_id > 0
 GROUP BY id, priority, name;
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -504,6 +569,8 @@ END$$
 DROP PROCEDURE IF EXISTS get_work_rezult_all;
 CREATE PROCEDURE get_work_rezult_all( )
 BEGIN
+
+START TRANSACTION;
 
 -- получить информацию об общем количестве
 -- выполненных заявок
@@ -532,6 +599,9 @@ FROM (
     ON priority_id = task_priority.id
 ) AS tmp1
 WHERE priority_id > 0;
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -539,6 +609,8 @@ END$$
 DROP PROCEDURE IF EXISTS get_work_rezult_each_priority;
 CREATE PROCEDURE get_work_rezult_each_priority( )
 BEGIN
+
+START TRANSACTION;
 
 -- получить информацию об общем количестве
 -- выполненных заявок по приоритетам
@@ -568,6 +640,9 @@ FROM (
 ) AS tmp1
 WHERE priority_id > 0
 GROUP BY priority_id, priority;
+
+COMMIT;
+
 END$$
 
 -----------------------------------------------------------------------------------------------
@@ -587,12 +662,14 @@ CREATE PROCEDURE add_employee(
                              )
 BEGIN
 
+START TRANSACTION;
+
 -- принять сотрудника на работу
 
 INSERT INTO employee ( name, phone, email, addr, login, password, role_id, group_id )
     VALUES(
         in_name, in_phone, in_email, in_addr, in_login, 
-        md5( in_password),
+        in_password,
         (
             SELECT id
             FROM employee_role
@@ -640,6 +717,9 @@ INSERT INTO equipment_owner ( equipment_id, employee_id )
                   LOWER( employee.phone ) LIKE in_phone
         )
     );
+
+COMMIT;
+
 
 END$$
 

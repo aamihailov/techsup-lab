@@ -1,3 +1,5 @@
+START TRANSACTION;
+
 -- изменить куратора заявки
 
 UPDATE task
@@ -8,4 +10,6 @@ UPDATE task
           md5 ( employee.password = ?
   )
   WHERE task.id = ?;
+
+COMMIT;
 

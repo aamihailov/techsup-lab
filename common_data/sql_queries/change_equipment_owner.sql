@@ -1,3 +1,5 @@
+START TRANSACTION; 
+
 -- сменить пользователя оборудования
 
 INSERT INTO equipment_owner( equipment_id, employee_id )
@@ -14,4 +16,6 @@ INSERT INTO equipment_owner( equipment_id, employee_id )
                   md5( employee.password ) = ?
           ) 
        );
+
+COMMIT;
 

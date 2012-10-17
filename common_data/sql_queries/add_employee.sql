@@ -1,9 +1,11 @@
+START TRANSACTION;
+
 -- принять сотрудника на работу
 
 INSERT INTO employee ( name, phone, email, addr, login, password, role_id, group_id )
     VALUES(
         in_name, in_phone, in_email, in_addr, in_login, 
-        md5( in_password),
+        in_password,
         (
             SELECT id
             FROM employee_role
@@ -51,4 +53,7 @@ INSERT INTO equipment_owner ( equipment_id, employee_id )
                   LOWER( employee.phone ) LIKE ?
         )
     );
+
+COMMIT;
+
 

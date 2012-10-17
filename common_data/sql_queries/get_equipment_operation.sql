@@ -1,3 +1,5 @@
+START TRANSACTION;
+
 -- получить информацию о всех операциях 
 -- с конкретным оборудованием
 
@@ -54,4 +56,7 @@ RIGHT JOIN (
     ORDER BY equipment_operation.datetime
 ) AS temp_eq_oper
 ON temp_eq_oper.id = equipment_operation_id;
+
+COMMIT;
+
 

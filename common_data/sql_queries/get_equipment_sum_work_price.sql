@@ -1,3 +1,5 @@
+START TRANSACTION;
+
 -- получить расходы на работу мастеров
 -- для конкретного оборудования
 
@@ -16,4 +18,6 @@ FROM (
   ) AS tmp
   ON tmp.task_id = task_operation.task_id
 ) AS tmp1;
+
+COMMIT;
 

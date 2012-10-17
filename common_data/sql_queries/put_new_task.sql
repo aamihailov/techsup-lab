@@ -1,3 +1,5 @@
+START TRANSACTION;
+
 -- добавить новую заявку
 
 INSERT INTO task ( name, datetime, priority_id, client_id )
@@ -28,4 +30,6 @@ INSERT INTO task_equipment ( task_id, equipment_id )
               WHERE LOWER( equipment.serial_number ) LIKE ?
            )
           );
+
+COMMIT;
 

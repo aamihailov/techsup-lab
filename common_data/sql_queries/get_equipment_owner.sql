@@ -1,3 +1,5 @@
+START TRANSACTION;
+
 -- получить всех владельцев конкретного оборудования
 -- с последним изменением статуса (принят/уволен)
 
@@ -38,4 +40,6 @@ RIGHT JOIN (
 ) AS tmp2
 ON employee.id = tmp2.employee_id
 ORDER BY name;
+
+COMMIT;
 
