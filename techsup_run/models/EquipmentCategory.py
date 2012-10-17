@@ -6,7 +6,7 @@ import settings as s
 
 # Категория узла
 class EquipmentCategory(models.Model):
-    name  = models.CharField(max_length=s.NODE_CATEGORY_NAME_LENGTH)
+    name  = models.CharField(max_length=s.NODE_CATEGORY_NAME_LENGTH, unique=True)
     
     class Meta:
         app_label = 'techsup_run'

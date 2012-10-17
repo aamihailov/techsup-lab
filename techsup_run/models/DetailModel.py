@@ -6,7 +6,7 @@ import settings as s
 
 # Модель детали
 class DetailModel(models.Model):
-    name      = models.CharField(max_length=s.DETAIL_MODEL_NAME_LENGTH)
+    name      = models.CharField(max_length=s.DETAIL_MODEL_NAME_LENGTH, unique=True)
     category  = models.ForeignKey('DetailCategory')
     
     class Meta:

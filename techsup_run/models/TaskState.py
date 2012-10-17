@@ -6,7 +6,7 @@ import settings as s
 
 # Статус заявки
 class TaskState(models.Model):
-    name  = models.CharField(max_length=s.TASK_STATE_NAME_LENGTH)
+    name  = models.CharField(max_length=s.TASK_STATE_NAME_LENGTH, unique=True)
     
     class Meta:
         app_label = 'techsup_run'

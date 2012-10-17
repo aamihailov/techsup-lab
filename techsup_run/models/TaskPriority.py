@@ -6,7 +6,7 @@ import settings as s
 
 # Приоритет заявки
 class TaskPriority(models.Model):
-    name  = models.CharField(max_length=s.TASK_PRIORITY_NAME_LENGTH)
+    name  = models.CharField(max_length=s.TASK_PRIORITY_NAME_LENGTH, unique=True)
     
     class Meta:
         app_label = 'techsup_run'

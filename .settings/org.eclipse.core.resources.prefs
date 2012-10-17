@@ -17,3 +17,5 @@ encoding//techsup_run/models/Repair.py=utf-8
 encoding//techsup_run/models/RightsGroup.py=utf-8
 encoding//techsup_run/models/Task.py=utf-8
 encoding//techsup_run/models/TaskOperation.py=utf-8
+encoding//techsup_run/models/TaskPriority.py=utf-8
+encoding//techsup_run/models/TaskState.py=utf-8
