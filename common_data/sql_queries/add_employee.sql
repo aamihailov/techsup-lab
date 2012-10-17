@@ -39,21 +39,5 @@ INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
         )
     ); 
 
-INSERT INTO equipment_owner ( equipment_id, employee_id )
-    VALUES (
-        (
-            SELECT id
-            FROM equipment
-            WHERE equipment.serial_number LIKE ?
-        ),
-        (
-            SELECT id
-            FROM employee
-            WHERE LOWER( employee.name )  LIKE ? AND
-                  LOWER( employee.phone ) LIKE ?
-        )
-    );
-
 COMMIT;
-
 

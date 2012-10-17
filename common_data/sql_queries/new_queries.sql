@@ -15,13 +15,13 @@ INSERT INTO equipment_owner( equipment_id, employee_id )
             (
                 SELECT equipment.id
                 FROM equipment
-                WHERE equipment.serial_number = serial_number
+                WHERE LOWER( equipment.serial_number ) LIKE serial_number
             ), 
             (
                 SELECT employee.id
                 FROM employee
-                WHERE employee.login    = login AND
-                      employee.password = password
+                WHERE employee.login    LIKE login AND
+                      employee.password LIKE password
             ) 
         );
 
@@ -47,8 +47,8 @@ UPDATE task
     SET owner_id = (
             SELECT employee.id
             FROM employee
-            WHERE employee.login    = login AND
-                  employee.password = password
+            WHERE employee.login    LIKE login AND
+                  employee.password LIKE password
         )
     WHERE task.id = task_id;
 
@@ -70,7 +70,7 @@ START TRANSACTION;
 
 UPDATE department
         SET exists_now = FALSE
-        WHERE department.name  = name;
+        WHERE LOWER( department.name ) LIKE name;
 
 COMMIT;
 
@@ -115,7 +115,7 @@ INNER JOIN (
         WHERE equipment_id = (
             SELECT equipment.id
             FROM equipment
-            WHERE equipment.serial_number LIKE serial_number
+            WHERE LOWER( equipment.serial_number ) LIKE serial_number
         ) AND eq_oper_type_id = ( 
             SELECT equipment_operation_type.id
             FROM equipment_operation_type
@@ -137,7 +137,7 @@ RIGHT JOIN (
           equipment_operation.equipment_id = (
             SELECT equipment.id
             FROM equipment
-            WHERE equipment.serial_number LIKE serial_number
+            WHERE LOWER( equipment.serial_number ) LIKE serial_number
     )
     ORDER BY equipment_operation.datetime
 ) AS temp_eq_oper
@@ -191,7 +191,7 @@ RIGHT JOIN (
         WHERE equipment_owner.equipment_id = (
             SELECT equipment.id
             FROM equipment
-            WHERE equipment.serial_number LIKE serial_number
+            WHERE LOWER( equipment.serial_number ) LIKE serial_number
         )
    )
 ) AS tmp2
@@ -224,7 +224,7 @@ FROM (
 WHERE tmp.equipment_id = (
     SELECT id
     FROM equipment
-    WHERE equipment.serial_number LIKE serial_number
+    WHERE LOWER( equipment.serial_number ) LIKE serial_number
 );
 
 COMMIT;
@@ -254,7 +254,7 @@ FROM (
         WHERE equipment_id = (
             SELECT id
             FROM equipment
-            WHERE equipment.serial_number LIKE serial_number
+            WHERE LOWER( equipment.serial_number ) LIKE serial_number
         )
     ) AS tmp
     ON tmp.task_id = task_operation.task_id
@@ -379,7 +379,7 @@ INSERT INTO task_equipment ( task_id, equipment_id )
            (
                 SELECT id
                 FROM equipment
-                WHERE equipment.serial_number LIKE serial_number
+                WHERE LOWER( equipment.serial_number ) LIKE serial_number
            )
           );
 
@@ -455,7 +455,7 @@ INSERT INTO task_equipment ( task_id, equipment_id )
             (
                 SELECT id
                 FROM equipment
-                WHERE equipment.serial_number LIKE serial_number
+                WHERE LOWER( equipment.serial_number ) LIKE serial_number
             )
           );
 
@@ -468,7 +468,7 @@ INSERT INTO equipment_operation( datetime, equipment_id, eq_oper_type_id )
             (
                 SELECT id
                 FROM equipment
-                WHERE equipment.serial_number LIKE serial_number
+                WHERE LOWER( equipment.serial_number ) LIKE serial_number
             ),
             (
                 SELECT id
@@ -657,8 +657,7 @@ CREATE PROCEDURE add_employee(
                                IN in_password   VARCHAR( 128 ),
                                IN in_role_name  VARCHAR( 128 ),
                                IN in_group_name VARCHAR( 128 ),
-                               IN in_department_name VARCHAR( 128 ),
-                               IN in_serial_number   VARCHAR( 128 )
+                               IN in_department_name VARCHAR( 128 )
                              )
 BEGIN
 
@@ -703,6 +702,68 @@ INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
         )
     ); 
 
+COMMIT;
+
+END$$
+
+-----------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS add_employee_with_date;
+CREATE PROCEDURE add_employee_with_date(
+                               IN in_name       VARCHAR( 128 ),
+                               IN in_phone      VARCHAR( 32 ),
+                               IN in_email      VARCHAR( 75 ),
+                               IN in_addr       VARCHAR( 256 ),
+                               IN in_login      VARCHAR( 64 ),
+                               IN in_password   VARCHAR( 128 ),
+                               IN in_role_name  VARCHAR( 128 ),
+                               IN in_group_name VARCHAR( 128 ),
+                               IN in_department_name VARCHAR( 128 ),
+                               IN in_date DATE
+                             )
+BEGIN
+
+START TRANSACTION;
+
+-- принять сотрудника на работу
+
+INSERT INTO employee ( name, phone, email, addr, login, password, role_id, group_id )
+    VALUES(
+        in_name, in_phone, in_email, in_addr, in_login, 
+        in_password,
+        (
+            SELECT id
+            FROM employee_role
+            WHERE LOWER( employee_role.name ) LIKE in_role_name
+        ),
+        (
+            SELECT id
+            FROM rights_group
+            WHERE LOWER( rights_group.name ) LIKE in_group_name
+        )
+    );
+
+INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
+    VALUES ( 
+        in_date,
+        (
+            SELECT id
+            FROM employee_operation_type
+            WHERE LOWER( employee_operation_type.name ) = 'принят'
+        ),
+        (
+            SELECT id
+            FROM employee
+            WHERE LOWER( employee.name )  LIKE in_name AND
+                  LOWER( employee.phone ) LIKE in_phone
+        ),
+        (
+            SELECT id
+            FROM department
+            WHERE LOWER( department.name ) LIKE in_department_name
+        )
+    ); 
+
 INSERT INTO equipment_owner ( equipment_id, employee_id )
     VALUES (
         (
@@ -720,8 +781,5 @@ INSERT INTO equipment_owner ( equipment_id, employee_id )
 
 COMMIT;
 
-
 END$$
-
------------------------------------------------------------------------------------------------
 
