@@ -4,7 +4,8 @@ UPDATE task
   SET owner_id = (
     SELECT employee.id
     FROM employee
-    WHERE LOWER( employee.login )    = ? AND
-          LOWER( employee.password ) = ?
+    WHERE employee.login          = ? AND
+          md5 ( employee.password = ?
   )
   WHERE task.id = ?;
+

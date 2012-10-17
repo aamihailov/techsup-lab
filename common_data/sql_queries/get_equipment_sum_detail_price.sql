@@ -12,3 +12,4 @@ WHERE tmp.equipment_id = (
   FROM equipment
   WHERE LOWER( equipment.serial_number ) LIKE ?
 );
+

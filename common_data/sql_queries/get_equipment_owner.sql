@@ -38,3 +38,4 @@ RIGHT JOIN (
 ) AS tmp2
 ON employee.id = tmp2.employee_id
 ORDER BY name;
+

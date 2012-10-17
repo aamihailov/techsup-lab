@@ -7,8 +7,8 @@ INSERT INTO task ( name, datetime, priority_id, client_id )
           (
             SELECT id
             FROM employee
-            WHERE LOWER( employee.login )    LIKE ? AND
-                  LOWER( employee.password ) LIKE ?
+            WHERE employee.login           LIKE ? AND
+                  md5( employee.password ) LIKE ?
           )
         );
 
@@ -29,8 +29,8 @@ INSERT INTO task_operation( datetime, task_id, technic_id, state_id )
           (
             SELECT id
             FROM employee
-            WHERE LOWER( employee.login )    LIKE ? AND
-                  LOWER( employee.password ) LIKE ?
+            WHERE employee.login           LIKE ? AND
+                  md5( employee.password ) LIKE ?
           ),
           (
             SELECT id
@@ -73,3 +73,4 @@ INSERT INTO equipment_operation( datetime, equipment_id, eq_oper_type_id )
             WHERE equipment_operation_type.name = 'помещение на ремонт'
           )
         );
+

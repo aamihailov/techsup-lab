@@ -26,3 +26,4 @@ FROM (
 ) AS tmp1
 WHERE priority_id > 0
 GROUP BY priority_id, priority;
+

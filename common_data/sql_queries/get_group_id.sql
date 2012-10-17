@@ -2,5 +2,6 @@
 
 SELECT group_id
 FROM employee
-WHERE LOWER( employee.login )    LIKE ? AND
-      LOWER( employee.password ) LIKE ?;
+WHERE employee.login           LIKE ? AND
+      md5( employee.password ) LIKE ?;
+
