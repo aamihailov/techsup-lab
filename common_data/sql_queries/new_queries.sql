@@ -1,4 +1,4 @@
-DROP PROCEDURE IF EXISTS change_equipment_owner;
+DROP PROCEDURE IF EXISTS change_equipment_owner$$
 CREATE PROCEDURE change_equipment_owner (
                                          IN serial_number VARCHAR(128), 
                                          IN login VARCHAR(128), 
@@ -31,7 +31,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS change_task_owner;
+DROP PROCEDURE IF EXISTS change_task_owner$$
 CREATE PROCEDURE change_task_owner(
                                    IN task_id  INT(11),
                                    IN login    VARCHAR(128), 
@@ -58,7 +58,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS delete_department;
+DROP PROCEDURE IF EXISTS delete_department$$
 CREATE PROCEDURE delete_department( 
                                     IN name VARCHAR( 128 )
                                   )
@@ -78,7 +78,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS get_equipment_operation;
+DROP PROCEDURE IF EXISTS get_equipment_operation$$
 CREATE PROCEDURE get_equipment_operation( 
                                          IN serial_number VARCHAR( 128 )
                                         )
@@ -149,7 +149,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS get_equipment_owner;
+DROP PROCEDURE IF EXISTS get_equipment_owner$$
 CREATE PROCEDURE get_equipment_owner(
                                      IN serial_number VARCHAR( 128 )
                                     )
@@ -204,7 +204,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS get_equipment_sum_detail_price;
+DROP PROCEDURE IF EXISTS get_equipment_sum_detail_price$$
 CREATE PROCEDURE get_equipment_sum_detail_price( 
                                                 IN serial_number VARCHAR( 128 )
                                                )
@@ -233,7 +233,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS get_equipment_sum_work_price;
+DROP PROCEDURE IF EXISTS get_equipment_sum_work_price$$
 CREATE PROCEDURE get_equipment_sum_work_price( 
                                               IN serial_number VARCHAR( 128 )
                                              )
@@ -266,7 +266,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS get_task_queue_user;
+DROP PROCEDURE IF EXISTS get_task_queue_user$$
 CREATE PROCEDURE get_task_queue_user( )
 BEGIN
 
@@ -318,7 +318,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS put_new_task;
+DROP PROCEDURE IF EXISTS put_new_task$$
 CREATE PROCEDURE put_new_task(
                               IN task_name     VARCHAR( 128 ),
                               IN priority_id   INT( 11 ),
@@ -367,7 +367,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS put_equipment_repair;
+DROP PROCEDURE IF EXISTS put_equipment_repair$$
 CREATE PROCEDURE put_equipment_repair( 
                                       IN task_name     VARCHAR( 128 ),
                                       IN priority_id   INT( 11 ),
@@ -462,7 +462,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS get_work_each_empl;
+DROP PROCEDURE IF EXISTS get_work_each_empl$$
 CREATE PROCEDURE get_work_each_empl( )
 BEGIN
 
@@ -503,7 +503,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS get_work_each_prior_empl;
+DROP PROCEDURE IF EXISTS get_work_each_prior_empl$$
 CREATE PROCEDURE get_work_each_prior_empl( )
 BEGIN
 
@@ -544,7 +544,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS get_work_rezult_all;
+DROP PROCEDURE IF EXISTS get_work_rezult_all$$
 CREATE PROCEDURE get_work_rezult_all( )
 BEGIN
 
@@ -584,7 +584,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS get_work_rezult_each_priority;
+DROP PROCEDURE IF EXISTS get_work_rezult_each_priority$$
 CREATE PROCEDURE get_work_rezult_each_priority( )
 BEGIN
 
@@ -625,7 +625,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS add_employee;
+DROP PROCEDURE IF EXISTS add_employee$$
 CREATE PROCEDURE add_employee(
                                IN in_name       VARCHAR( 128 ),
                                IN in_phone      VARCHAR( 32 ),
@@ -679,7 +679,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS add_employee_with_date;
+DROP PROCEDURE IF EXISTS add_employee_with_date$$
 CREATE PROCEDURE add_employee_with_date(
                                IN in_name       VARCHAR( 128 ),
                                IN in_phone      VARCHAR( 32 ),
@@ -734,7 +734,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS delete_employee;
+DROP PROCEDURE IF EXISTS delete_employee$$
 CREATE PROCEDURE delete_employee(
                                  IN in_name  VARCHAR( 128 ),
                                  IN in_phone VARCHAR( 32 ),
@@ -779,7 +779,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS delete_employee_with_date;
+DROP PROCEDURE IF EXISTS delete_employee_with_date$$
 CREATE PROCEDURE delete_employee_with_date(
                                  IN in_name  VARCHAR( 128 ),
                                  IN in_phone VARCHAR( 32 ),
@@ -825,7 +825,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS add_equipment_owner;
+DROP PROCEDURE IF EXISTS add_equipment_owner$$
 CREATE PROCEDURE add_equipment_owner(
                                IN in_name       VARCHAR( 128 ),
                                IN in_phone      VARCHAR( 32 ),
@@ -858,7 +858,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS add_equipment;
+DROP PROCEDURE IF EXISTS add_equipment$$
 CREATE PROCEDURE add_equipment(
                                IN in_name            VARCHAR( 128 ),
                                IN in_serial_number   VARCHAR( 128 ),
@@ -904,7 +904,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS add_equipment_with_date;
+DROP PROCEDURE IF EXISTS add_equipment_with_date$$
 CREATE PROCEDURE add_equipment_with_date(
                                IN in_name            VARCHAR( 128 ),
                                IN in_serial_number   VARCHAR( 128 ),
@@ -951,7 +951,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS add_admin;
+DROP PROCEDURE IF EXISTS add_admin$$
 CREATE PROCEDURE add_admin(
                             IN in_name VARCHAR( 128 ),
                             IN in_phone   VARCHAR( 32 )
@@ -978,7 +978,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS add_technic;
+DROP PROCEDURE IF EXISTS add_technic$$
 CREATE PROCEDURE add_technic(
                               IN in_name VARCHAR( 128 ),
                               IN in_phone   VARCHAR( 32 )
@@ -1005,7 +1005,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS delete_admin;
+DROP PROCEDURE IF EXISTS delete_admin$$
 CREATE PROCEDURE delete_admin(
                               IN in_name VARCHAR( 128 ),
                               IN in_phone   VARCHAR( 32 )
@@ -1031,7 +1031,7 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS delete_technic;
+DROP PROCEDURE IF EXISTS delete_technic$$
 CREATE PROCEDURE delete_technic(
                               IN in_name VARCHAR( 128 ),
                               IN in_phone   VARCHAR( 32 )
