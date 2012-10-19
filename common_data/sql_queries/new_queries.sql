@@ -266,28 +266,6 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS get_group_id;
-CREATE PROCEDURE get_group_id(
-                              IN login    VARCHAR(128),
-                              IN password VARCHAR(128)
-                             )
-BEGIN
-
-START TRANSACTION;
-
--- получить номер группы доступа для пользователя
-
-SELECT group_id
-FROM employee
-WHERE employee.login    LIKE login AND
-      employee.password LIKE password;
-
-COMMIT;
-
-END$$
-
------------------------------------------------------------------------------------------------
-
 DROP PROCEDURE IF EXISTS get_task_queue_user;
 CREATE PROCEDURE get_task_queue_user( )
 BEGIN
@@ -966,6 +944,112 @@ INSERT INTO equipment_operation ( datetime, equipment_id, eq_oper_type_id )
                 WHERE LOWER( equipment_operation_type.name ) = 'поступление'
             )
    );
+
+COMMIT;
+
+END$$
+
+-----------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS add_admin;
+CREATE PROCEDURE add_admin(
+                            IN in_name VARCHAR( 128 ),
+                            IN in_phone   VARCHAR( 32 )
+                          )
+BEGIN
+
+START TRANSACTION;
+
+-- добавить администратора
+
+INSERT INTO admins 
+    VALUES (
+        (
+            SELECT id
+            FROM employee
+            WHERE LOWER( employee.name )  LIKE in_name AND
+                  LOWER( employee.phone ) LIKE in_phone
+        )
+   );
+
+COMMIT;
+
+END$$
+
+-----------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS add_technic;
+CREATE PROCEDURE add_technic(
+                              IN in_name VARCHAR( 128 ),
+                              IN in_phone   VARCHAR( 32 )
+                             )
+BEGIN
+
+START TRANSACTION;
+
+-- добавить техника
+
+INSERT INTO technics
+    VALUES (
+        (
+            SELECT id
+            FROM employee
+            WHERE LOWER( employee.name )  LIKE in_name AND
+                  LOWER( employee.phone ) LIKE in_phone
+        )
+   );
+
+COMMIT;
+
+END$$
+
+-----------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS delete_admin;
+CREATE PROCEDURE delete_admin(
+                              IN in_name VARCHAR( 128 ),
+                              IN in_phone   VARCHAR( 32 )
+                             )
+BEGIN
+
+START TRANSACTION;
+
+-- удалить администратора
+
+DELETE FROM admins 
+WHERE admins.employee_id =
+    (
+        SELECT id
+        FROM employee
+        WHERE LOWER( employee.name )  LIKE in_name AND
+              LOWER( employee.phone ) LIKE in_phone
+    );
+
+COMMIT;
+
+END$$
+
+-----------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS delete_technic;
+CREATE PROCEDURE delete_technic(
+                              IN in_name VARCHAR( 128 ),
+                              IN in_phone   VARCHAR( 32 )
+                             )
+BEGIN
+
+START TRANSACTION;
+
+-- удалить техника
+
+DELETE FROM technics 
+WHERE technics.employee_id =
+    (
+        SELECT id
+        FROM employee
+        WHERE LOWER( employee.name )  LIKE in_name AND
+              LOWER( employee.phone ) LIKE in_phone
+    );
 
 COMMIT;
 
