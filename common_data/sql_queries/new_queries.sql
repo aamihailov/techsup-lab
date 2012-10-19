@@ -1,3 +1,5 @@
+DELIMETER $$
+
 DROP PROCEDURE IF EXISTS change_equipment_owner$$
 CREATE PROCEDURE change_equipment_owner (
                                          IN serial_number VARCHAR(128), 
@@ -1056,4 +1058,6 @@ COMMIT;
 END$$
 
 -----------------------------------------------------------------------------------------------
+
+DELIMETER ;
 
