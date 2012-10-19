@@ -30,7 +30,7 @@ sub role {
   } elsif ( $_[0] < 442 ) {
     return $roles{ 1 };
   }
-  return $roles{ 2 + int rand 7 };
+  return $roles{ 2 + int rand 5 };  # 2..6
 }
 
 sub dep {
@@ -48,7 +48,7 @@ sub dep {
   if ( $_[0] >= 294 ) {
     return $dep{ 1 };
   }
-  return $dep{ 2 + int rand 12 };
+  return $dep{ 2 + int rand 10 };  #2..11
 }
 
 $n = scalar @names;
