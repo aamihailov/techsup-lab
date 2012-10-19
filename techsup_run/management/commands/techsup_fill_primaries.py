@@ -30,15 +30,6 @@ class EmployeeRoleFill(BaseFill):
                      u'Администратор'
                     ]
     
-class RightsGroupFill(BaseFill):
-    def __init__(self, *args, **kwargs):
-        self.T    = lambda val: tsm.RightsGroup.RightsGroup(name = val[0], rights = val[1])
-        self.vals = [
-                     (u'Администратор', 'rw'),
-                     (u'Техник', 'rw'),
-                     (u'Пользователь', 'r') 
-                    ]
-
 class EmployeeOperationTypeFill(BaseFill):
     def __init__(self, *args, **kwargs):
         self.T    = lambda val: tsm.EmployeeOperationType.EmployeeOperationType(name = val)
@@ -96,7 +87,6 @@ class Command(BaseCommand):
     
     def handle(self, *args, **options):
         FillerList = [EmployeeRoleFill, 
-                      RightsGroupFill,
                       EmployeeOperationTypeFill,
                       DepartmentActivitySphereFill,
                       EquipmentOperationTypeFill,
