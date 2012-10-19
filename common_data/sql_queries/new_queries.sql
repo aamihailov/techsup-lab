@@ -973,3 +973,109 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
+DROP PROCEDURE IF EXISTS add_admin;
+CREATE PROCEDURE add_admin(
+                            IN in_name VARCHAR( 128 ),
+                            IN in_phone   VARCHAR( 32 )
+                          )
+BEGIN
+
+START TRANSACTION;
+
+-- добавить администратора
+
+INSERT INTO admins 
+    VALUES (
+        (
+            SELECT id
+            FROM employee
+            WHERE LOWER( employee.name )  LIKE in_name AND
+                  LOWER( employee.phone ) LIKE in_phone
+        )
+   );
+
+COMMIT;
+
+END$$
+
+-----------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS add_technic;
+CREATE PROCEDURE add_technic(
+                              IN in_name VARCHAR( 128 ),
+                              IN in_phone   VARCHAR( 32 )
+                             )
+BEGIN
+
+START TRANSACTION;
+
+-- добавить техника
+
+INSERT INTO technics
+    VALUES (
+        (
+            SELECT id
+            FROM employee
+            WHERE LOWER( employee.name )  LIKE in_name AND
+                  LOWER( employee.phone ) LIKE in_phone
+        )
+   );
+
+COMMIT;
+
+END$$
+
+-----------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS delete_admin;
+CREATE PROCEDURE delete_admin(
+                              IN in_name VARCHAR( 128 ),
+                              IN in_phone   VARCHAR( 32 )
+                             )
+BEGIN
+
+START TRANSACTION;
+
+-- удалить администратора
+
+DELETE FROM admins 
+WHERE admins.employee_id =
+    (
+        SELECT id
+        FROM employee
+        WHERE LOWER( employee.name )  LIKE in_name AND
+              LOWER( employee.phone ) LIKE in_phone
+    );
+
+COMMIT;
+
+END$$
+
+-----------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS delete_technic;
+CREATE PROCEDURE delete_technic(
+                              IN in_name VARCHAR( 128 ),
+                              IN in_phone   VARCHAR( 32 )
+                             )
+BEGIN
+
+START TRANSACTION;
+
+-- удалить техника
+
+DELETE FROM technics 
+WHERE technics.employee_id =
+    (
+        SELECT id
+        FROM employee
+        WHERE LOWER( employee.name )  LIKE in_name AND
+              LOWER( employee.phone ) LIKE in_phone
+    );
+
+COMMIT;
+
+END$$
+
+-----------------------------------------------------------------------------------------------
+
