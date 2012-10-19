@@ -1,25 +1,27 @@
-import DepartmentActivitySphere # --.                                    | f
-import Department               # <-'            --.                     |
-import DetailCategory           # --.              |                     |
-import DetailModel              # <-'              |  --.                |
-import EmployeeRole             # --.              |    |                | f
-import RightsGroup              #   |  --.         |    |                | f
-import Employee                 # <-'  <-'  --.    |    |                |
-import EmployeeOperationType    # --.         |    |    |                | f
-import EmployeeOperation        # <-'       <-'  <-'    |  --.           |
-import EquipmentCategory        #      --.              |    |           |
-import EquipmentModel           # --.  <-'              |    |           |
-import Equipment                # <-'  --.              |    |           |
-import EquipmentOperationType   # --.    |              |    |           | f
-import EquipmentOperation       # <-'  <-'       --.    |    |           |
-import EquipmentOwner           #                  |    |    |           |
-import TaskPriority             #           --.    |    |    |           | f
-import Task                     # --.  --.  <-'    |    |    |           |
-import Repair                   # <-'    |       <-'  <-'    |           |
-import TaskState                # --.    |                   |           | f
-import TaskOperation            # <-'  <-'                 <-'           |
+import Admins                   #                                    --.      |
+import DepartmentActivitySphere # --.                                  |      | f
+import Department               # <-'                 --.              |      |
+import DetailCategory           # --.                   |              |      |
+import DetailModel              # <-'                   |  --.         |      |
+import EmployeeRole             # --.                   |    |         |      | f
+import Employee                 # <-'       --.  --.    |    |  --.  <-' <-.  |
+import EmployeeOperationType    # --.         |    |    |    |    |        |  | f
+import EmployeeOperation        # <-'       <-'    |  <-'    |    |        |  |
+import EquipmentCategory        #      --.         |         |    |        |  |
+import EquipmentModel           # --.  <-'         |         |    |        |  |
+import Equipment                # <-'  --.         |         |    |        |  |
+import EquipmentOperationType   # --.    |         |         |    |        |  | f
+import EquipmentOperation       # <-'  <-'         |  --.    |    |        |  |
+import EquipmentOwner           #                  |    |    |    |        |  |
+import TaskPriority             #           --.    |    |    |    |        |  | f
+import Task                     # --.  --.  <-'  <-'    |    |    |        |  |
+import Repair                   # <-'    |  <-.       <-'  <-'    |        |  |
+import TaskState                # --.    |    |                   |        |  | f
+import TaskOperation            # <-'  <-'  --'                 <-'        |  |
+import Technics                 #                                        --'  |
 
-all_models = [Department.Department,
+all_models = [Admins.Admins,
+              Department.Department,
               DepartmentActivitySphere.DepartmentActivitySphere,
               DetailCategory.DetailCategory,
               DetailModel.DetailModel,
@@ -34,8 +36,8 @@ all_models = [Department.Department,
               EquipmentOperationType.EquipmentOperationType,
               EquipmentOwner.EquipmentOwner,
               Repair.Repair,
-              RightsGroup.RightsGroup,
               Task.Task,
               TaskOperation.TaskOperation,
               TaskPriority.TaskPriority,
-              TaskState.TaskState]
+              TaskState.TaskState,
+              Technics.Technics]
