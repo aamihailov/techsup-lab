@@ -5,31 +5,62 @@ open(phones,      "phones.dat");
 open(addresses,   "addresses.dat");
 open(logins,      "logins.dat");
 open(passwords,   "passwords.dat");
-open(roles,       "roles.dat");
-open(departments, "departments.dat");
+open(dates,		  "dates_in.dat");
 
-sub random_date {
-  "CURRENT_DATE - " . int rand 16000;
-}
-
-$format = "CALL add_employee_with_date('%s', '%s', '%s', '%s', '%s', '%s', '%s', %s);\n";
+$format = "CALL add_employee_with_date('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');\n";
 
 @names       = <names>;
 @phones      = <phones>;
 @addresses   = <addresses>;
 @logins      = <logins>;
 @passwords   = <passwords>;
-@roles       = <roles>;
-@departments = <departments>;
+@dates       = <dates>;
 
-# Техники
-for ( $i = 0; $i < 294; $i++ ) {
-  printf format, @names[$i],
-                 @phones[$i],
-                 @addresses[$i],
-                 @logins[$i],
-                 @passwords[$i],
-                 @roles[$i],
-                 @departments[$i],
-                 random_date;
+sub role {
+  %roles = ( 1 => "Бухгалтер",
+             2 => "Инженер", 
+             3 => "Старший лаборант", 
+             4 => "Младший лаборант", 
+             5 => "Старший научный сотрудник", 
+             6 => "Младший научный сотрудник",
+             7 => "Техник",
+             8 => "Администратор" );
+  if ( $_[0] < 294 ) {
+    return $roles{ 7 };
+  } elsif ( $_[0] < 442 ) {
+    return $roles{ 1 };
+  }
+  return $roles{ 2 + int rand 7 };
+}
+
+sub dep {
+  %dep = ( 1  => "НИИ Физиологии СО РАМН",
+           2  => "Сибирский компьютер", 
+           3  => "Мобильный Сервис", 
+   	       4  => "Виста Сервис", 
+           5  => "Региональный Сервисный Центр", 
+           6  => "Звёздочка", 
+           7  => "Очумелые ручки", 
+           8  => "Fast help",
+           9  => "Домашний мастер",
+           10 => "Красный Робот",
+           11 => "АСЦ ООО Мобайл-Сервис" );
+  if ( $_[0] >= 294 ) {
+    return $dep{ 1 };
+  }
+  return $dep{ 2 + int rand 12 };
+}
+
+$n = scalar @names;
+
+for ( $i = 0; $i < $n; $i++ ) {
+  $na = @names[$i];       chomp $na;
+  $ph = @phones[$i];      chomp $ph;
+  $ad = @addresses[$i];   chomp $ad;
+  $lo = @logins[$i];      chomp $lo;
+  $pa = @passwords[$i];   chomp $pa;
+  $ro = role $i;
+  $de = dep  $i;
+  $da = @dates[$i];       chomp $da;
+  printf $format, $na, $ph, $ad, $lo, $pa, $ro, $de, $da; 
 }
