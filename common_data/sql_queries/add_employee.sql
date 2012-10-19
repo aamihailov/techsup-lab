@@ -1,20 +1,11 @@
-START TRANSACTION;
-
--- принять сотрудника на работу
-
-INSERT INTO employee ( name, phone, email, addr, login, password, role_id, group_id )
+INSERT INTO employee ( name, phone, addr, login, password, role_id )
     VALUES(
-        in_name, in_phone, in_email, in_addr, in_login, 
-        in_password,
+        in_name, in_phone, in_addr, 
+	in_login, in_password,
         (
             SELECT id
             FROM employee_role
             WHERE LOWER( employee_role.name ) LIKE ?
-        ),
-        (
-            SELECT id
-            FROM rights_group
-            WHERE LOWER( rights_group.name ) LIKE ?
         )
     );
 

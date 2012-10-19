@@ -23,5 +23,10 @@ INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
         )
     ); 
 
-COMMIT;
+UPDATE employee
+    SET employee.login    = NULL,
+        employee.password = NULL
+    WHERE LOWER( employee.name )  LIKE ? AND
+          LOWER( employee.phone ) LIKE ?
 
+COMMIT;
