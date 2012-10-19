@@ -266,28 +266,6 @@ END$$
 
 -----------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS get_group_id;
-CREATE PROCEDURE get_group_id(
-                              IN login    VARCHAR(128),
-                              IN password VARCHAR(128)
-                             )
-BEGIN
-
-START TRANSACTION;
-
--- получить номер группы доступа для пользователя
-
-SELECT group_id
-FROM employee
-WHERE employee.login    LIKE login AND
-      employee.password LIKE password;
-
-COMMIT;
-
-END$$
-
------------------------------------------------------------------------------------------------
-
 DROP PROCEDURE IF EXISTS get_task_queue_user;
 CREATE PROCEDURE get_task_queue_user( )
 BEGIN
