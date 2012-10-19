@@ -2,8 +2,6 @@
 
 from django.db import models
 
-import settings as s
-
 # Связь сотрудника и оборудования
 class EquipmentOwner(models.Model):
     equipment = models.ForeignKey('Equipment')
@@ -12,5 +10,5 @@ class EquipmentOwner(models.Model):
     class Meta:
         app_label = 'techsup_run'
         db_table  = 'equipment_owner'
-#        unique_together = ('equipment_id', 'employee_id')
+        unique_together = ('equipment', 'employee')
 

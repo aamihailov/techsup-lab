@@ -12,6 +12,7 @@ import EquipmentModel           # --.  <-'              |    |           |
 import Equipment                # <-'  --.              |    |           |
 import EquipmentOperationType   # --.    |              |    |           | f
 import EquipmentOperation       # <-'  <-'       --.    |    |           |
+import EquipmentOwner           #                  |    |    |           |
 import TaskPriority             #           --.    |    |    |           | f
 import Task                     # --.  --.  <-'    |    |    |           |
 import Repair                   # <-'    |       <-'  <-'    |           |
@@ -31,6 +32,7 @@ all_models = [Department.Department,
               EquipmentModel.EquipmentModel,
               EquipmentOperation.EquipmentOperation,
               EquipmentOperationType.EquipmentOperationType,
+              EquipmentOwner.EquipmentOwner,
               Repair.Repair,
               RightsGroup.RightsGroup,
               Task.Task,
