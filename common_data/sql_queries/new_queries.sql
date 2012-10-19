@@ -1,4 +1,4 @@
-DELIMETER $$
+DELIMITER $$
 
 DROP PROCEDURE IF EXISTS change_equipment_owner$$
 CREATE PROCEDURE change_equipment_owner (
@@ -31,7 +31,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS change_task_owner$$
 CREATE PROCEDURE change_task_owner(
@@ -58,7 +58,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS delete_department$$
 CREATE PROCEDURE delete_department( 
@@ -78,7 +78,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS get_equipment_operation$$
 CREATE PROCEDURE get_equipment_operation( 
@@ -149,7 +149,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS get_equipment_owner$$
 CREATE PROCEDURE get_equipment_owner(
@@ -204,7 +204,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS get_equipment_sum_detail_price$$
 CREATE PROCEDURE get_equipment_sum_detail_price( 
@@ -233,7 +233,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS get_equipment_sum_work_price$$
 CREATE PROCEDURE get_equipment_sum_work_price( 
@@ -266,7 +266,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS get_task_queue_user$$
 CREATE PROCEDURE get_task_queue_user( )
@@ -318,7 +318,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS put_new_task$$
 CREATE PROCEDURE put_new_task(
@@ -367,7 +367,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS put_equipment_repair$$
 CREATE PROCEDURE put_equipment_repair( 
@@ -462,7 +462,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS get_work_each_empl$$
 CREATE PROCEDURE get_work_each_empl( )
@@ -503,7 +503,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS get_work_each_prior_empl$$
 CREATE PROCEDURE get_work_each_prior_empl( )
@@ -544,7 +544,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS get_work_rezult_all$$
 CREATE PROCEDURE get_work_rezult_all( )
@@ -584,7 +584,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS get_work_rezult_each_priority$$
 CREATE PROCEDURE get_work_rezult_each_priority( )
@@ -625,7 +625,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS add_employee$$
 CREATE PROCEDURE add_employee(
@@ -635,7 +635,7 @@ CREATE PROCEDURE add_employee(
                                IN in_login      VARCHAR( 64 ),
                                IN in_password   VARCHAR( 128 ),
                                IN in_role_name  VARCHAR( 128 ),
-			       IN in_department_name VARCHAR( 128 )
+                   IN in_department_name VARCHAR( 128 )
                              )
 BEGIN
 
@@ -646,7 +646,7 @@ START TRANSACTION;
 INSERT INTO employee ( name, phone, addr, login, password, role_id )
     VALUES(
         in_name, in_phone, in_addr, 
-	in_login, in_password,
+    in_login, in_password,
         (
             SELECT id
             FROM employee_role
@@ -679,7 +679,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS add_employee_with_date$$
 CREATE PROCEDURE add_employee_with_date(
@@ -701,7 +701,7 @@ START TRANSACTION;
 INSERT INTO employee ( name, phone, addr, login, password, role_id )
     VALUES(
         in_name, in_phone, in_addr,
-	in_login, in_password,
+    in_login, in_password,
         (
             SELECT id
             FROM employee_role
@@ -734,7 +734,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS delete_employee$$
 CREATE PROCEDURE delete_employee(
@@ -779,14 +779,14 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS delete_employee_with_date$$
 CREATE PROCEDURE delete_employee_with_date(
                                  IN in_name  VARCHAR( 128 ),
                                  IN in_phone VARCHAR( 32 ),
                                  IN in_department_name VARCHAR( 128 ),
-			         in_date DATE
+                     in_date DATE
                                 )
 BEGIN
 
@@ -825,7 +825,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS add_equipment_owner$$
 CREATE PROCEDURE add_equipment_owner(
@@ -858,7 +858,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS add_equipment$$
 CREATE PROCEDURE add_equipment(
@@ -904,7 +904,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS add_equipment_with_date$$
 CREATE PROCEDURE add_equipment_with_date(
@@ -912,7 +912,7 @@ CREATE PROCEDURE add_equipment_with_date(
                                IN in_serial_number   VARCHAR( 128 ),
                                IN in_addr            VARCHAR( 256 ),
                                IN in_equipment_model VARCHAR( 128 ),
-			       IN in_datetime DATETIME                               
+                   IN in_datetime DATETIME                               
                               )
 BEGIN
 
@@ -951,7 +951,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS add_admin$$
 CREATE PROCEDURE add_admin(
@@ -978,7 +978,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS add_technic$$
 CREATE PROCEDURE add_technic(
@@ -1005,7 +1005,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS delete_admin$$
 CREATE PROCEDURE delete_admin(
@@ -1031,7 +1031,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS delete_technic$$
 CREATE PROCEDURE delete_technic(
@@ -1057,7 +1057,7 @@ COMMIT;
 
 END$$
 
------------------------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------------------
 
-DELIMETER ;
+DELIMITER ;
 
