@@ -15,7 +15,6 @@ encoding//techsup_run/models/EquipmentOperation.py=utf-8
 encoding//techsup_run/models/EquipmentOperationType.py=utf-8
 encoding//techsup_run/models/EquipmentOwner.py=utf-8
 encoding//techsup_run/models/Repair.py=utf-8
-encoding//techsup_run/models/RightsGroup.py=utf-8
 encoding//techsup_run/models/Task.py=utf-8
 encoding//techsup_run/models/TaskOperation.py=utf-8
 encoding//techsup_run/models/TaskPriority.py=utf-8
