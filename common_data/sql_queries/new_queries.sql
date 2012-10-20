@@ -629,13 +629,13 @@ END$$
 
 DROP PROCEDURE IF EXISTS add_employee$$
 CREATE PROCEDURE add_employee(
-                               IN in_name       VARCHAR( 128 ),
-                               IN in_phone      VARCHAR( 32 ),
-                               IN in_addr       VARCHAR( 256 ),
-                               IN in_login      VARCHAR( 64 ),
-                               IN in_password   VARCHAR( 128 ),
-                               IN in_role_name  VARCHAR( 128 ),
-                   IN in_department_name VARCHAR( 128 )
+                              IN in_name       VARCHAR( 128 ),
+                              IN in_phone      VARCHAR( 32 ),
+                              IN in_addr       VARCHAR( 256 ),
+                              IN in_login      VARCHAR( 64 ),
+                              IN in_password   VARCHAR( 128 ),
+                              IN in_role_name  VARCHAR( 128 ),
+                              IN in_department_name VARCHAR( 128 )
                              )
 BEGIN
 
@@ -643,37 +643,95 @@ START TRANSACTION;
 
 -- принять сотрудника на работу
 
-INSERT INTO employee ( name, phone, addr, login, password, role_id )
-    VALUES(
-        in_name, in_phone, in_addr, 
-    in_login, in_password,
-        (
-            SELECT id
-            FROM employee_role
-            WHERE LOWER( employee_role.name ) LIKE in_role_name
-        )
-    );
+IF EXISTS
+(
+  SELECT *
+  FROM employee
+  WHERE LOWER( employee.name )  LIKE in_name AND
+        LOWER( employee.phone ) LIKE in_phone
+)
+THEN
+  IF EXISTS
+  (
+    SELECT *
+    FROM (
+      SELECT employee_id, type_id, MAX( employee_operation.date ),
+             employee_operation_type.name AS employee_operation_name
+      FROM employee_operation, employee_operation_type
+      WHERE employee_id = (
+        SELECT id
+        FROM employee
+        WHERE LOWER( employee.name )  LIKE in_name AND
+              LOWER( employee.phone ) LIKE in_phone
+        ) AND type_id = employee_operation_type.id
+    ) AS tmp 
+    WHERE tmp.employee_operation_name = 'уволен'
+  ) 
+  THEN
+    UPDATE employee
+    SET employee.login    = in_login,
+        employee.password = in_password
+    WHERE employee.id = (
+      SELECT id
+      FROM employee
+      WHERE LOWER( employee.name )  LIKE in_name AND
+            LOWER( employee.phone ) LIKE in_phone
+    );  
 
-INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
+    INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
     VALUES ( 
-        ( SELECT CURDATE() ),
-        (
+            (  SELECT CURDATE() ),
+            (
+              SELECT id
+              FROM employee_operation_type
+              WHERE LOWER( employee_operation_type.name ) = 'принят'
+            ),
+            (
+              SELECT id
+              FROM employee
+              WHERE LOWER( employee.name )  LIKE in_name AND
+                    LOWER( employee.phone ) LIKE in_phone
+            ),
+            (
+              SELECT id
+              FROM department
+              WHERE LOWER( department.name ) LIKE in_department_name
+            )
+    );  
+  END IF;  
+ELSE 
+  INSERT INTO employee ( name, phone, addr, login, password, role_id )
+    VALUES(
+           in_name, in_phone, in_addr, 
+           in_login, in_password,
+           ( 
+              SELECT id
+              FROM employee_role
+              WHERE LOWER( employee_role.name ) LIKE in_role_name
+           )
+  );
+
+  INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
+  VALUES ( 
+          ( SELECT CURDATE() ),
+          (
             SELECT id
             FROM employee_operation_type
             WHERE LOWER( employee_operation_type.name ) = 'принят'
-        ),
-        (
+          ),
+          (
             SELECT id
             FROM employee
             WHERE LOWER( employee.name )  LIKE in_name AND
                   LOWER( employee.phone ) LIKE in_phone
-        ),
-        (
+          ),
+          (
             SELECT id
             FROM department
             WHERE LOWER( department.name ) LIKE in_department_name
-        )
-    ); 
+          )
+  );
+END IF;
 
 COMMIT;
 
@@ -699,37 +757,95 @@ START TRANSACTION;
 
 -- принять сотрудника на работу
 
-INSERT INTO employee ( name, phone, addr, login, password, role_id )
-    VALUES(
-        in_name, in_phone, in_addr,
-    in_login, in_password,
-        (
-            SELECT id
-            FROM employee_role
-            WHERE LOWER( employee_role.name ) LIKE in_role_name
-        )
-    );
+IF EXISTS
+(
+  SELECT *
+  FROM employee
+  WHERE LOWER( employee.name )  LIKE in_name AND
+        LOWER( employee.phone ) LIKE in_phone
+)
+THEN
+  IF EXISTS
+  (
+    SELECT *
+    FROM (
+      SELECT employee_id, type_id, MAX( employee_operation.date ),
+             employee_operation_type.name AS employee_operation_name
+      FROM employee_operation, employee_operation_type
+      WHERE employee_id = (
+        SELECT id
+        FROM employee
+        WHERE LOWER( employee.name )  LIKE in_name AND
+              LOWER( employee.phone ) LIKE in_phone
+        ) AND type_id = employee_operation_type.id
+    ) AS tmp 
+    WHERE tmp.employee_operation_name = 'уволен'
+  ) 
+  THEN
+    UPDATE employee
+    SET employee.login    = in_login,
+        employee.password = in_password
+    WHERE employee.id = (
+      SELECT id
+      FROM employee
+      WHERE LOWER( employee.name )  LIKE in_name AND
+            LOWER( employee.phone ) LIKE in_phone
+    );  
 
-INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
+    INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
     VALUES ( 
-        in_date,
-        (
+            in_date,
+            (
+              SELECT id
+              FROM employee_operation_type
+              WHERE LOWER( employee_operation_type.name ) = 'принят'
+            ),
+            (
+              SELECT id
+              FROM employee
+              WHERE LOWER( employee.name )  LIKE in_name AND
+                    LOWER( employee.phone ) LIKE in_phone
+            ),
+            (
+              SELECT id
+              FROM department
+              WHERE LOWER( department.name ) LIKE in_department_name
+            )
+    );  
+  END IF;  
+ELSE 
+  INSERT INTO employee ( name, phone, addr, login, password, role_id )
+    VALUES(
+           in_name, in_phone, in_addr, 
+           in_login, in_password,
+           ( 
+              SELECT id
+              FROM employee_role
+              WHERE LOWER( employee_role.name ) LIKE in_role_name
+           )
+  );
+
+  INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
+  VALUES ( 
+          in_date,
+          (
             SELECT id
             FROM employee_operation_type
             WHERE LOWER( employee_operation_type.name ) = 'принят'
-        ),
-        (
+          ),
+          (
             SELECT id
             FROM employee
             WHERE LOWER( employee.name )  LIKE in_name AND
                   LOWER( employee.phone ) LIKE in_phone
-        ),
-        (
+          ),
+          (
             SELECT id
             FROM department
             WHERE LOWER( department.name ) LIKE in_department_name
-        )
-    ); 
+          )
+  );
+END IF;
 
 COMMIT;
 
