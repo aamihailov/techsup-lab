@@ -832,7 +832,7 @@ END$$
 -- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS add_equipment$$
-CREATE PROCEDURE add_equipment_with_date(
+CREATE PROCEDURE add_equipment(
                                IN in_name            VARCHAR( 128 ),
                                IN in_serial_number   VARCHAR( 128 ),
                                IN in_addr            VARCHAR( 256 ),
