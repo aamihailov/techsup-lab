@@ -629,6 +629,7 @@ END$$
 
 DROP PROCEDURE IF EXISTS add_employee$$
 CREATE PROCEDURE add_employee(
+                              IN in_snils      VARCHAR( 16 ),
                               IN in_name       VARCHAR( 128 ),
                               IN in_phone      VARCHAR( 32 ),
                               IN in_addr       VARCHAR( 256 ),
@@ -647,8 +648,7 @@ IF EXISTS
 (
   SELECT *
   FROM employee
-  WHERE LOWER( employee.name )  LIKE in_name AND
-        LOWER( employee.phone ) LIKE in_phone
+  WHERE LOWER( employee.snils )  LIKE in_snils
 )
 THEN
   IF EXISTS
@@ -661,8 +661,7 @@ THEN
       WHERE employee_id = (
         SELECT id
         FROM employee
-        WHERE LOWER( employee.name )  LIKE in_name AND
-              LOWER( employee.phone ) LIKE in_phone
+        WHERE LOWER( employee.snils )  LIKE in_snils
         ) AND type_id = employee_operation_type.id
     ) AS tmp 
     WHERE tmp.employee_operation_name = 'уволен'
@@ -674,8 +673,7 @@ THEN
     WHERE employee.id = (
       SELECT id
       FROM employee
-      WHERE LOWER( employee.name )  LIKE in_name AND
-            LOWER( employee.phone ) LIKE in_phone
+      WHERE LOWER( employee.snils )  LIKE in_snils
     );  
 
     INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
@@ -689,8 +687,7 @@ THEN
             (
               SELECT id
               FROM employee
-              WHERE LOWER( employee.name )  LIKE in_name AND
-                    LOWER( employee.phone ) LIKE in_phone
+              WHERE LOWER( employee.snils )  LIKE in_snils
             ),
             (
               SELECT id
@@ -700,9 +697,9 @@ THEN
     );  
   END IF;  
 ELSE 
-  INSERT INTO employee ( name, phone, addr, login, password, role_id )
+  INSERT INTO employee ( snils, name, phone, addr, login, password, role_id )
     VALUES(
-           in_name, in_phone, in_addr, 
+           in_snils, in_name, in_phone, in_addr, 
            in_login, in_password,
            ( 
               SELECT id
@@ -722,8 +719,7 @@ ELSE
           (
             SELECT id
             FROM employee
-            WHERE LOWER( employee.name )  LIKE in_name AND
-                  LOWER( employee.phone ) LIKE in_phone
+            WHERE LOWER( employee.snils )  LIKE in_snils
           ),
           (
             SELECT id
@@ -742,6 +738,7 @@ END$$
 
 DROP PROCEDURE IF EXISTS add_employee_with_date$$
 CREATE PROCEDURE add_employee_with_date(
+                               IN in_snils      VARCHAR( 16 ),
                                IN in_name       VARCHAR( 128 ),
                                IN in_phone      VARCHAR( 32 ),
                                IN in_addr       VARCHAR( 256 ),
@@ -761,8 +758,7 @@ IF EXISTS
 (
   SELECT *
   FROM employee
-  WHERE LOWER( employee.name )  LIKE in_name AND
-        LOWER( employee.phone ) LIKE in_phone
+  WHERE LOWER( employee.snils )  LIKE in_snils
 )
 THEN
   IF EXISTS
@@ -775,8 +771,7 @@ THEN
       WHERE employee_id = (
         SELECT id
         FROM employee
-        WHERE LOWER( employee.name )  LIKE in_name AND
-              LOWER( employee.phone ) LIKE in_phone
+        WHERE LOWER( employee.snils )  LIKE in_snils
         ) AND type_id = employee_operation_type.id
     ) AS tmp 
     WHERE tmp.employee_operation_name = 'уволен'
@@ -788,8 +783,7 @@ THEN
     WHERE employee.id = (
       SELECT id
       FROM employee
-      WHERE LOWER( employee.name )  LIKE in_name AND
-            LOWER( employee.phone ) LIKE in_phone
+      WHERE LOWER( employee.snils )  LIKE in_snils
     );  
 
     INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
@@ -803,8 +797,7 @@ THEN
             (
               SELECT id
               FROM employee
-              WHERE LOWER( employee.name )  LIKE in_name AND
-                    LOWER( employee.phone ) LIKE in_phone
+              WHERE LOWER( employee.snils )  LIKE in_snils
             ),
             (
               SELECT id
@@ -814,9 +807,9 @@ THEN
     );  
   END IF;  
 ELSE 
-  INSERT INTO employee ( name, phone, addr, login, password, role_id )
+  INSERT INTO employee ( snils, name, phone, addr, login, password, role_id )
     VALUES(
-           in_name, in_phone, in_addr, 
+           in_snils, in_name, in_phone, in_addr, 
            in_login, in_password,
            ( 
               SELECT id
@@ -836,8 +829,7 @@ ELSE
           (
             SELECT id
             FROM employee
-            WHERE LOWER( employee.name )  LIKE in_name AND
-                  LOWER( employee.phone ) LIKE in_phone
+            WHERE LOWER( employee.snils )  LIKE in_snils
           ),
           (
             SELECT id
@@ -855,9 +847,7 @@ END$$
 
 DROP PROCEDURE IF EXISTS delete_employee$$
 CREATE PROCEDURE delete_employee(
-                                 IN in_name  VARCHAR( 128 ),
-                                 IN in_phone VARCHAR( 32 ),
-                                 IN in_department_name VARCHAR( 128 )
+                                 IN in_snils VARCHAR( 16 )
                                 )
 BEGIN
 
@@ -865,21 +855,26 @@ START TRANSACTION;
 
 -- уволить сотрудника
 
+CREATE TEMPORARY TABLE temp AS(
+  SELECT *
+  FROM (
+    SELECT employee_id, type_id, MAX( employee_operation.date ),
+           employee_operation_type.name AS employee_operation_name,
+           employee_operation.department_id
+    FROM employee_operation, employee_operation_type
+    WHERE employee_id = (
+      SELECT id
+      FROM employee
+      WHERE LOWER( employee.snils )  LIKE in_snils
+    ) AND type_id = employee_operation_type.id
+  ) AS tmp 
+  WHERE tmp.employee_operation_name = 'принят'
+);
+
 IF EXISTS
 (
     SELECT *
-    FROM (
-      SELECT employee_id, type_id, MAX( employee_operation.date ),
-             employee_operation_type.name AS employee_operation_name
-      FROM employee_operation, employee_operation_type
-      WHERE employee_id = (
-        SELECT id
-        FROM employee
-        WHERE LOWER( employee.name )  LIKE in_name AND
-              LOWER( employee.phone ) LIKE in_phone
-        ) AND type_id = employee_operation_type.id
-    ) AS tmp 
-    WHERE tmp.employee_operation_name = 'принят'
+    FROM temp
 ) 
 THEN
     INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
@@ -893,20 +888,17 @@ THEN
             (
                 SELECT id
                 FROM employee
-                WHERE LOWER( employee.name )  LIKE in_name AND
-                      LOWER( employee.phone ) LIKE in_phone
+                WHERE LOWER( employee.snils )  LIKE in_snils
             ),
-            (
-                SELECT id
-                FROM department
-                WHERE LOWER( department.name ) LIKE in_department_name
+            ( 
+              SELECT department_id
+              FROM temp
             )
         ); 
 
     UPDATE employee
         SET employee.login = NULL, employee.password = NULL
-        WHERE LOWER( employee.name )  LIKE in_name AND
-              LOWER( employee.phone ) LIKE in_phone;
+        WHERE LOWER( employee.snils )  LIKE in_snils;
 END IF;
 
 COMMIT;
@@ -928,21 +920,26 @@ START TRANSACTION;
 
 -- уволить сотрудника
 
+CREATE TEMPORARY TABLE temp AS(
+  SELECT *
+  FROM (
+    SELECT employee_id, type_id, MAX( employee_operation.date ),
+           employee_operation_type.name AS employee_operation_name,
+           employee_operation.department_id
+    FROM employee_operation, employee_operation_type
+    WHERE employee_id = (
+      SELECT id
+      FROM employee
+      WHERE LOWER( employee.snils )  LIKE in_snils
+    ) AND type_id = employee_operation_type.id
+  ) AS tmp 
+  WHERE tmp.employee_operation_name = 'принят'
+);
+
 IF EXISTS
 (
     SELECT *
-    FROM (
-      SELECT employee_id, type_id, MAX( employee_operation.date ),
-             employee_operation_type.name AS employee_operation_name
-      FROM employee_operation, employee_operation_type
-      WHERE employee_id = (
-        SELECT id
-        FROM employee
-        WHERE LOWER( employee.name )  LIKE in_name AND
-              LOWER( employee.phone ) LIKE in_phone
-        ) AND type_id = employee_operation_type.id
-    ) AS tmp 
-    WHERE tmp.employee_operation_name = 'принят'
+    FROM temp
 ) 
 THEN
     INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
@@ -956,21 +953,18 @@ THEN
             (
                 SELECT id
                 FROM employee
-                WHERE LOWER( employee.name )  LIKE in_name AND
-                      LOWER( employee.phone ) LIKE in_phone
+                WHERE LOWER( employee.snils )  LIKE in_snils
             ),
-            (
-                SELECT id
-                FROM department
-                WHERE LOWER( department.name ) LIKE in_department_name
+            ( 
+              SELECT department_id
+              FROM temp
             )
         ); 
 
     UPDATE employee
         SET employee.login    = NULL,
             employee.password = NULL
-        WHERE LOWER( employee.name )  LIKE in_name AND
-              LOWER( employee.phone ) LIKE in_phone;
+        WHERE LOWER( employee.snils )  LIKE in_snils;
 END IF;
 
 COMMIT;
