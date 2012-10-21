@@ -587,6 +587,56 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
+DROP PROCEDURE IF EXISTS add_admin$$
+CREATE PROCEDURE add_admin(
+                            IN in_snils VARCHAR( 16 )
+                          )
+BEGIN
+
+START TRANSACTION;
+
+-- добавить администратора
+
+INSERT INTO admins 
+    VALUES (
+        (
+            SELECT id
+            FROM employee
+            WHERE LOWER( employee.snils )  LIKE in_snils
+        )
+   );
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS add_technic$$
+CREATE PROCEDURE add_technic(
+                              IN in_snils VARCHAR( 16 )
+                            )
+BEGIN
+
+START TRANSACTION;
+
+-- добавить техника
+
+INSERT INTO technics
+    VALUES (
+        (
+            SELECT id
+            FROM employee
+            WHERE LOWER( employee.snils )  LIKE in_snils
+        )
+   );
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
 DROP PROCEDURE IF EXISTS add_new_employee$$
 CREATE PROCEDURE add_new_employee(
                                   IN in_snils      VARCHAR( 16 ),
@@ -901,56 +951,6 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS add_admin$$
-CREATE PROCEDURE add_admin(
-                            IN in_snils VARCHAR( 16 )
-                          )
-BEGIN
-
-START TRANSACTION;
-
--- добавить администратора
-
-INSERT INTO admins 
-    VALUES (
-        (
-            SELECT id
-            FROM employee
-            WHERE LOWER( employee.snils )  LIKE in_snils
-        )
-   );
-
-COMMIT;
-
-END$$
-
--- ---------------------------------------------------------------------------------------------
-
-DROP PROCEDURE IF EXISTS add_technic$$
-CREATE PROCEDURE add_technic(
-                              IN in_snils VARCHAR( 16 )
-                            )
-BEGIN
-
-START TRANSACTION;
-
--- добавить техника
-
-INSERT INTO technics
-    VALUES (
-        (
-            SELECT id
-            FROM employee
-            WHERE LOWER( employee.snils )  LIKE in_snils
-        )
-   );
-
-COMMIT;
-
-END$$
-
--- ---------------------------------------------------------------------------------------------
-
 DROP PROCEDURE IF EXISTS delete_admin$$
 CREATE PROCEDURE delete_admin(
                               IN in_snils VARCHAR( 16 )
@@ -1011,18 +1011,14 @@ BEGIN
 RETURN(
   SELECT department_id
   FROM (
-    SELECT department_id, date
+    SELECT department_id, MAX( employee_operation.date )
     FROM employee_operation
-    WHERE employee_id = (
+    WHERE employee_operation.employee_id = (
       SELECT id
       FROM employee
       WHERE LOWER( employee.snils ) = in_snils
     )
   ) AS temp
-  WHERE temp.date = ( 
-    SELECT MAX( employee_operation.date )
-    FROM employee_operation
-  )
 );
 
 END$$
