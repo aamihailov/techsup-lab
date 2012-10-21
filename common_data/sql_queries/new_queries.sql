@@ -627,8 +627,8 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS add_employee_with_date$$
-CREATE PROCEDURE add_employee_with_date(
+DROP PROCEDURE IF EXISTS add_employee$$
+CREATE PROCEDURE add_employee(
                                IN in_snils      VARCHAR( 16 ),
                                IN in_name       VARCHAR( 128 ),
                                IN in_phone      VARCHAR( 32 ),
@@ -736,8 +736,8 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS delete_employee_with_date$$
-CREATE PROCEDURE delete_employee_with_date(
+DROP PROCEDURE IF EXISTS delete_employee$$
+CREATE PROCEDURE delete_employee(
                                            IN in_snils VARCHAR( 16 ),
                                            IN in_date DATE
                                           )
@@ -831,7 +831,7 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
-DROP PROCEDURE IF EXISTS add_equipment_with_date$$
+DROP PROCEDURE IF EXISTS add_equipment$$
 CREATE PROCEDURE add_equipment_with_date(
                                IN in_name            VARCHAR( 128 ),
                                IN in_serial_number   VARCHAR( 128 ),
@@ -977,4 +977,3 @@ END$$
 -- ---------------------------------------------------------------------------------------------
 
 DELIMITER ;
-
