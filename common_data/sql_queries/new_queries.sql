@@ -903,7 +903,7 @@ END$$
 
 DROP PROCEDURE IF EXISTS add_admin$$
 CREATE PROCEDURE add_admin(
-                            
+                            IN in_snils VARCHAR( 16 )
                           )
 BEGIN
 
@@ -1047,7 +1047,7 @@ INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
     (
       SELECT id
       FROM employee_operation_type
-      WHERE LOWER( equipment_operation_type.name ) = 'отправлен в отпуск'
+      WHERE LOWER( employee_operation_type.name ) = 'отправлен в отпуск'
     ),
     (
       SELECT id
@@ -1063,7 +1063,7 @@ INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
     (
       SELECT id
       FROM employee_operation_type
-      WHERE LOWER( equipment_operation_type.name ) = 'отозван из отпуска'
+      WHERE LOWER( employee_operation_type.name ) = 'отозван из отпуска'
     ),
     (
       SELECT id
