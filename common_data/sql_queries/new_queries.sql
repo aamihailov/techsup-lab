@@ -1184,7 +1184,7 @@ WHERE technics.employee_id =
     (
         SELECT id
         FROM employee
-        IN in_snils VARCHAR( 16 )
+        WHERE LOWER( employee.snils )  LIKE in_snils
     );
 
 COMMIT;
