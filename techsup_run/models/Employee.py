@@ -6,7 +6,7 @@ import settings as s
 
 # Сотрудник
 class Employee(models.Model):
-    snils       = models.CharField(max_length=s.SNILS_LENGTH, primary_key=True)
+    snils       = models.CharField(max_length=s.SNILS_LENGTH, unique=True)
     name        = models.CharField(max_length=s.EMPLOYEE_NAME_LENGTH)
     phone       = models.CharField(max_length=s.EMPLOYEE_PHONE_LENGTH)
     addr        = models.CharField(max_length=s.EMPLOYEE_ADDR_LENGTH)
