@@ -593,8 +593,6 @@ CREATE PROCEDURE add_admin(
                           )
 BEGIN
 
-START TRANSACTION;
-
 -- добавить администратора
 
 INSERT INTO admins 
@@ -606,8 +604,6 @@ INSERT INTO admins
         )
    );
 
-COMMIT;
-
 END$$
 
 -- ---------------------------------------------------------------------------------------------
@@ -617,8 +613,6 @@ CREATE PROCEDURE add_technic(
                               IN in_snils VARCHAR( 16 )
                             )
 BEGIN
-
-START TRANSACTION;
 
 -- добавить техника
 
@@ -630,8 +624,6 @@ INSERT INTO technics
             WHERE LOWER( employee.snils )  LIKE in_snils
         )
    );
-
-COMMIT;
 
 END$$
 
@@ -801,11 +793,60 @@ ELSE
                        );
 END IF;
 
+CASE in_role_name
+  WHEN 'администратор' THEN CALL add_admin( in_snils );
+  WHEN 'техник' THEN CALL add_technic( in_snils );
+  ELSE 
+    BEGIN
+    END;
+END CASE;
+
 COMMIT;
 
 END$$
 
 -- ---------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS delete_admin$$
+CREATE PROCEDURE delete_admin(
+                              IN in_snils VARCHAR( 16 )
+                             )
+BEGIN
+
+-- удалить администратора
+
+DELETE FROM admins 
+WHERE admins.employee_id =
+    (
+        SELECT id
+        FROM employee
+        WHERE LOWER( employee.snils )  LIKE in_snils
+    );
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS delete_technic$$
+CREATE PROCEDURE delete_technic(
+                                IN in_snils VARCHAR( 16 )
+                               )
+BEGIN
+
+-- удалить техника
+
+DELETE FROM technics 
+WHERE technics.employee_id =
+    (
+        SELECT id
+        FROM employee
+        WHERE LOWER( employee.snils )  LIKE in_snils
+    );
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
 
 DROP PROCEDURE IF EXISTS delete_employee$$
 CREATE PROCEDURE delete_employee(
@@ -864,6 +905,14 @@ THEN
             employee.password = NULL
         WHERE LOWER( employee.snils )  LIKE in_snils;
 END IF;
+
+CASE in_role_name
+  WHEN 'администратор' THEN CALL delete_admin( in_snils );
+  WHEN 'техник' THEN CALL delete_technic( in_snils );
+  ELSE 
+    BEGIN
+    END;
+END CASE;
 
 DROP TABLE IF EXISTS temp;
 
@@ -944,54 +993,6 @@ INSERT INTO equipment_operation ( datetime, equipment_id, eq_oper_type_id )
                 WHERE LOWER( equipment_operation_type.name ) = 'поступление'
             )
    );
-
-COMMIT;
-
-END$$
-
--- ---------------------------------------------------------------------------------------------
-
-DROP PROCEDURE IF EXISTS delete_admin$$
-CREATE PROCEDURE delete_admin(
-                              IN in_snils VARCHAR( 16 )
-                             )
-BEGIN
-
-START TRANSACTION;
-
--- удалить администратора
-
-DELETE FROM admins 
-WHERE admins.employee_id =
-    (
-        SELECT id
-        FROM employee
-        WHERE LOWER( employee.snils )  LIKE in_snils
-    );
-
-COMMIT;
-
-END$$
-
--- ---------------------------------------------------------------------------------------------
-
-DROP PROCEDURE IF EXISTS delete_technic$$
-CREATE PROCEDURE delete_technic(
-                                IN in_snils VARCHAR( 16 )
-                               )
-BEGIN
-
-START TRANSACTION;
-
--- удалить техника
-
-DELETE FROM technics 
-WHERE technics.employee_id =
-    (
-        SELECT id
-        FROM employee
-        WHERE LOWER( employee.snils )  LIKE in_snils
-    );
 
 COMMIT;
 
