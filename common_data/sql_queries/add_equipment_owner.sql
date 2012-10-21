@@ -12,8 +12,7 @@ INSERT INTO equipment_owner ( equipment_id, employee_id )
         (
             SELECT id
             FROM employee
-            WHERE LOWER( employee.name )  LIKE ? AND
-                  LOWER( employee.phone ) LIKE ?
+            WHERE LOWER( employee.snils )  LIKE ? 
         )
     );
 
