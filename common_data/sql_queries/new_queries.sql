@@ -86,8 +86,6 @@ CREATE PROCEDURE get_equipment_operation(
                                         )
 BEGIN
 
-START TRANSACTION;
-
 -- получить информацию о всех операциях 
 -- с конкретным оборудованием
 
@@ -145,8 +143,6 @@ RIGHT JOIN (
 ) AS temp_eq_oper
 ON temp_eq_oper.id = equipment_operation_id;
 
-COMMIT;
-
 END$$
 
 -- ---------------------------------------------------------------------------------------------
@@ -156,8 +152,6 @@ CREATE PROCEDURE get_equipment_owner(
                                      IN serial_number VARCHAR( 128 )
                                     )
 BEGIN
-
-START TRANSACTION;
 
 -- получить всех владельцев конкретного оборудования
 -- с последним изменением статуса (принят/уволен)
@@ -200,8 +194,6 @@ RIGHT JOIN (
 ON employee.id = tmp2.employee_id
 ORDER BY name;
 
-COMMIT;
-
 END$$
 
 -- ---------------------------------------------------------------------------------------------
@@ -211,8 +203,6 @@ CREATE PROCEDURE get_equipment_sum_detail_price(
                                                 IN serial_number VARCHAR( 128 )
                                                )
 BEGIN
-
-START TRANSACTION;
 
 -- получить расходы по закупке деталей
 -- для конкретного оборудования
@@ -229,8 +219,6 @@ WHERE tmp.equipment_id = (
     WHERE LOWER( equipment.serial_number ) LIKE serial_number
 );
 
-COMMIT;
-
 END$$
 
 -- ---------------------------------------------------------------------------------------------
@@ -240,8 +228,6 @@ CREATE PROCEDURE get_equipment_sum_work_price(
                                               IN serial_number VARCHAR( 128 )
                                              )
 BEGIN
-
-START TRANSACTION;
 
 -- получить расходы на работу мастеров
 -- для конкретного оборудования
@@ -262,8 +248,6 @@ FROM (
     ON tmp.task_id = task_operation.task_id
 ) AS tmp1;
 
-COMMIT;
-
 END$$
 
 -- ---------------------------------------------------------------------------------------------
@@ -271,8 +255,6 @@ END$$
 DROP PROCEDURE IF EXISTS get_task_queue_user$$
 CREATE PROCEDURE get_task_queue_user( )
 BEGIN
-
-START TRANSACTION;
 
 -- просмотреть очередь заявок с последним
 -- изменённым статусом для пользователя
@@ -313,8 +295,6 @@ CREATE TEMPORARY TABLE tmp AS
     INNER JOIN task_priority
     ON priority_id = task_priority.id
     ORDER BY tmp.datetime;
-
-COMMIT;
 
 END$$
 
@@ -464,8 +444,6 @@ DROP PROCEDURE IF EXISTS get_work_each_empl$$
 CREATE PROCEDURE get_work_each_empl( )
 BEGIN
 
-START TRANSACTION;
-
 -- получить информацию об общем количестве выполненных заявок
 -- для кажого работника
 
@@ -495,8 +473,6 @@ FROM (
 WHERE priority_id > 0
 GROUP BY id, name;
 
-COMMIT;
-
 END$$
 
 -- ---------------------------------------------------------------------------------------------
@@ -504,8 +480,6 @@ END$$
 DROP PROCEDURE IF EXISTS get_work_each_prior_empl$$
 CREATE PROCEDURE get_work_each_prior_empl( )
 BEGIN
-
-START TRANSACTION;
 
 -- получить информацию околичестве выполненных заявок
 -- для кажого работника по приоритетам заявок
@@ -536,8 +510,6 @@ FROM (
 WHERE priority_id > 0
 GROUP BY id, priority, name;
 
-COMMIT;
-
 END$$
 
 -- ---------------------------------------------------------------------------------------------
@@ -545,8 +517,6 @@ END$$
 DROP PROCEDURE IF EXISTS get_work_rezult_all$$
 CREATE PROCEDURE get_work_rezult_all( )
 BEGIN
-
-START TRANSACTION;
 
 -- получить информацию об общем количестве
 -- выполненных заявок
@@ -576,8 +546,6 @@ FROM (
 ) AS tmp1
 WHERE priority_id > 0;
 
-COMMIT;
-
 END$$
 
 -- ---------------------------------------------------------------------------------------------
@@ -585,8 +553,6 @@ END$$
 DROP PROCEDURE IF EXISTS get_work_rezult_each_priority$$
 CREATE PROCEDURE get_work_rezult_each_priority( )
 BEGIN
-
-START TRANSACTION;
 
 -- получить информацию об общем количестве
 -- выполненных заявок по приоритетам
@@ -616,8 +582,6 @@ FROM (
 ) AS tmp1
 WHERE priority_id > 0
 GROUP BY priority_id, priority;
-
-COMMIT;
 
 END$$
 
@@ -1042,8 +1006,6 @@ CREATE FUNCTION get_department_id_for_employee(
 RETURNS INT
 BEGIN
 
-START TRANSACTION;
-
 -- получить id-подразделения для сотрудника
 
 RETURN(
@@ -1062,8 +1024,6 @@ RETURN(
     FROM employee_operation
   )
 );
-
-COMMIT;
 
 END$$
 
