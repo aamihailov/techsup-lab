@@ -790,6 +790,8 @@ THEN
         WHERE LOWER( employee.snils )  LIKE in_snils;
 END IF;
 
+DROP TABLE IF EXISTS temp;
+
 COMMIT;
 
 END$$
