@@ -7,8 +7,7 @@ WHERE technics.employee_id =
     (
         SELECT id
         FROM employee
-        WHERE LOWER( employee.name )  LIKE ? AND
-              LOWER( employee.phone ) LIKE ?
+        WHERE LOWER( employee.snils )  LIKE ?
     );
 
 COMMIT;

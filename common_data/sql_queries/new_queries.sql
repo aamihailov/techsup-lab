@@ -1054,7 +1054,7 @@ CREATE PROCEDURE add_equipment_with_date(
                                IN in_serial_number   VARCHAR( 128 ),
                                IN in_addr            VARCHAR( 256 ),
                                IN in_equipment_model VARCHAR( 128 ),
-                   IN in_datetime DATETIME                               
+                               IN in_datetime DATETIME                               
                               )
 BEGIN
 
@@ -1097,8 +1097,7 @@ END$$
 
 DROP PROCEDURE IF EXISTS add_admin$$
 CREATE PROCEDURE add_admin(
-                            IN in_name VARCHAR( 128 ),
-                            IN in_phone   VARCHAR( 32 )
+                            
                           )
 BEGIN
 
@@ -1111,8 +1110,7 @@ INSERT INTO admins
         (
             SELECT id
             FROM employee
-            WHERE LOWER( employee.name )  LIKE in_name AND
-                  LOWER( employee.phone ) LIKE in_phone
+            WHERE LOWER( employee.snils )  LIKE in_snils
         )
    );
 
@@ -1124,9 +1122,8 @@ END$$
 
 DROP PROCEDURE IF EXISTS add_technic$$
 CREATE PROCEDURE add_technic(
-                              IN in_name VARCHAR( 128 ),
-                              IN in_phone   VARCHAR( 32 )
-                             )
+                              IN in_snils VARCHAR( 16 )
+                            )
 BEGIN
 
 START TRANSACTION;
@@ -1138,8 +1135,7 @@ INSERT INTO technics
         (
             SELECT id
             FROM employee
-            WHERE LOWER( employee.name )  LIKE in_name AND
-                  LOWER( employee.phone ) LIKE in_phone
+            WHERE LOWER( employee.snils )  LIKE in_snils
         )
    );
 
@@ -1151,8 +1147,7 @@ END$$
 
 DROP PROCEDURE IF EXISTS delete_admin$$
 CREATE PROCEDURE delete_admin(
-                              IN in_name VARCHAR( 128 ),
-                              IN in_phone   VARCHAR( 32 )
+                              IN in_snils VARCHAR( 16 )
                              )
 BEGIN
 
@@ -1165,8 +1160,7 @@ WHERE admins.employee_id =
     (
         SELECT id
         FROM employee
-        WHERE LOWER( employee.name )  LIKE in_name AND
-              LOWER( employee.phone ) LIKE in_phone
+        WHERE LOWER( employee.snils )  LIKE in_snils
     );
 
 COMMIT;
@@ -1177,9 +1171,8 @@ END$$
 
 DROP PROCEDURE IF EXISTS delete_technic$$
 CREATE PROCEDURE delete_technic(
-                              IN in_name VARCHAR( 128 ),
-                              IN in_phone   VARCHAR( 32 )
-                             )
+                                IN in_snils VARCHAR( 16 )
+                               )
 BEGIN
 
 START TRANSACTION;
@@ -1191,8 +1184,7 @@ WHERE technics.employee_id =
     (
         SELECT id
         FROM employee
-        WHERE LOWER( employee.name )  LIKE in_name AND
-              LOWER( employee.phone ) LIKE in_phone
+        IN in_snils VARCHAR( 16 )
     );
 
 COMMIT;
