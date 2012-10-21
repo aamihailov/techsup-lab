@@ -1035,4 +1035,88 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
+DROP FUNCTION IF EXISTS get_department_id_for_employee$$
+CREATE FUNCTION get_department_id_for_employee(
+                                                in_snils   VARCHAR( 16 )
+                                              )
+RETURNS INT
+BEGIN
+
+START TRANSACTION;
+
+-- получить id-подразделения для сотрудника
+
+RETURN(
+  SELECT department_id
+  FROM (
+    SELECT department_id, date
+    FROM employee_operation
+    WHERE employee_id = (
+      SELECT id
+      FROM employee
+      WHERE LOWER( employee.snils ) = in_snils
+    )
+  ) AS temp
+  WHERE temp.date = ( 
+    SELECT MAX( employee_operation.date )
+    FROM employee_operation
+  )
+);
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS add_vacation$$
+CREATE PROCEDURE add_vacation(
+                              IN in_snils   VARCHAR( 16 ),
+                              IN date_start DATE,
+                              IN date_end   DATE
+                             )
+BEGIN
+
+START TRANSACTION;
+
+-- установить даты отпусков
+
+INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
+  VALUES( 
+    date_start,
+    (
+      SELECT id
+      FROM employee_operation_type
+      WHERE LOWER( equipment_operation_type.name ) = 'отправлен в отпуск'
+    ),
+    (
+      SELECT id
+      FROM employee
+      WHERE LOWER( employee.snils ) = in_snils 
+    ),
+    ( SELECT get_department_id_for_employee( in_snils ) )
+  );
+
+INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
+  VALUES( 
+    date_end,
+    (
+      SELECT id
+      FROM employee_operation_type
+      WHERE LOWER( equipment_operation_type.name ) = 'отозван из отпуска'
+    ),
+    (
+      SELECT id
+      FROM employee
+      WHERE LOWER( employee.snils ) = in_snils 
+    ),
+    ( SELECT get_department_id_for_employee( in_snils ) )
+  );
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
 DELIMITER ;
