@@ -909,9 +909,7 @@ END$$
 
 DROP PROCEDURE IF EXISTS delete_employee_with_date$$
 CREATE PROCEDURE delete_employee_with_date(
-                                 IN in_name  VARCHAR( 128 ),
-                                 IN in_phone VARCHAR( 32 ),
-                                 IN in_department_name VARCHAR( 128 ),
+                                 IN in_snils VARCHAR( 16 ),
                                  IN in_date DATE
                                 )
 BEGIN
