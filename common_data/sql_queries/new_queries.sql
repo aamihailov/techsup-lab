@@ -623,6 +623,115 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
+DROP PROCEDURE IF EXISTS add_new_employee$$
+CREATE PROCEDURE add_new_employee(
+                                  IN in_snils      VARCHAR( 16 ),
+                                  IN in_name       VARCHAR( 128 ),
+                                  IN in_phone      VARCHAR( 32 ),
+                                  IN in_addr       VARCHAR( 256 ),
+                                  IN in_login      VARCHAR( 64 ),
+                                  IN in_password   VARCHAR( 128 ),
+                                  IN in_role_name  VARCHAR( 128 ),
+                                  IN in_department_name VARCHAR( 128 ),
+                                  IN in_date DATE
+                                 )
+BEGIN
+
+START TRANSACTION;
+
+-- принять нового сотрудника на работу
+
+INSERT INTO employee ( snils, name, phone, addr, login, password, role_id )
+  VALUES(
+         in_snils, in_name, in_phone, in_addr, 
+         in_login, in_password,
+         ( 
+            SELECT id
+            FROM employee_role
+            WHERE LOWER( employee_role.name ) LIKE in_role_name
+         )
+);
+
+INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
+  VALUES ( 
+          in_date,
+          (
+            SELECT id
+            FROM employee_operation_type
+            WHERE LOWER( employee_operation_type.name ) = 'принят'
+          ),
+          (
+            SELECT id
+            FROM employee
+            WHERE LOWER( employee.snils )  LIKE in_snils
+          ),
+          (
+            SELECT id
+            FROM department
+            WHERE LOWER( department.name ) LIKE in_department_name
+          )
+  );
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS add_existing_employee$$
+CREATE PROCEDURE add_existing_employee(
+                                        IN in_snils      VARCHAR( 16 ),
+                                        IN in_login      VARCHAR( 64 ),
+                                        IN in_password   VARCHAR( 128 ),
+                                        IN in_role_name  VARCHAR( 128 ),
+                                        IN in_department_name VARCHAR( 128 ),
+                                        IN in_date DATE
+                                      )
+BEGIN
+
+START TRANSACTION;
+
+-- принять существующего сотрудника на работу
+
+UPDATE employee
+  SET employee.login    = in_login,
+      employee.password = in_password,
+      employee.role_id  = ( 
+        SELECT id
+        FROM employee_role
+        WHERE LOWER( employee_role.name ) LIKE in_role_name
+      )
+  WHERE employee.id = (
+    SELECT id
+    FROM employee
+    WHERE LOWER( employee.snils )  LIKE in_snils
+  );  
+
+INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
+  VALUES ( 
+          in_date,
+          (
+            SELECT id
+            FROM employee_operation_type
+            WHERE LOWER( employee_operation_type.name ) = 'принят'
+          ),
+          (
+            SELECT id
+            FROM employee
+            WHERE LOWER( employee.snils )  LIKE in_snils
+          ),
+          (
+            SELECT id
+            FROM department
+            WHERE LOWER( department.name ) LIKE in_department_name
+          )
+  ); 
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
 DROP PROCEDURE IF EXISTS add_employee$$
 CREATE PROCEDURE add_employee(
                                IN in_snils      VARCHAR( 16 ),
@@ -664,66 +773,18 @@ THEN
     WHERE tmp.employee_operation_name = 'уволен'
   ) 
   THEN
-    UPDATE employee
-    SET employee.login    = in_login,
-        employee.password = in_password
-    WHERE employee.id = (
-      SELECT id
-      FROM employee
-      WHERE LOWER( employee.snils )  LIKE in_snils
-    );  
-
-    INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
-    VALUES ( 
-            in_date,
-            (
-              SELECT id
-              FROM employee_operation_type
-              WHERE LOWER( employee_operation_type.name ) = 'принят'
-            ),
-            (
-              SELECT id
-              FROM employee
-              WHERE LOWER( employee.snils )  LIKE in_snils
-            ),
-            (
-              SELECT id
-              FROM department
-              WHERE LOWER( department.name ) LIKE in_department_name
-            )
-    );  
+    CALL add_existing_employee( in_snils, 
+                                in_login, in_password, 
+                                in_role_name, in_department_name,
+                                in_date
+                              );     
   END IF;  
 ELSE 
-  INSERT INTO employee ( snils, name, phone, addr, login, password, role_id )
-    VALUES(
-           in_snils, in_name, in_phone, in_addr, 
-           in_login, in_password,
-           ( 
-              SELECT id
-              FROM employee_role
-              WHERE LOWER( employee_role.name ) LIKE in_role_name
-           )
-  );
-
-  INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
-  VALUES ( 
-          in_date,
-          (
-            SELECT id
-            FROM employee_operation_type
-            WHERE LOWER( employee_operation_type.name ) = 'принят'
-          ),
-          (
-            SELECT id
-            FROM employee
-            WHERE LOWER( employee.snils )  LIKE in_snils
-          ),
-          (
-            SELECT id
-            FROM department
-            WHERE LOWER( department.name ) LIKE in_department_name
-          )
-  );
+  CALL add_new_employee( in_snils, in_name, in_phone, in_addr, 
+                         in_login, in_password, 
+                         in_role_name, in_department_name,
+                         in_date
+                       );
 END IF;
 
 COMMIT;
