@@ -4,7 +4,7 @@ START TRANSACTION;
 
 INSERT INTO task ( name, datetime, priority_id, client_id )
   VALUES( task_name, 
-          ( SELECT NOW() ),
+          ?,
           priority_id, 
           (
             SELECT id
@@ -16,10 +16,7 @@ INSERT INTO task ( name, datetime, priority_id, client_id )
 
 INSERT INTO task_operation( datetime, task_id, technic_id, state_id )
   VALUES(
-          ( 
-            SELECT MAX( datetime )
-            FROM task 
-          ),
+          ?,
           (
             SELECT id
             FROM task
@@ -60,10 +57,7 @@ INSERT INTO task_equipment ( task_id, equipment_id )
 
 INSERT INTO equipment_operation( datetime, equipment_id, eq_oper_type_id )
   VALUES(
-          ( 
-            SELECT MAX( datetime )
-            FROM task 
-          ),
+          ?,
           (
             SELECT id
             FROM equipment
@@ -77,4 +71,3 @@ INSERT INTO equipment_operation( datetime, equipment_id, eq_oper_type_id )
         );
 
 COMMIT;
-
