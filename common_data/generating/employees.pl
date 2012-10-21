@@ -6,8 +6,9 @@ open(addresses,   "addresses.dat");
 open(logins,      "logins.dat");
 open(passwords,   "passwords.dat");
 open(dates,		  "dates_in.dat");
+open(snils,		  "snils.dat");
 
-$format = "CALL add_employee_with_date('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');\n";
+$format = "CALL add_employee('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');\n";
 
 @names       = <names>;
 @phones      = <phones>;
@@ -15,6 +16,7 @@ $format = "CALL add_employee_with_date('%s', '%s', '%s', '%s', '%s', '%s', '%s',
 @logins      = <logins>;
 @passwords   = <passwords>;
 @dates       = <dates>;
+@snils       = <snils>;
 
 sub role {
   %roles = ( 1 => "Бухгалтер",
@@ -54,6 +56,7 @@ sub dep {
 $n = scalar @names;
 
 for ( $i = 0; $i < $n; $i++ ) {
+  $sn = @snils[$i];       chomp $sn;
   $na = @names[$i];       chomp $na;
   $ph = @phones[$i];      chomp $ph;
   $ad = @addresses[$i];   chomp $ad;
@@ -62,5 +65,5 @@ for ( $i = 0; $i < $n; $i++ ) {
   $ro = role $i;
   $de = dep  $i;
   $da = @dates[$i];       chomp $da;
-  printf $format, $na, $ph, $ad, $lo, $pa, $ro, $de, $da; 
+  printf $format, $sn, $na, $ph, $ad, $lo, $pa, $ro, $de, $da; 
 }
