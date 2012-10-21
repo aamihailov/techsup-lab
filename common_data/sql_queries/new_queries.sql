@@ -847,6 +847,30 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
+DROP FUNCTION IF EXISTS get_employee_role$$
+CREATE FUNCTION get_employee_role(
+                                  in_snils VARCHAR( 16 )
+                                 )
+RETURNS CHAR( 128 )
+BEGIN
+
+-- получить должность сотрудника
+
+RETURN(
+  SELECT name
+  FROM employee_role
+  INNER JOIN (
+    SELECT role_id
+    FROM employee
+    WHERE LOWER( employee.snils ) = in_snils
+  ) AS tmp
+  ON employee_role.id = tmp.role_id 
+);
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
 
 DROP PROCEDURE IF EXISTS delete_employee$$
 CREATE PROCEDURE delete_employee(
@@ -906,13 +930,15 @@ THEN
         WHERE LOWER( employee.snils )  LIKE in_snils;
 END IF;
 
-CASE in_role_name
-  WHEN 'администратор' THEN CALL delete_admin( in_snils );
-  WHEN 'техник' THEN CALL delete_technic( in_snils );
-  ELSE 
-    BEGIN
-    END;
-END CASE;
+IF ( 
+  ( SELECT get_employee_role( in_snils ) ) = 'администратор'
+)
+THEN CALL delete_admin( in_snils );
+ELSEIF (
+  ( SELECT get_employee_role( in_snils ) ) = 'техник'
+)
+THEN CALL delete_technic( in_snils );
+END IF;
 
 DROP TABLE IF EXISTS temp;
 
