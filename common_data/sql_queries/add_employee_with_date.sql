@@ -6,8 +6,7 @@ IF EXISTS
 (
   SELECT *
   FROM employee
-  WHERE LOWER( employee.name )  LIKE ? AND
-        LOWER( employee.phone ) LIKE ?
+  WHERE LOWER( employee.snils )  LIKE ?
 )
 THEN
   IF EXISTS
@@ -20,8 +19,7 @@ THEN
       WHERE employee_id = (
         SELECT id
         FROM employee
-        WHERE LOWER( employee.name )  LIKE ? AND
-              LOWER( employee.phone ) LIKE ?
+        WHERE LOWER( employee.snils )  LIKE ?
         ) AND type_id = employee_operation_type.id
     ) AS tmp 
     WHERE tmp.employee_operation_name = 'уволен'
@@ -33,8 +31,7 @@ THEN
     WHERE employee.id = (
       SELECT id
       FROM employee
-      WHERE LOWER( employee.name )  LIKE ? AND
-            LOWER( employee.phone ) LIKE ?
+      WHERE LOWER( employee.snils )  LIKE ?
     );  
 
     INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
@@ -48,8 +45,7 @@ THEN
             (
               SELECT id
               FROM employee
-              WHERE LOWER( employee.name )  LIKE ? AND
-                    LOWER( employee.phone ) LIKE ?
+              WHERE LOWER( employee.snils )  LIKE ?
             ),
             (
               SELECT id
@@ -59,9 +55,9 @@ THEN
     );  
   END IF;  
 ELSE 
-  INSERT INTO employee ( name, phone, addr, login, password, role_id )
+  INSERT INTO employee ( snils, name, phone, addr, login, password, role_id )
     VALUES(
-           ?, ?, ?, 
+           ?, ?, ?, ?, 
            ?, ?,
            ( 
               SELECT id
@@ -81,8 +77,7 @@ ELSE
           (
             SELECT id
             FROM employee
-            WHERE LOWER( employee.name )  LIKE ? AND
-                  LOWER( employee.phone ) LIKE ?
+            WHERE LOWER( employee.snils )  LIKE ?
           ),
           (
             SELECT id
@@ -93,4 +88,3 @@ ELSE
 END IF;
 
 COMMIT;
-

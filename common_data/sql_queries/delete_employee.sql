@@ -2,21 +2,26 @@ START TRANSACTION;
 
 -- уволить сотрудника
 
+CREATE TEMPORARY TABLE temp AS(
+  SELECT *
+  FROM (
+    SELECT employee_id, type_id, MAX( employee_operation.date ),
+           employee_operation_type.name AS employee_operation_name,
+           employee_operation.department_id
+    FROM employee_operation, employee_operation_type
+    WHERE employee_id = (
+      SELECT id
+      FROM employee
+      WHERE LOWER( employee.snils )  LIKE ?
+    ) AND type_id = employee_operation_type.id
+  ) AS tmp 
+  WHERE tmp.employee_operation_name = 'принят'
+);
+
 IF EXISTS
 (
     SELECT *
-    FROM (
-      SELECT employee_id, type_id, MAX( employee_operation.date ),
-             employee_operation_type.name AS employee_operation_name
-      FROM employee_operation, employee_operation_type
-      WHERE employee_id = (
-        SELECT id
-        FROM employee
-        WHERE LOWER( employee.name )  LIKE ? AND
-              LOWER( employee.phone ) LIKE ?
-        ) AND type_id = employee_operation_type.id
-    ) AS tmp 
-    WHERE tmp.employee_operation_name = 'принят'
+    FROM temp
 ) 
 THEN
     INSERT INTO employee_operation ( date, type_id, employee_id, department_id )
@@ -30,8 +35,7 @@ THEN
             (
                 SELECT id
                 FROM employee
-                WHERE LOWER( employee.name )  LIKE ? AND
-                      LOWER( employee.phone ) LIKE ?
+                WHERE LOWER( employee.snils )  LIKE ? 
             ),
             (
                 SELECT id
@@ -43,8 +47,7 @@ THEN
     UPDATE employee
         SET employee.login    = NULL,
             employee.password = NULL
-        WHERE LOWER( employee.name )  LIKE ? AND
-              LOWER( employee.phone ) LIKE ?;
+        WHERE LOWER( employee.snils )  LIKE ?;
 
 COMMIT;
 
