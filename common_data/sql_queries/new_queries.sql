@@ -326,7 +326,8 @@ CREATE PROCEDURE put_new_task(
                               IN priority_id   INT( 11 ),
                               IN serial_number VARCHAR( 128 ),
                               IN login         VARCHAR ( 64 ),
-                              IN password      VARCHAR ( 128 )
+                              IN password      VARCHAR ( 128 ),
+                              IN in_datetime   DATETIME
                              )
 BEGIN
 
@@ -336,7 +337,7 @@ START TRANSACTION;
 
 INSERT INTO task ( name, datetime, priority_id, client_id )
     VALUES( task_name, 
-            ( SELECT NOW() ),
+            in_datetime,
             priority_id, 
             (
                 SELECT id
@@ -375,7 +376,8 @@ CREATE PROCEDURE put_equipment_repair(
                                       IN priority_id   INT( 11 ),
                                       IN serial_number VARCHAR( 128 ),
                                       IN login         VARCHAR ( 64 ),
-                                      IN password      VARCHAR ( 128 )
+                                      IN password      VARCHAR ( 128 ),
+                                      IN in_datetime   DATETIME
                                     )
 BEGIN
 
@@ -385,7 +387,7 @@ START TRANSACTION;
 
 INSERT INTO task ( name, datetime, priority_id, client_id )
     VALUES( task_name, 
-            ( SELECT NOW() ),
+            in_datetime,
             priority_id, 
             (
                 SELECT id
@@ -397,10 +399,7 @@ INSERT INTO task ( name, datetime, priority_id, client_id )
 
 INSERT INTO task_operation( datetime, task_id, technic_id, state_id )
     VALUES(
-            ( 
-                SELECT MAX( datetime )
-                FROM task 
-            ),
+            in_datetime,
             (
                 SELECT id
                 FROM task
@@ -441,10 +440,7 @@ INSERT INTO task_equipment ( task_id, equipment_id )
 
 INSERT INTO equipment_operation( datetime, equipment_id, eq_oper_type_id )
     VALUES(
-            ( 
-                SELECT MAX( datetime )
-                FROM task 
-            ),
+            in_datetime,
             (
                 SELECT id
                 FROM equipment

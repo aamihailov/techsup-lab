@@ -4,7 +4,7 @@ START TRANSACTION;
 
 INSERT INTO task ( name, datetime, priority_id, client_id )
     VALUES( task_name, 
-            ( SELECT NOW() ),
+            ?,
             priority_id, 
             (
               SELECT id
@@ -32,4 +32,3 @@ INSERT INTO task_equipment ( task_id, equipment_id )
           );
 
 COMMIT;
-
