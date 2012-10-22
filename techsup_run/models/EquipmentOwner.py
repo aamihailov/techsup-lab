@@ -4,8 +4,10 @@ from django.db import models
 
 # Связь сотрудника и оборудования
 class EquipmentOwner(models.Model):
-    equipment = models.ForeignKey('Equipment')
-    employee  = models.ForeignKey('Employee')
+    start_datetime  = models.DateTimeField()
+    finish_datetime = models.DateTimeField()
+    equipment       = models.ForeignKey('Equipment')
+    employee        = models.ForeignKey('Employee')
      
     class Meta:
         app_label = 'techsup_run'
