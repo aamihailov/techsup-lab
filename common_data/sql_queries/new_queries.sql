@@ -950,8 +950,9 @@ END$$
 
 DROP PROCEDURE IF EXISTS add_equipment_owner$$
 CREATE PROCEDURE add_equipment_owner(
-                                     IN in_snils         VARCHAR( 16 ),
-                                     IN in_serial_number VARCHAR( 128 )
+                                     IN in_snils          VARCHAR( 16 ),
+                                     IN in_serial_number  VARCHAR( 128 ),
+                                     IN in_start_datetime DATETIME
                                     )
 BEGIN
 
@@ -959,21 +960,39 @@ START TRANSACTION;
 
 -- добавить пользователя оборудованием
 
-INSERT INTO equipment_owner ( equipment_id, employee_id )
-    VALUES (
-        (
-            SELECT id
-            FROM equipment
-            WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
-        ),
-        (
-            SELECT id
-            FROM employee
-            WHERE LOWER( employee.snils )  LIKE in_snils
-        )
-    );
+IF NOT EXISTS (
+  SELECT *
+  FROM equipment_owner
+  WHERE equipment_owner.equipment_id = (
+    SELECT id
+    FROM equipment
+    WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+  ) AND
+  equipment_owner.employee_id = (
+    SELECT id
+    FROM employee
+    WHERE LOWER( employee.snils ) LIKE in_snils
+  ) AND
+  equipment_owner.finish_datetime = NULL
+)
+THEN
+  INSERT INTO equipment_owner ( equipment_id, employee_id, start_datetime )
+      VALUES (
+          (
+              SELECT id
+              FROM equipment
+              WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+          ),
+          (
+              SELECT id
+              FROM employee
+              WHERE LOWER( employee.snils )  LIKE in_snils
+          ),
+          in_start_datetime
+      );
+END IF;
 
-COMMIT;
+  COMMIT;
 
 END$$
 
@@ -1019,6 +1038,135 @@ INSERT INTO equipment_operation ( datetime, equipment_id, eq_oper_type_id )
                 WHERE LOWER( equipment_operation_type.name ) = 'поступление'
             )
    );
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS add_equipment_and_owner$$
+CREATE PROCEDURE add_equipment_and_owner(
+                                         IN in_snils           VARCHAR( 16 ),
+                                         IN in_name            VARCHAR( 128 ),
+                                         IN in_serial_number   VARCHAR( 128 ),
+                                         IN in_addr            VARCHAR( 256 ),
+                                         IN in_equipment_model VARCHAR( 128 ),
+                                         IN in_datetime        DATETIME                               
+                                        )
+BEGIN
+
+START TRANSACTION;
+
+-- добавление оборудования и владельца оборудования
+
+CALL add_equipment( in_name, in_serial_number, in_addr, in_equipment_model, in_datetime );
+CALL add_equipment_owner( in_snils, in_serial_number, in_datetime );
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS delete_equipment$$
+CREATE PROCEDURE delete_equipment(
+                                  IN in_serial_number   VARCHAR( 128 ),
+                                  IN in_datetime        DATETIME                               
+                                 )
+BEGIN
+
+START TRANSACTION;
+
+-- списание оборудования
+
+IF (
+  (
+    SELECT equipment_operation_type.name
+    FROM equipment_operation_type
+    INNER JOIN (
+      SELECT *
+      FROM (
+        SELECT equipment_id, eq_oper_type_id, MAX( datetime )
+        FROM equipment_operation
+        GROUP BY equipment_id
+      ) AS tmp
+      WHERE tmp.eq_oper_type_id = (
+        SELECT id
+        FROM equipment
+        WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+      ) 
+    ) AS temp
+    ON equipment_operation_type.id = temp.eq_oper_type_id
+  ) <> 'списание'
+)
+THEN
+  INSERT INTO equipment_operation( date, equipment_id, eq_oper_type_id )
+    VALUES(
+            in_datetime,
+            (
+              SELECT id
+              FROM equipment
+              WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+            ),
+            (
+              SELECT id
+              FROM equipment_operation_type
+              WHERE LOWER( equipment_operation_type.name ) = 'списание'
+            ) 
+    );
+
+  UPDATE equipment_owner
+    SET equipment_owner.finish_datetime = in_datetime
+    WHERE equipment_owner.equipment_id = (
+      SELECT id
+      FROM equipment
+      WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+    );
+END IF;
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS delete_equipment_owner$$
+CREATE PROCEDURE delete_equipment_owner(
+                                        IN in_snils           VARCHAR( 16 ),
+                                        IN in_serial_number   VARCHAR( 128 ),
+                                        IN in_datetime        DATETIME                               
+                                       )
+BEGIN
+
+START TRANSACTION;
+
+-- отписать владельца от оборудования
+
+IF EXISTS (
+  SELECT *
+  FROM equipment_owner
+  WHERE equipment_owner.equipment_id = (
+    SELECT id
+    FROM equipment
+    WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+  ) AND
+  equipment_owner.employee_id = (
+    SELECT id
+    FROM employee
+    WHERE LOWER( employee.snils ) LIKE in_snils
+  ) AND
+  equipment_owner.finish_datetime = NULL
+)
+THEN
+  UPDATE equipment_owner
+    SET equipment_owner.finish_datetime = in_datetime
+    WHERE equipment_owner.equipment_id = (
+      SELECT id
+      FROM equipment
+      WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+    );
+END IF;
 
 COMMIT;
 
