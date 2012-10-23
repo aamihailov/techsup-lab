@@ -955,6 +955,18 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
+-- CALL add_equipment_owner(
+--                          '999-999-999 99',
+--                          'серийник рабочее место начальника'
+--                          ( SELECT NOW( ) )
+--                         );
+
+-- CALL add_equipment_owner(
+--                          '999-999-999 99',
+--                          'серийник ноута'
+--                          ( SELECT NOW( ) )
+--                         );
+
 DROP PROCEDURE IF EXISTS add_equipment_owner$$
 CREATE PROCEDURE add_equipment_owner(
                                      IN in_snils          VARCHAR( 16 ),
