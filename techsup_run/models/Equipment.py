@@ -8,7 +8,7 @@ import settings as s
 class Equipment(models.Model):
     name             = models.CharField(max_length=s.EQ_NAME_LENGTH)
     serial_number    = models.CharField(max_length=s.SN_NAME_LENGTH, unique=True)
-    addr             = models.CharField(max_length=s.EQ_ADDR_LENGTH)
+    addr             = models.CharField(max_length=s.EQ_ADDR_LENGTH, null=True)
     equipment_model  = models.ForeignKey('EquipmentModel')
     owner            = models.ManyToManyField('Employee', through='EquipmentOwner')
      
