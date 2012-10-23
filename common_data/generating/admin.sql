@@ -6,14 +6,18 @@ CALL add_employee( '999-999-999 99', 'Анастасия Алексеевна С
                 );
 
 
-CALL add_equipment_owner(
-                          '999-999-999 99',
-                          'серийник рабочее место начальника'
-                          ( SELECT NOW( ) )
-                        );
+CALL add_equipment_and_owner( '999-999-999 99',
+                              'рабочее место шефа',
+                              'adm-999-9999-99-pc',
+                              'комн. 99',
+                              'рабочее место начальника',
+                              ( SELECT NOW( ) )
+                            );
 
-CALL add_equipment_owner(
-                          '999-999-999 99',
-                          'серийник ноута'
-                          ( SELECT NOW( ) )
-                        );
+CALL add_equipment_and_owner( '999-999-999 99',
+                              'ноут шефа',
+                              'adm-999-9999-99-note',
+                              NULL,
+                              'рабочее место начальника',
+                              ( SELECT NOW( ) )
+                            );
