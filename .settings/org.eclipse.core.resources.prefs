@@ -1,5 +1,4 @@
 eclipse.preferences.version=1
-encoding//techsup_run/management/commands/techsup_fill_primaries.py=utf-8
 encoding//techsup_run/models/Admins.py=utf-8
 encoding//techsup_run/models/Department.py=utf-8
 encoding//techsup_run/models/DepartmentActivitySphere.py=utf-8

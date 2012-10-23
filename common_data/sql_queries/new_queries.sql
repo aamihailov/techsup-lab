@@ -738,6 +738,13 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
+-- CALL add_employee( '999-999-999 99', 'Анастасия Алексеевна Санина',
+--                    '+7-923-233-39-95', 'Блюхера, 30/1',
+--                    'anastas.sanina', md5( 'anastas.sanina' ),
+--                    'администратор', 'Региональный Сервисный Центр',
+--                    ( SELECT NOW() )
+--                  );
+
 DROP PROCEDURE IF EXISTS add_employee$$
 CREATE PROCEDURE add_employee(
                                IN in_snils      VARCHAR( 16 ),
@@ -748,7 +755,7 @@ CREATE PROCEDURE add_employee(
                                IN in_password   VARCHAR( 128 ),
                                IN in_role_name  VARCHAR( 128 ),
                                IN in_department_name VARCHAR( 128 ),
-                               IN in_date DATE
+                               IN in_date       DATE
                              )
 BEGIN
 
@@ -1071,8 +1078,8 @@ END$$
 
 DROP PROCEDURE IF EXISTS delete_equipment$$
 CREATE PROCEDURE delete_equipment(
-                                  IN in_serial_number   VARCHAR( 128 ),
-                                  IN in_datetime        DATETIME                               
+                                  IN in_serial_number VARCHAR( 128 ),
+                                  IN in_datetime      DATETIME                               
                                  )
 BEGIN
 
@@ -1133,9 +1140,9 @@ END$$
 
 DROP PROCEDURE IF EXISTS delete_equipment_owner$$
 CREATE PROCEDURE delete_equipment_owner(
-                                        IN in_snils           VARCHAR( 16 ),
-                                        IN in_serial_number   VARCHAR( 128 ),
-                                        IN in_datetime        DATETIME                               
+                                        IN in_snils         VARCHAR( 16 ),
+                                        IN in_serial_number VARCHAR( 128 ),
+                                        IN in_datetime      DATETIME                               
                                        )
 BEGIN
 
