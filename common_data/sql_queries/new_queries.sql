@@ -1022,7 +1022,7 @@ CREATE PROCEDURE add_equipment(
                                IN in_name            VARCHAR( 128 ),
                                IN in_serial_number   VARCHAR( 128 ),
                                IN in_addr            VARCHAR( 256 ),
-                               IN in_equipment_model VARCHAR( 128 ),
+                               IN in_equipment_model VARCHAR( 255 ),
                                IN in_datetime DATETIME                               
                               )
 BEGIN
@@ -1040,6 +1040,7 @@ INSERT INTO equipment ( name, serial_number, addr, equipment_model_id )
             SELECT id
             FROM equipment_model
             WHERE LOWER( equipment_model.name ) LIKE in_equipment_model
+            UNION SELECT 154 LIMIT 1
         )
     );
 
@@ -1070,7 +1071,7 @@ CREATE PROCEDURE add_equipment_and_owner(
                                          IN in_name            VARCHAR( 128 ),
                                          IN in_serial_number   VARCHAR( 128 ),
                                          IN in_addr            VARCHAR( 256 ),
-                                         IN in_equipment_model VARCHAR( 128 ),
+                                         IN in_equipment_model VARCHAR( 255 ),
                                          IN in_datetime        DATETIME                               
                                         )
 BEGIN
