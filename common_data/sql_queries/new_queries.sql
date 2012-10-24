@@ -1088,6 +1088,8 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
+-- call delete_equipment( 'issl-714-3299-54-lt', (SELECT NOW()) );
+
 DROP PROCEDURE IF EXISTS delete_equipment$$
 CREATE PROCEDURE delete_equipment(
                                   IN in_serial_number VARCHAR( 128 ),
@@ -1099,28 +1101,38 @@ START TRANSACTION;
 
 -- списание оборудования
 
-IF (
-  (
+IF NOT EXISTS (
+  SELECT *
+  FROM (
     SELECT equipment_operation_type.name
     FROM equipment_operation_type
     INNER JOIN (
-      SELECT *
+      SELECT equipment_id, eq_oper_type_id, datetime
       FROM (
-        SELECT equipment_id, eq_oper_type_id, MAX( datetime )
+        SELECT equipment_id, eq_oper_type_id, datetime                                        
         FROM equipment_operation
-        GROUP BY equipment_id
+        WHERE equipment_id = (
+          SELECT id
+          FROM equipment
+          WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+        )
       ) AS tmp
-      WHERE tmp.eq_oper_type_id = (
-        SELECT id
-        FROM equipment
-        WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
-      ) 
+      WHERE datetime = (
+        SELECT MAX( datetime )
+        FROM equipment_operation
+        WHERE equipment_operation.equipment_id = (
+          SELECT id
+          FROM equipment
+          WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+        )
+      )
     ) AS temp
     ON equipment_operation_type.id = temp.eq_oper_type_id
-  ) <> 'списание'
+  ) AS tmp_operation
+  WHERE tmp_operation.name = 'списание'
 )
 THEN
-  INSERT INTO equipment_operation( date, equipment_id, eq_oper_type_id )
+  INSERT INTO equipment_operation( datetime, equipment_id, eq_oper_type_id )
     VALUES(
             in_datetime,
             (
