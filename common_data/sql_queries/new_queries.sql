@@ -3,8 +3,7 @@ DELIMITER $$
 DROP PROCEDURE IF EXISTS change_equipment_owner$$
 CREATE PROCEDURE change_equipment_owner (
                                          IN serial_number VARCHAR(128), 
-                                         IN login VARCHAR(128), 
-                                         IN password VARCHAR(128)
+                                         IN in_snils      VARCHAR(16)
                                         )
 BEGIN
 
@@ -22,8 +21,7 @@ INSERT INTO equipment_owner( equipment_id, employee_id )
             (
                 SELECT employee.id
                 FROM employee
-                WHERE employee.login    LIKE login AND
-                      employee.password LIKE password
+                WHERE LOWER(employee.snils) LIKE in_snils
             ) 
         );
 
@@ -36,8 +34,7 @@ END$$
 DROP PROCEDURE IF EXISTS change_task_owner$$
 CREATE PROCEDURE change_task_owner(
                                    IN task_id  INT(11),
-                                   IN login    VARCHAR(128), 
-                                   IN password VARCHAR(128)
+                                   IN in_snils VARCHAR(128)
                                   ) 
 BEGIN
 
@@ -49,8 +46,7 @@ UPDATE task
     SET owner_id = (
             SELECT employee.id
             FROM employee
-            WHERE employee.login    LIKE login AND
-                  employee.password LIKE password
+            WHERE LOWER(employee.snils) LIKE in_snils
         )
     WHERE task.id = task_id;
 
@@ -304,10 +300,10 @@ DROP PROCEDURE IF EXISTS put_new_task$$
 CREATE PROCEDURE put_new_task(
                               IN task_name     VARCHAR( 128 ),
                               IN priority_id   INT( 11 ),
-                              IN serial_number VARCHAR( 128 ),
                               IN login         VARCHAR ( 64 ),
                               IN password      VARCHAR ( 128 ),
-                              IN in_datetime   DATETIME
+                              IN in_datetime   DATETIME,
+                              IN serial_number VARCHAR( 128 )
                              )
 BEGIN
 
@@ -332,7 +328,7 @@ INSERT INTO task_equipment ( task_id, equipment_id )
            (
                 SELECT id
                 FROM task
-                WHERE datetime = ( 
+                WHERE task.datetime = ( 
                     SELECT MAX( datetime )
                     FROM task
                 )  
@@ -343,6 +339,87 @@ INSERT INTO task_equipment ( task_id, equipment_id )
                 WHERE LOWER( equipment.serial_number ) LIKE serial_number
            )
           );
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS add_task_owner$$
+CREATE PROCEDURE add_task_owner(
+                                IN in_task_id   INT(11),
+                                IN in_login     VARCHAR ( 64 ),
+                                IN in_password  VARCHAR ( 128 ),
+                                IN in_datetime  DATETIME
+                              )
+BEGIN
+
+START TRANSACTION;
+
+-- добавить куратора заявки
+
+UPDATE task
+  SET task.owner_id = (
+    SELECT id
+    FROM employee
+    WHERE employee.login    LIKE in_login AND
+          employee.password LIKE in_password
+  )
+  WHERE task.id = in_task_id;
+
+INSERT INTO task_operation( datetime, task_id, technic_id, state_id )
+  VALUES(
+    in_datetime,
+    in_task_id,
+    (
+      SELECT id
+      FROM employee
+      WHERE employee.login    LIKE in_login AND
+            employee.password LIKE in_password
+    ),
+    (
+      SELECT id
+      FROM task_state
+      WHERE LOWER( task_state.name ) LIKE 'выполняется'
+    )
+  );
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS close_task$$
+CREATE PROCEDURE close_task(
+                              IN in_task_id   INT(11),
+                              IN in_login     VARCHAR ( 64 ),
+                              IN in_password  VARCHAR ( 128 ),
+                              IN in_datetime  DATETIME
+                           )
+BEGIN
+
+START TRANSACTION;
+
+-- закрыть заявку
+
+INSERT INTO task_operation( datetime, task_id, technic_id, state_id )
+  VALUES(
+    in_datetime,
+    in_task_id,
+    (
+      SELECT id
+      FROM employee
+      WHERE employee.login    LIKE in_login AND
+            employee.password LIKE in_password
+    ),
+    (
+      SELECT id
+      FROM task_state
+      WHERE LOWER( task_state.name ) LIKE 'закрыта'
+    )
+  );
 
 COMMIT;
 
