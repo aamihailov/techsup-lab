@@ -46,15 +46,15 @@ def maybe_owners(request, printer_id):
     SELECT * FROM employee
     WHERE id NOT IN (
       SELECT employee_id FROM employee_operation
-      WHERE type_id = 1 AND date < %s
+      WHERE type_id = 2 AND date < %s
       UNION
       SELECT employee_id FROM employee_operation
-      WHERE type_id = 2 AND date > %s
+      WHERE type_id = 1 AND date > %s
     )'''  
     
-    el = Employee.objects.raw(query, [B, A])
+    el = Employee.objects.raw(query, [A, B])
 
-    return render_to_response('test.html', {'employees_list' : el})
+    return render_to_response('maybe_owners.html', {'employees_list' : el})
     return HttpResponse('%s' % printer_id)
 
 def owners(request, printer_id, snils):
@@ -69,7 +69,7 @@ def owners(request, printer_id, snils):
 
     try:
         C = EmployeeOperation.objects.get(employee__snils=snils, type_id=1).date
-        D = get_or_none(EmployeeOperation, employee__snils=snils, type_id=1)
+        D = get_or_none(EmployeeOperation, employee__snils=snils, type_id=2)
         if D != None:
             D = D.date
     except:
@@ -91,5 +91,7 @@ def owners(request, printer_id, snils):
     if end < beg:
         end = 'NULL'
         beg = 'NULL'
+        
+    raise 'aa'
     
     return HttpResponse('%s\n%s' % ( beg, end ) )
