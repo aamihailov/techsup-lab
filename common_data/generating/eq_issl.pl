@@ -41,7 +41,7 @@ foreach $id( @ids ) {
     $lt = @ltids[$id1]; chomp $lt;
     printf $fmt1, $sn, $bn.'-laptop', $lt, 'room '.(100+int rand 500), $mo, @da[0];
     if ( @da[1] < $today ) {
-      printf $fmt2, $sn, @da[1];
+      printf $fmt2, $lt, @da[1];
     }
     $id1 += 1;
   }
@@ -54,7 +54,7 @@ foreach $id( @ids ) {
     $pc = @pcids[$id2]; chomp $pc;
     printf $fmt1, $sn, $bn.'-pc-'.($i+1), $pc, 'room '.(100+int rand 500), $mo, @da[2*$i];
     if ( @da[2*$i+1] < $today ) {
-      printf $fmt2, $sn, @da[2*$i+1];
+      printf $fmt2, $pc, @da[2*$i+1];
     }
     $id2 += 1;
   }
