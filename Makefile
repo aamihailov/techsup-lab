@@ -6,16 +6,18 @@ fill : clear
 clean_fill : clear
 	test -e $(DUMP) && rm $(DUMP) || echo
 	python manage.py syncdb
-	cat common_data/sql_queries/new_queries.sql | python manage.py dbshell
-	cat common_data/generating/primaries.sql    | python manage.py dbshell
-	cat common_data/generating/equipment.sql    | python manage.py dbshell
-	cat common_data/generating/detail.sql       | python manage.py dbshell
-	cat common_data/generating/departments.sql  | python manage.py dbshell
-	cat common_data/generating/employees.sql    | python manage.py dbshell
-	cat common_data/generating/admin.sql        | python manage.py dbshell
-	cat common_data/generating/dates_h.sql      | python manage.py dbshell
-	cat common_data/generating/dates_out.sql    | python manage.py dbshell
-	cat common_data/generating/eq_issl.sql      | python manage.py dbshell
+	cat common_data/sql_queries/new_queries.sql 			| python manage.py dbshell
+	cat common_data/generating/primaries.sql    			| python manage.py dbshell
+	cat common_data/generating/equipment.sql    			| python manage.py dbshell
+	cat common_data/generating/detail.sql       			| python manage.py dbshell
+	cat common_data/generating/departments.sql  			| python manage.py dbshell
+	cat common_data/generating/employees.sql    			| python manage.py dbshell
+	cat common_data/generating/admin.sql        			| python manage.py dbshell
+	cat common_data/generating/dates_h.sql      			| python manage.py dbshell
+	cat common_data/generating/dates_out.sql    			| python manage.py dbshell
+	cat common_data/generating/eq_issl.sql      			| python manage.py dbshell
+	cat common_data/generating/add_equipment_printer.sql    | python manage.py dbshell
+	cat common_data/generating/delete_equipment_printer.sql | python manage.py dbshell
 	python manage.py techsup_dump > $(DUMP)
 
 clear :
