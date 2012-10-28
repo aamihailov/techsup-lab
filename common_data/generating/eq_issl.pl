@@ -1,8 +1,8 @@
 
 
-open(ids, "eq_oper_id.dat");
-open(ltids, "eq_oper_laptop_id.dat");
-open(pcids, "eq_oper_pc_id.dat");
+open(ids, "eq_tech_id.dat");
+open(ltids, "eq_tech_laptop_id.dat");
+open(pcids, "eq_tech_pc_id.dat");
 open(snils, "snils.dat");
 open(logins, "logins.dat");
 open(pcs, "eq_issl_pc_dates.dat");

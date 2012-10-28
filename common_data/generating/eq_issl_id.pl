@@ -1,6 +1,6 @@
 
 
-$format = "oper-%03d-%04d-%02d-lt\n";
+$format = "tech-%03d-%04d-%02d-pc\n";
 
 $n = 100000;
 
