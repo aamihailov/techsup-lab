@@ -70,6 +70,8 @@ def owners(request, printer_id, snils):
     try:
         C = EmployeeOperation.objects.get(employee__snils=snils, type_id=1).date
         D = get_or_none(EmployeeOperation, employee__snils=snils, type_id=1)
+        if D != None:
+            D = D.date
     except:
         C = date( 1950, 01, 01 )
         D = date( 2020, 12, 31 )
@@ -77,7 +79,7 @@ def owners(request, printer_id, snils):
     beg = '%s' % max([A,C])
     if B == None:
         if D == None:
-            end = 'NULL';
+            end = 'NULL'
         else:
             end = '%s' % D
     else:
@@ -85,5 +87,9 @@ def owners(request, printer_id, snils):
             end = '%s' % B
         else:
             end = '%s' % min([B,D])
+
+    if end < beg:
+        end = 'NULL'
+        beg = 'NULL'
     
-    return HttpResponse('%s\t%s' % ( beg, end ) )
+    return HttpResponse('%s\n%s' % ( beg, end ) )
