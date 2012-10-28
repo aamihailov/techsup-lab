@@ -1,8 +1,8 @@
 
 
-open(ids, "eq_issl_id.dat");
-open(ltids, "eq_laptop_id.dat");
-open(pcids, "eq_issl_pc_id.dat");
+open(ids, "eq_engi_id.dat");
+open(ltids, "eq_engi_laptop_id.dat");
+open(pcids, "eq_engi_pc_id.dat");
 open(snils, "snils.dat");
 open(logins, "logins.dat");
 open(pcs, "eq_issl_pc_dates.dat");
@@ -50,7 +50,7 @@ foreach $id( @ids ) {
   @da = split( "\t", $da );
   $n = scalar @da / 2;
   for ( $i = 0; $i < $n; $i++ ) {
-    $mo = 'Рабочее место исследователя';
+    $mo = 'Рабочее место инженера';
     $pc = @pcids[$id2]; chomp $pc;
     printf $fmt1, $sn, $bn.'-pc-'.($i+1), $pc, 'room '.(100+int rand 500), $mo, @da[2*$i];
     if ( @da[2*$i+1] < $today ) {
