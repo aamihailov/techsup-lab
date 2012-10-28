@@ -92,6 +92,4 @@ def owners(request, printer_id, snils):
         end = 'NULL'
         beg = 'NULL'
         
-    raise 'aa'
-    
     return HttpResponse('%s\n%s' % ( beg, end ) )
