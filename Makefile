@@ -1,10 +1,4 @@
-DUMP = techsup_run/fixtures/initial_data.json
-
 fill : clear
-	python manage.py syncdb
-
-clean_fill : clear
-	test -e $(DUMP) && rm $(DUMP) || echo
 	python manage.py syncdb
 	cat common_data/sql_queries/new_queries.sql 			| python manage.py dbshell
 	cat common_data/generating/primaries.sql    			| python manage.py dbshell
@@ -18,7 +12,6 @@ clean_fill : clear
 	cat common_data/generating/eq_issl.sql      			| python manage.py dbshell
 	cat common_data/generating/add_equipment_printer.sql    | python manage.py dbshell
 	cat common_data/generating/delete_equipment_printer.sql | python manage.py dbshell
-	python manage.py techsup_dump > $(DUMP)
 
 clear :
-	python manage.py sqlclear techsup_run | python manage.py dbshell
+	python manage.py sqlclear techsup_run 					| python manage.py dbshell
