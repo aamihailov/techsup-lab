@@ -12,6 +12,8 @@ fill : clear
 	cat common_data/generating/eq_issl.sql      			| python manage.py dbshell
 	cat common_data/generating/add_equipment_printer.sql    | python manage.py dbshell
 	cat common_data/generating/delete_equipment_printer.sql | python manage.py dbshell
+	cat common_data/generating/add_printer_owner.sql        | python manage.py dbshell
+	cat common_data/generating/delete_printer_owner.sql     | python manage.py dbshell
 
 clear :
 	python manage.py sqlclear techsup_run 					| python manage.py dbshell
