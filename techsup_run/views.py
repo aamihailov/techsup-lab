@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
+from random import randint
+from datetime import date, timedelta
 
-from django.utils.datetime_safe import date
 from django.shortcuts import render_to_response
 from django.http import HttpResponse
 
@@ -10,7 +11,6 @@ from techsup_run.models.Equipment import Equipment
 from techsup_run.models.EquipmentOperation import EquipmentOperation
 from techsup_run.models.EmployeeOperation import EmployeeOperation
 from techsup_run.models.EquipmentModel import EquipmentModel
-
 
 def get_or_none(model, **kwargs):
     try:
@@ -56,6 +56,8 @@ def maybe_owners(request, printer_id):
 
     return render_to_response('maybe_owners.html', {'employees_list' : el})
 
+
+
 def owners(request, printer_id, snils):
     try:
         A = EquipmentOperation.objects.get(equipment__serial_number=printer_id, eq_oper_type_id=1).datetime.date()
@@ -93,17 +95,64 @@ def owners(request, printer_id, snils):
         
     return HttpResponse('%s\n%s' % ( beg, end ) )
 
+
+
 def task(request, eqid):
-    date_add = 'a'; snils_add = 'b'
-    date_own = 'a'; snils_own = 'b'
-    date_cls = 'a'; snils_cls = 'b'
-    date_rep = 'a'; snils_rep = 'b'
-    add = "%s\t%s" % (date_add, snils_add)
-    own = "%s\t%s" % (date_own, snils_own)
-    cls = "%s\t%s" % (date_cls, snils_cls)
-    rep = "%s\t%s" % (date_rep, snils_rep)
-    response = "%s\n%s\n%s\n%s\n" % (add, own, cls, rep)
+    response = ""
+    beg_date = EquipmentOperation.objects.get(equipment__serial_number=eqid, eq_oper_type_id=1).datetime.date()
+    beg_date += timedelta( weeks = randint(10, 300) )
+    today = date(2012, 10, 20)
+    
+    eq = Equipment.objects.get(serial_number = eqid)
+    owners = eq.owner.all()
+    if len( owners ) == 0:
+        return HttpResponse( '' ) 
+    
+    query = '''
+    SELECT * FROM employee
+    WHERE id NOT IN (
+      SELECT employee_id FROM employee_operation
+      WHERE type_id = 2 AND date < %s
+      UNION
+      SELECT employee_id FROM employee_operation
+      WHERE type_id = 1 AND date > %s
+    )
+    AND role_id = 7'''  
+
+
+    while beg_date < today:
+        owner = owners[randint(0,len(owners)-1)]
+        date_add  = '%s' % beg_date; snils_add = owner.snils
+        beg_date += timedelta( days = randint(0, 5) )
+        
+        tech = Employee.objects.raw(query, [beg_date, beg_date + timedelta( weeks = 4 )])
+        tech = [t for t in tech]
+        if len( tech ) == 0:
+            tch = owner
+            cls = owner
+        else:
+            tch = tech[randint(0,len(tech)-1)]
+            cls = tech[randint(0,len(tech)-1)]
+        date_own  = '%s' % beg_date; snils_own = tch.snils
+        beg_date += timedelta( days = randint(0, 5) )
+        
+        if randint(0,3) == 0:
+            date_rep  = '%s' % beg_date; snils_rep = 'repair' 
+            beg_date += timedelta( days = randint(0, 5) )
+        else:
+            date_rep  = '2020-01-01';    snils_rep = 'not-a-repair'
+        date_cls  = '%s' % beg_date; snils_cls = cls.snils
+        beg_date += timedelta( weeks = randint(10, 300) )
+        
+        add = "%s\t%s" % (date_add, snils_add)
+        own = "%s\t%s" % (date_own, snils_own)
+        rep = "%s\t%s" % (date_rep, snils_rep)
+        cls = "%s\t%s" % (date_cls, snils_cls)
+        response += "%s\n%s\n%s\n%s\n\n" % (add, own, rep, cls)
+
     return HttpResponse(response)
+
+
 
 def equipment_list(request):
     el = Equipment.objects.all()
