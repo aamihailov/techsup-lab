@@ -55,7 +55,6 @@ def maybe_owners(request, printer_id):
     el = Employee.objects.raw(query, [A, B])
 
     return render_to_response('maybe_owners.html', {'employees_list' : el})
-    return HttpResponse('%s' % printer_id)
 
 def owners(request, printer_id, snils):
     try:
@@ -93,3 +92,19 @@ def owners(request, printer_id, snils):
         beg = 'NULL'
         
     return HttpResponse('%s\n%s' % ( beg, end ) )
+
+def task(request, eqid):
+    date_add = 'a'; snils_add = 'b'
+    date_own = 'a'; snils_own = 'b'
+    date_cls = 'a'; snils_cls = 'b'
+    date_rep = 'a'; snils_rep = 'b'
+    add = "%s\t%s" % (date_add, snils_add)
+    own = "%s\t%s" % (date_own, snils_own)
+    cls = "%s\t%s" % (date_cls, snils_cls)
+    rep = "%s\t%s" % (date_rep, snils_rep)
+    response = "%s\n%s\n%s\n%s\n" % (add, own, cls, rep)
+    return HttpResponse(response)
+
+def equipment_list(request):
+    el = Equipment.objects.all()
+    return render_to_response('equipment_list.html', {'equipment_list' : el})
