@@ -346,6 +346,54 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
+DROP PROCEDURE IF EXISTS gen_put_new_task$$
+CREATE PROCEDURE gen_put_new_task(
+								  IN task_name     VARCHAR( 128 ),
+								  IN priority_id   INT( 11 ),
+								  IN in_snils      VARCHAR ( 16 ),
+								  IN in_datetime   DATETIME,
+								  IN serial_number VARCHAR( 128 )
+								 )
+BEGIN
+
+START TRANSACTION;
+
+-- добавить новую заявку
+
+INSERT INTO task ( name, datetime, priority_id, client_id )
+    VALUES( task_name, 
+            in_datetime,
+            priority_id, 
+            (
+                SELECT id
+                FROM employee
+                WHERE LOWER( employee.snils ) LIKE in_snils
+            )            
+           );
+
+INSERT INTO task_equipment ( task_id, equipment_id )
+    VALUES( 
+           (
+                SELECT id
+                FROM task
+                WHERE task.datetime = ( 
+                    SELECT MAX( datetime )
+                    FROM task
+                )  
+           ),
+           (
+                SELECT id
+                FROM equipment
+                WHERE LOWER( equipment.serial_number ) LIKE serial_number
+           )
+          );
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
 DROP PROCEDURE IF EXISTS add_task_owner$$
 CREATE PROCEDURE add_task_owner(
                                 IN in_task_id   INT(11),
@@ -391,6 +439,48 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
+DROP PROCEDURE IF EXISTS gen_add_task_owner$$
+CREATE PROCEDURE gen_add_task_owner(
+									IN in_task_id   INT(11),
+									IN in_snils     VARCHAR ( 16 ),
+									IN in_datetime  DATETIME
+								   )
+BEGIN
+
+START TRANSACTION;
+
+-- добавить куратора заявки
+
+UPDATE task
+  SET task.owner_id = (
+    SELECT id
+    FROM employee
+    WHERE LOWER( employee.snils ) LIKE in_snils
+  )
+  WHERE task.id = in_task_id;
+
+INSERT INTO task_operation( datetime, task_id, technic_id, state_id )
+  VALUES(
+    in_datetime,
+    in_task_id,
+    (
+      SELECT id
+      FROM employee
+      WHERE LOWER( employee.snils ) LIKE in_snils
+    ),
+    (
+      SELECT id
+      FROM task_state
+      WHERE LOWER( task_state.name ) LIKE 'выполняется'
+    )
+  );
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
 DROP PROCEDURE IF EXISTS close_task$$
 CREATE PROCEDURE close_task(
                               IN in_task_id   INT(11),
@@ -413,6 +503,40 @@ INSERT INTO task_operation( datetime, task_id, technic_id, state_id )
       FROM employee
       WHERE employee.login    LIKE in_login AND
             employee.password LIKE in_password
+    ),
+    (
+      SELECT id
+      FROM task_state
+      WHERE LOWER( task_state.name ) LIKE 'закрыта'
+    )
+  );
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS gen_close_task$$
+CREATE PROCEDURE gen_close_task(
+                                IN in_task_id   INT(11),
+                                IN in_snils     VARCHAR( 16 ),
+                                IN in_datetime  DATETIME
+                               )
+BEGIN
+
+START TRANSACTION;
+
+-- закрыть заявку
+
+INSERT INTO task_operation( datetime, task_id, technic_id, state_id )
+  VALUES(
+    in_datetime,
+    in_task_id,
+    (
+      SELECT id
+      FROM employee
+      WHERE LOWER( employee.snils ) LIKE in_snils
     ),
     (
       SELECT id
