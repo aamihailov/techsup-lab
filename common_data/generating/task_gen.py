@@ -22,6 +22,8 @@ c.request("GET", req)
 serial_numbers = c.getresponse()
 serial_numbers = serial_numbers.read().split("\n")
 
+ind = 100000
+
 f  = open('task.sql','w')
 for serial_number in serial_numbers:
     req = "/task/" + serial_number + "/"
@@ -40,7 +42,9 @@ for serial_number in serial_numbers:
 
     for i in xrange(0, len(dates_snils), 4):
         if dates_snils[i][0] < today:
-            put_new_task   = "CALL gen_put_new_task( '%s', %d, '%s', '%s', '%s' );\n" % (
+            ind += 1
+            put_new_task   = "CALL gen_put_new_task( %d, '%s', %d, '%s', '%s', '%s' );\n" % (
+                             ind,
                              task_names[random.randint(0, task_num)], 
                              random.randint(1, 5),
                              dates_snils[i][1],
@@ -51,7 +55,7 @@ for serial_number in serial_numbers:
 
         if dates_snils[i+1][0] < today:
             add_task_owner = "CALL gen_add_task_owner( %d, '%s', '%s' );\n" % (
-                            000, 
+                            ind, 
                             dates_snils[i+1][1],
                             dates_snils[i+1][0] )
 
@@ -59,18 +63,18 @@ for serial_number in serial_numbers:
 
         if dates_snils[i+2][0] < today:
             if dates_snils[i+2][1] != 'not-a-repair':
-                equipment_repair = "CALL gen_equipment_repair( %f, '%s', '%s', '%s', %d, %d );\n" % (
+                equipment_repair = "CALL gen_equipment_repair( %.2lf, '%s', '%s', '%s', %d, %d );\n" % (
                                 round(random.randint(100, 5000)+random.random(), 2), 
-                                dates_snils[i+2][1],
                                 dates_snils[i+2][0],
+                                serial_number,
                                 "ремонт успешно завершён",
                                 random.randint(1, 836),
-                                000 )
+                                ind )
                 f.write(equipment_repair)
 
         if dates_snils[i+3][0] < today:
             close_task     = "CALL gen_close_task( %d, '%s', '%s' );\n" % (
-                            000, 
+                            ind, 
                             dates_snils[i+3][1],
                             dates_snils[i+3][0] )
 

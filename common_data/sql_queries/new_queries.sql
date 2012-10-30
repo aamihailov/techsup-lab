@@ -348,6 +348,7 @@ END$$
 
 DROP PROCEDURE IF EXISTS gen_put_new_task$$
 CREATE PROCEDURE gen_put_new_task(
+                  IN in_id         INT( 11 ),
 								  IN task_name     VARCHAR( 128 ),
 								  IN priority_id   INT( 11 ),
 								  IN in_snils      VARCHAR ( 16 ),
@@ -360,8 +361,10 @@ START TRANSACTION;
 
 -- добавить новую заявку
 
-INSERT INTO task ( name, datetime, priority_id, client_id )
-    VALUES( task_name, 
+INSERT INTO task ( id, name, datetime, priority_id, client_id )
+    VALUES( 
+            in_id,
+            task_name, 
             in_datetime,
             priority_id, 
             (
@@ -373,14 +376,7 @@ INSERT INTO task ( name, datetime, priority_id, client_id )
 
 INSERT INTO task_equipment ( task_id, equipment_id )
     VALUES( 
-           (
-                SELECT id
-                FROM task
-                WHERE task.datetime = ( 
-                    SELECT MAX( datetime )
-                    FROM task
-                )  
-           ),
+           in_id,
            (
                 SELECT id
                 FROM equipment
@@ -679,25 +675,14 @@ INSERT INTO repair( comment, datetime, detail_model_id, equipment_operation_id, 
           (
             SELECT id
             FROM equipment_operation
-            WHERE equipment_operation.datetime = (
-              SELECT MAX( datetime ) AS tmp_datetime
-              FROM (
-                SELECT datetime
-                FROM equipment_operation
-                WHERE eq_oper_type_id = (
-                  SELECT id
-                  FROM equipment_operation_type
-                  WHERE equipment_operation_type.name = 'ремонт'
-                ) AND equipment_id = (
-                  SELECT id
-                  FROM equipment
-                  WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
-                )
-              ) AS tmp
-            ) AND equipment_operation.equipment_id = (
+            WHERE equipment_operation.datetime = in_datetime AND equipment_operation.equipment_id = (
                 SELECT id
                 FROM equipment
                 WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+            ) AND equipment_operation.eq_oper_type_id = (
+              SELECT id
+              FROM equipment_operation_type
+              WHERE equipment_operation_type.name = 'ремонт'
             )
           ),
           in_task_id
