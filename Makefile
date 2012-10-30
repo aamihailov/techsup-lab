@@ -12,6 +12,7 @@ fill : clear
 	cat common_data/generating/eq_issl.sql                    | python manage.py dbshell
 	cat common_data/generating/eq_engi.sql                    | python manage.py dbshell
 	cat common_data/generating/eq_oper.sql                    | python manage.py dbshell
+	cat common_data/generating/eq_tech.sql                    | python manage.py dbshell
 	cat common_data/generating/add_equipment_printer.sql      | python manage.py dbshell
 	cat common_data/generating/delete_equipment_printer.sql   | python manage.py dbshell
 	cat common_data/generating/add_printer_owner.sql          | python manage.py dbshell
