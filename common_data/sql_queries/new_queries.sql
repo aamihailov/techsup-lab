@@ -632,14 +632,83 @@ INSERT INTO equipment_operation( datetime, equipment_id, eq_oper_type_id )
                 FROM equipment_operation_type
                 WHERE equipment_operation_type.name = 'помещение на ремонт'
             )
-          )
-;
+          );
 
 COMMIT;
 
 END$$
 
 -- ---------------------------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS gen_equipment_repair$$
+CREATE PROCEDURE gen_equipment_repair( 
+                                      IN in_detail_price    DOUBLE,
+                                      IN in_datetime        DATETIME,
+                                      IN in_serial_number   VARCHAR( 128 ),
+                                      IN in_comment         VARCHAR( 512 ),
+                                      IN in_detail_model_id INT( 11 ),
+                                      IN in_task_id         INT( 11 )
+                                    )
+BEGIN
+
+START TRANSACTION;
+
+-- ремонт оборудования
+
+INSERT INTO equipment_operation( detail_price, datetime, equipment_id, eq_oper_type_id )
+    VALUES(
+            in_detail_price,
+            in_datetime,
+            (
+                SELECT id
+                FROM equipment
+                WHERE LOWER( equipment.serial_number ) LIKE serial_number
+            ),
+            (
+                SELECT id
+                FROM equipment_operation_type
+                WHERE equipment_operation_type.name = 'ремонт'
+            )
+          );
+
+INSERT INTO repair( comment, datetime, detail_model_id, equipment_operation_id, task_id )
+  VALUES(
+          in_comment,
+          in_datetime,
+          in_detail_model_id,
+          (
+            SELECT id
+            FROM equipment_operation
+            WHERE equipment_operation.datetime = (
+              SELECT MAX( datetime ) AS tmp_datetime
+              FROM (
+                SELECT datetime
+                FROM equipment_operation
+                WHERE eq_oper_type_id = (
+                  SELECT id
+                  FROM equipment_operation_type
+                  WHERE equipment_operation_type.name = 'ремонт'
+                ) AND equipment_id = (
+                  SELECT id
+                  FROM equipment
+                  WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+                )
+              ) AS tmp
+            ) AND equipment_operation.equipment_id = (
+                SELECT id
+                FROM equipment
+                WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+            )
+          ),
+          in_task_id
+        );
+
+COMMIT;
+
+END$$
+
+-- ---------------------------------------------------------------------------------------------
+
 
 DROP PROCEDURE IF EXISTS get_work_each_empl$$
 CREATE PROCEDURE get_work_each_empl( )
