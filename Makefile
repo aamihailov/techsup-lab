@@ -21,6 +21,7 @@ fill : clear
 	cat common_data/generating/delete_equipment_projector.sql | python manage.py dbshell
 	cat common_data/generating/add_projector_owner.sql        | python manage.py dbshell
 	cat common_data/generating/delete_projector_owner.sql     | python manage.py dbshell
+	cat common_data/generating/task.sql                       | python manage.py dbshell
 
 clear :
 	python manage.py sqlclear techsup_run                     | python manage.py dbshell
