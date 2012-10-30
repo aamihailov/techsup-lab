@@ -22,7 +22,7 @@ c.request("GET", req)
 serial_numbers = c.getresponse()
 serial_numbers = serial_numbers.read().split("\n")
 
-ind = 10000000
+ind = 100000000
 
 f  = open('task.sql','w')
 for serial_number in serial_numbers:
@@ -45,7 +45,7 @@ for serial_number in serial_numbers:
             ind += 1
             put_new_task   = "CALL gen_put_new_task( %d, '%s', %d, '%s', '%s', '%s' );\n" % (
                              ind,
-                             task_names[random.randint(0, task_num)], 
+                             task_names[random.randint(0, task_num-1)], 
                              random.randint(1, 5),
                              dates_snils[i][1],
                              dates_snils[i][0],

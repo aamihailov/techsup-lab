@@ -10,7 +10,7 @@ class Repair(models.Model):
     datetime             = models.DateTimeField()
     detail_model         = models.ForeignKey('DetailModel')
     equipment_operation  = models.ForeignKey('EquipmentOperation')
-    task                 = models.ForeignKey('TaskOperation')
+    task                 = models.ForeignKey('Task')
     
     class Meta:
         app_label = 'techsup_run'

@@ -682,7 +682,7 @@ INSERT INTO repair( comment, datetime, detail_model_id, equipment_operation_id, 
             ) AND equipment_operation.eq_oper_type_id = (
               SELECT id
               FROM equipment_operation_type
-              WHERE equipment_operation_type.name = 'ремонт'
+              WHERE LOWER( equipment_operation_type.name ) = 'ремонт'
             )
           ),
           in_task_id
