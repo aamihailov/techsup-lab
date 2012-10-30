@@ -658,7 +658,7 @@ INSERT INTO equipment_operation( detail_price, datetime, equipment_id, eq_oper_t
             (
                 SELECT id
                 FROM equipment
-                WHERE LOWER( equipment.serial_number ) LIKE serial_number
+                WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
             ),
             (
                 SELECT id

@@ -22,7 +22,7 @@ c.request("GET", req)
 serial_numbers = c.getresponse()
 serial_numbers = serial_numbers.read().split("\n")
 
-ind = 1000000
+ind = 10000000
 
 f  = open('task.sql','w')
 for serial_number in serial_numbers:
