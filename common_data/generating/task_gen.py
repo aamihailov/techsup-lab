@@ -40,6 +40,8 @@ for serial_number in serial_numbers:
     for i in xrange(0, len(dates_snils)):
         dates_snils[i] = dates_snils[i].split("\t")
 
+    print len(dates_snils)
+
     for i in xrange(0, len(dates_snils), 4):
         if dates_snils[i][0] < today:
             ind += 1

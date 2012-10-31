@@ -1,4 +1,7 @@
 eclipse.preferences.version=1
+encoding//common_data/generating/dates.py=utf-8
+encoding//common_data/generating/eq_issl_date.py=utf-8
+encoding//common_data/generating/task_gen.py=utf-8
 encoding//techsup_run/models/Admins.py=utf-8
 encoding//techsup_run/models/Department.py=utf-8
 encoding//techsup_run/models/DepartmentActivitySphere.py=utf-8
@@ -20,3 +23,4 @@ encoding//techsup_run/models/TaskOperation.py=utf-8
 encoding//techsup_run/models/TaskPriority.py=utf-8
 encoding//techsup_run/models/TaskState.py=utf-8
 encoding//techsup_run/models/Technics.py=utf-8
+encoding//techsup_run/views.py=utf-8
