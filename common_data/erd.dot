@@ -32,7 +32,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >Admins</FONT></TD></TR>
+     >1 * Admins * 11B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -50,7 +50,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >DepartmentActivitySphere</FONT></TD></TR>
+     >2 * DepartmentActivitySphere * 266B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -75,7 +75,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >Department</FONT></TD></TR>
+     >11 * Department * 886B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -135,7 +135,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >DetailCategory</FONT></TD></TR>
+     >23 * DetailCategory * 266B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -160,7 +160,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >DetailModel</FONT></TD></TR>
+     >2'064 * DetailModel * 277B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -192,7 +192,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >EmployeeRole</FONT></TD></TR>
+     >8 * EmployeeRole * 266B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -217,7 +217,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >Employee</FONT></TD></TR>
+     >2'939 * Employee * 1029B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -284,7 +284,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >EmployeeOperationType</FONT></TD></TR>
+     >6 * EmployeeOperationType * 266B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -309,7 +309,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >EmployeeOperation</FONT></TD></TR>
+     >61'736 * EmployeeOperation * 7B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -355,7 +355,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >EquipmentCategory</FONT></TD></TR>
+     >4 * EquipmentCategory * 11B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -380,7 +380,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >EquipmentModel</FONT></TD></TR>
+     >836 * EquipmentModel * 12B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -412,7 +412,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >Equipment</FONT></TD></TR>
+     >6'483 * Equipment * 1044B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -465,7 +465,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >EquipmentOperationType</FONT></TD></TR>
+     >6 * EquipmentOperationType * 266B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -490,7 +490,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >EquipmentOperation</FONT></TD></TR>
+     >22'125 * EquipmentOperation * 49B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -536,7 +536,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >EquipmentOwner</FONT></TD></TR>
+     >16'975 * EquipmentOwner * 49B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -582,7 +582,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >TaskPriority</FONT></TD></TR>
+     >5 * TaskPriority * 266B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -607,7 +607,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >Task</FONT></TD></TR>
+     >40'378 * Task * 307B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -667,7 +667,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >Repair</FONT></TD></TR>
+     >10'073 * Repair * 564B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -720,7 +720,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >TaskState</FONT></TD></TR>
+     >5 * TaskState * 266B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -745,7 +745,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >TaskOperation</FONT></TD></TR>
+     >80'719 * TaskOperation * 60B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -798,7 +798,7 @@ subgraph cluster_techsup_run_models {
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
      ><FONT FACE="Helvetica Bold" COLOR="white"
-     >Technics</FONT></TD></TR>
+     >206 * Technics * 11B</FONT></TD></TR>
     
         
         <TR><TD ALIGN="LEFT" BORDER="0"
