@@ -28,6 +28,24 @@ subgraph cluster_techsup_run_models {
   style="rounded"
 
 
+    techsup_run_models_Admins_Admins [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >Admins</FONT></TD></TR>
+    
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">employee</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+    
+    </TABLE>
+    >]
+
     techsup_run_models_DepartmentActivitySphere_DepartmentActivitySphere [label=<
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
@@ -195,38 +213,6 @@ subgraph cluster_techsup_run_models {
     </TABLE>
     >]
 
-    techsup_run_models_RightsGroup_RightsGroup [label=<
-    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
-     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
-     ><FONT FACE="Helvetica Bold" COLOR="white"
-     >RightsGroup</FONT></TD></TR>
-    
-        
-        <TR><TD ALIGN="LEFT" BORDER="0"
-        ><FONT COLOR="#7B7B7B" FACE="Helvetica Bold">id</FONT
-        ></TD>
-        <TD ALIGN="LEFT"
-        ><FONT COLOR="#7B7B7B" FACE="Helvetica Bold">AutoField</FONT
-        ></TD></TR>
-        
-        <TR><TD ALIGN="LEFT" BORDER="0"
-        ><FONT FACE="Helvetica Bold">name</FONT
-        ></TD>
-        <TD ALIGN="LEFT"
-        ><FONT FACE="Helvetica Bold">CharField</FONT
-        ></TD></TR>
-        
-        <TR><TD ALIGN="LEFT" BORDER="0"
-        ><FONT FACE="Helvetica Bold">rights</FONT
-        ></TD>
-        <TD ALIGN="LEFT"
-        ><FONT FACE="Helvetica Bold">CharField</FONT
-        ></TD></TR>
-        
-    
-    </TABLE>
-    >]
-
     techsup_run_models_Employee_Employee [label=<
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
@@ -242,6 +228,13 @@ subgraph cluster_techsup_run_models {
         ></TD></TR>
         
         <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">snils</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">CharField</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
         ><FONT FACE="Helvetica Bold">name</FONT
         ></TD>
         <TD ALIGN="LEFT"
@@ -253,13 +246,6 @@ subgraph cluster_techsup_run_models {
         ></TD>
         <TD ALIGN="LEFT"
         ><FONT FACE="Helvetica Bold">CharField</FONT
-        ></TD></TR>
-        
-        <TR><TD ALIGN="LEFT" BORDER="0"
-        ><FONT FACE="Helvetica Bold">email</FONT
-        ></TD>
-        <TD ALIGN="LEFT"
-        ><FONT FACE="Helvetica Bold">EmailField</FONT
         ></TD></TR>
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -285,13 +271,6 @@ subgraph cluster_techsup_run_models {
         
         <TR><TD ALIGN="LEFT" BORDER="0"
         ><FONT FACE="Helvetica Bold">role</FONT
-        ></TD>
-        <TD ALIGN="LEFT"
-        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
-        ></TD></TR>
-        
-        <TR><TD ALIGN="LEFT" BORDER="0"
-        ><FONT FACE="Helvetica Bold">group</FONT
         ></TD>
         <TD ALIGN="LEFT"
         ><FONT FACE="Helvetica Bold">ForeignKey</FONT
@@ -372,6 +351,31 @@ subgraph cluster_techsup_run_models {
     </TABLE>
     >]
 
+    techsup_run_models_EquipmentCategory_EquipmentCategory [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >EquipmentCategory</FONT></TD></TR>
+    
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT COLOR="#7B7B7B" FACE="Helvetica Bold">id</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT COLOR="#7B7B7B" FACE="Helvetica Bold">AutoField</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">name</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">CharField</FONT
+        ></TD></TR>
+        
+    
+    </TABLE>
+    >]
+
     techsup_run_models_EquipmentModel_EquipmentModel [label=<
     <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
      <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
@@ -391,6 +395,13 @@ subgraph cluster_techsup_run_models {
         ></TD>
         <TD ALIGN="LEFT"
         ><FONT FACE="Helvetica Bold">CharField</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">category</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
         ></TD></TR>
         
     
@@ -497,10 +508,10 @@ subgraph cluster_techsup_run_models {
         ></TD></TR>
         
         <TR><TD ALIGN="LEFT" BORDER="0"
-        ><FONT FACE="Helvetica Bold">date</FONT
+        ><FONT FACE="Helvetica Bold">datetime</FONT
         ></TD>
         <TD ALIGN="LEFT"
-        ><FONT FACE="Helvetica Bold">DateField</FONT
+        ><FONT FACE="Helvetica Bold">DateTimeField</FONT
         ></TD></TR>
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -512,6 +523,52 @@ subgraph cluster_techsup_run_models {
         
         <TR><TD ALIGN="LEFT" BORDER="0"
         ><FONT FACE="Helvetica Bold">eq_oper_type</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+    
+    </TABLE>
+    >]
+
+    techsup_run_models_EquipmentOwner_EquipmentOwner [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >EquipmentOwner</FONT></TD></TR>
+    
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT COLOR="#7B7B7B" FACE="Helvetica Bold">id</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT COLOR="#7B7B7B" FACE="Helvetica Bold">AutoField</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">start_datetime</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">DateTimeField</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">finish_datetime</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">DateTimeField</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">equipment</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">employee</FONT
         ></TD>
         <TD ALIGN="LEFT"
         ><FONT FACE="Helvetica Bold">ForeignKey</FONT
@@ -568,6 +625,13 @@ subgraph cluster_techsup_run_models {
         ></TD></TR>
         
         <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">datetime</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">DateTimeField</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
         ><FONT FACE="Helvetica Bold">priority</FONT
         ></TD>
         <TD ALIGN="LEFT"
@@ -614,10 +678,17 @@ subgraph cluster_techsup_run_models {
         ></TD></TR>
         
         <TR><TD ALIGN="LEFT" BORDER="0"
-        ><FONT FACE="Helvetica Bold">equipment_assisment</FONT
+        ><FONT FACE="Helvetica Bold">comment</FONT
         ></TD>
         <TD ALIGN="LEFT"
         ><FONT FACE="Helvetica Bold">CharField</FONT
+        ></TD></TR>
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">datetime</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">DateTimeField</FONT
         ></TD></TR>
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -628,7 +699,7 @@ subgraph cluster_techsup_run_models {
         ></TD></TR>
         
         <TR><TD ALIGN="LEFT" BORDER="0"
-        ><FONT FACE="Helvetica Bold">equpment_operation</FONT
+        ><FONT FACE="Helvetica Bold">equipment_operation</FONT
         ></TD>
         <TD ALIGN="LEFT"
         ><FONT FACE="Helvetica Bold">ForeignKey</FONT
@@ -692,10 +763,10 @@ subgraph cluster_techsup_run_models {
         ></TD></TR>
         
         <TR><TD ALIGN="LEFT" BORDER="0"
-        ><FONT FACE="Helvetica Bold">date</FONT
+        ><FONT FACE="Helvetica Bold">datetime</FONT
         ></TD>
         <TD ALIGN="LEFT"
-        ><FONT FACE="Helvetica Bold">DateField</FONT
+        ><FONT FACE="Helvetica Bold">DateTimeField</FONT
         ></TD></TR>
         
         <TR><TD ALIGN="LEFT" BORDER="0"
@@ -714,6 +785,24 @@ subgraph cluster_techsup_run_models {
         
         <TR><TD ALIGN="LEFT" BORDER="0"
         ><FONT FACE="Helvetica Bold">state</FONT
+        ></TD>
+        <TD ALIGN="LEFT"
+        ><FONT FACE="Helvetica Bold">ForeignKey</FONT
+        ></TD></TR>
+        
+    
+    </TABLE>
+    >]
+
+    techsup_run_models_Technics_Technics [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >Technics</FONT></TD></TR>
+    
+        
+        <TR><TD ALIGN="LEFT" BORDER="0"
+        ><FONT FACE="Helvetica Bold">employee</FONT
         ></TD>
         <TD ALIGN="LEFT"
         ><FONT FACE="Helvetica Bold">ForeignKey</FONT
@@ -748,6 +837,12 @@ subgraph cluster_django_extensions_models {
 
   
     
+    
+    techsup_run_models_Admins_Admins -> techsup_run_models_Employee_Employee
+    [label="employee"] ;
+    
+  
+    
   
     
     
@@ -766,15 +861,9 @@ subgraph cluster_django_extensions_models {
     
   
     
-  
-    
     
     techsup_run_models_Employee_Employee -> techsup_run_models_EmployeeRole_EmployeeRole
     [label="role"] ;
-    
-    
-    techsup_run_models_Employee_Employee -> techsup_run_models_RightsGroup_RightsGroup
-    [label="group"] ;
     
   
     
@@ -797,12 +886,14 @@ subgraph cluster_django_extensions_models {
   
     
     
+    techsup_run_models_EquipmentModel_EquipmentModel -> techsup_run_models_EquipmentCategory_EquipmentCategory
+    [label="category"] ;
+    
+  
+    
+    
     techsup_run_models_Equipment_Equipment -> techsup_run_models_EquipmentModel_EquipmentModel
     [label="equipment_model"] ;
-    
-    
-    techsup_run_models_Equipment_Equipment -> techsup_run_models_Employee_Employee
-    [label="owner"] [arrowhead=normal arrowtail=normal];
     
   
     
@@ -815,6 +906,16 @@ subgraph cluster_django_extensions_models {
     
     techsup_run_models_EquipmentOperation_EquipmentOperation -> techsup_run_models_EquipmentOperationType_EquipmentOperationType
     [label="eq_oper_type"] ;
+    
+  
+    
+    
+    techsup_run_models_EquipmentOwner_EquipmentOwner -> techsup_run_models_Equipment_Equipment
+    [label="equipment"] ;
+    
+    
+    techsup_run_models_EquipmentOwner_EquipmentOwner -> techsup_run_models_Employee_Employee
+    [label="employee"] ;
     
   
     
@@ -844,10 +945,10 @@ subgraph cluster_django_extensions_models {
     
     
     techsup_run_models_Repair_Repair -> techsup_run_models_EquipmentOperation_EquipmentOperation
-    [label="equpment_operation"] ;
+    [label="equipment_operation"] ;
     
     
-    techsup_run_models_Repair_Repair -> techsup_run_models_TaskOperation_TaskOperation
+    techsup_run_models_Repair_Repair -> techsup_run_models_Task_Task
     [label="task"] ;
     
   
@@ -865,6 +966,12 @@ subgraph cluster_django_extensions_models {
     
     techsup_run_models_TaskOperation_TaskOperation -> techsup_run_models_TaskState_TaskState
     [label="state"] ;
+    
+  
+    
+    
+    techsup_run_models_Technics_Technics -> techsup_run_models_Employee_Employee
+    [label="employee"] ;
     
   
 
