@@ -9,7 +9,7 @@ build_structure :
 	python manage.py syncdb
 	
 build_proc : 
-	cat common_data/sql_queries/new_queries.sql               | python manage.py dbshell
+	cat common_data/procedures.sql               			  | python manage.py dbshell
 	
 build_data : 
 	cat common_data/generating/primaries.sql                  | python manage.py dbshell
