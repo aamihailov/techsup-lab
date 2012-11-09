@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import random
-import linecache
-import readline
 import httplib
 
 today = '2012-10-20'
