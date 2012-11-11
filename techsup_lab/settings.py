@@ -11,7 +11,18 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default': {
+    'local_pg': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'study',                   
+        'USER': 'techsup',                   
+        'PASSWORD': '123123',                
+        'HOST': 'localhost',
+        'PORT': '',
+        'OPTIONS': {
+            'options': '-c search_path=techsup'
+        }
+    },
+    'local_my': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'techsup',                   
         'USER': 'techsup',                   
@@ -19,7 +30,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '',
     },
-    'amihailov': {
+    'amihailov_my': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'techsup',                   
         'USER': 'techsup',                   
@@ -27,15 +38,39 @@ DATABASES = {
         'HOST': 'amihailov.pro',
         'PORT': '',
     },
-    'kefir': {
+    'kefir_my': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'techsup',                   
         'USER': 'techsup',                   
         'PASSWORD': '123123',                
         'HOST': '54.243.236.240',
         'PORT': '',
-    }
+    },
+    'students51_pg': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'students51',                   
+        'USER': 'pmm8101',                   
+        'PASSWORD': 'retodarn',                
+        'HOST': 'fpm2.ami.nstu.ru',
+        'PORT': '',
+        'OPTIONS': {
+            'options': '-c search_path=techsup'
+        }
+    },
+    'students52_pg': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'students52',                   
+        'USER': 'pmm8101',                   
+        'PASSWORD': 'retodarn',                
+        'HOST': 'fpm2.ami.nstu.ru',
+        'PORT': '',
+        'OPTIONS': {
+            'options': '-c search_path=techsup'
+        }
+    },
 }
+DATABASES['default'] = DATABASES['local_my']
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

@@ -14,3 +14,9 @@ class EquipmentOwner(models.Model):
         db_table  = 'equipment_owner'
 #       unique_together = ('equipment', 'employee')
 
+    def __str__(self):
+        format = '[%d : %s : %s : %d : %d]'
+        return format % (self.id, self.start_datetime, self.finish_datetime, self.equipment.id, self.employee.id)
+    
+    def __unicode__(self):
+        return self.__str__()     

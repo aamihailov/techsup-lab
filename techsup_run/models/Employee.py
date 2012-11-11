@@ -18,3 +18,9 @@ class Employee(models.Model):
         app_label = 'techsup_run'
         db_table = 'employee'
         
+    def __str__(self):
+        format = '[%d : %s : %s : %s : %s]'
+        return format % (self.id, self.name, self.snils, self.phone, self.login)
+    
+    def __unicode__(self):
+        return self.__str__()        
