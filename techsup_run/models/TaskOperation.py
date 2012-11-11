@@ -12,5 +12,5 @@ class TaskOperation(models.Model):
     
     class Meta:
         app_label = 'techsup_run'
-        db_table = 'task_operation'
+        db_table  = 'task_operation'
     

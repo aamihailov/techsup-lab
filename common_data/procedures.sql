@@ -249,7 +249,10 @@ END$$
 -- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS get_task_queue_user$$
-CREATE PROCEDURE get_task_queue_user( )
+CREATE PROCEDURE get_task_queue_user(
+                                      IN in_begin_datetime DATETIME,
+                                      IN in_end_datetime   DATETIME
+                                    )
 BEGIN
 
 -- просмотреть очередь заявок с последним
@@ -280,6 +283,8 @@ CREATE TEMPORARY TABLE tmp AS
     INNER JOIN task_state 
     ON state_id = task_state.id;
 
+SELECT *
+FROM (
     SELECT tmp.task_id, 
            task_priority.name AS priority,
            task.name AS task,
@@ -290,7 +295,9 @@ CREATE TEMPORARY TABLE tmp AS
     ON tmp.task_id = task.id
     INNER JOIN task_priority
     ON priority_id = task_priority.id
-    ORDER BY tmp.datetime;
+) AS t
+WHERE t.datetime > in_begin_datetime AND t.datetime < in_end_datetime
+ORDER BY t.datetime;
 
 END$$
 
@@ -490,22 +497,46 @@ START TRANSACTION;
 
 -- закрыть заявку
 
-INSERT INTO task_operation( datetime, task_id, technic_id, state_id )
-  VALUES(
-    in_datetime,
-    in_task_id,
-    (
-      SELECT id
-      FROM employee
-      WHERE employee.login    LIKE in_login AND
-            employee.password LIKE in_password
-    ),
-    (
-      SELECT id
-      FROM task_state
-      WHERE LOWER( task_state.name ) LIKE 'закрыта'
-    )
-  );
+IF NOT EXISTS (
+    SELECT *
+    FROM (
+        SELECT name
+        FROM task_state
+        INNER JOIN (
+            SELECT state_id
+            FROM task_operation
+            WHERE task_id = in_task_id AND datetime = (
+                SELECT max_date
+                FROM (
+                    SELECT task_id, MAX( datetime ) AS max_date
+                    FROM task_operation
+                    GROUP BY task_id
+                ) AS tmp_date
+                WHERE tmp_date.task_id = in_task_id
+            )
+        ) AS tmp
+        ON task_state.id = tmp.state_id 
+    ) AS t
+    WHERE LOWER( t.name ) = 'закрыта'
+)
+THEN
+  INSERT INTO task_operation( datetime, task_id, technic_id, state_id )
+    VALUES(
+      in_datetime,
+      in_task_id,
+      (
+        SELECT id
+        FROM employee
+        WHERE employee.login    LIKE in_login AND
+              employee.password LIKE in_password
+      ),
+      (
+        SELECT id
+        FROM task_state
+        WHERE LOWER( task_state.name ) LIKE 'закрыта'
+      )
+    );
+END IF;
 
 COMMIT;
 
@@ -696,7 +727,9 @@ END$$
 
 
 DROP PROCEDURE IF EXISTS get_work_each_empl$$
-CREATE PROCEDURE get_work_each_empl( )
+CREATE PROCEDURE get_work_each_empl(
+                                    IN in_snils VARCHAR( 16 ) 
+                                   )
 BEGIN
 
 -- получить информацию об общем количестве выполненных заявок
@@ -704,7 +737,7 @@ BEGIN
 
 SELECT id, name, COUNT(*)
 FROM (
-    SELECT employee.id, employee.name,
+    SELECT employee.id, employee.snils, employee.name,
            tmp.task_id, tmp.priority_id,
            task_priority.name AS priority
     FROM employee
@@ -717,7 +750,7 @@ FROM (
             WHERE task_operation.state_id = (
                 SELECT id
                 FROM task_state
-                WHERE task_state.name = 'закрыта'
+                WHERE LOWER( task_state.name ) = 'закрыта'
             )
         )
     ) AS tmp
@@ -725,7 +758,7 @@ FROM (
     RIGHT JOIN task_priority
     ON priority_id = task_priority.id
 ) AS tmp1
-WHERE priority_id > 0
+WHERE priority_id > 0 AND snils LIKE in_snils
 GROUP BY id, name;
 
 END$$
@@ -733,7 +766,9 @@ END$$
 -- ---------------------------------------------------------------------------------------------
 
 DROP PROCEDURE IF EXISTS get_work_each_prior_empl$$
-CREATE PROCEDURE get_work_each_prior_empl( )
+CREATE PROCEDURE get_work_each_prior_empl( 
+                                          IN in_snils VARCHAR( 16 ) 
+                                         )
 BEGIN
 
 -- получить информацию околичестве выполненных заявок
@@ -741,7 +776,7 @@ BEGIN
 
 SELECT id, name, priority, COUNT(*)
 FROM (
-    SELECT employee.id, employee.name,
+    SELECT employee.id, employee.snils, employee.name,
            tmp.task_id, tmp.priority_id,
            task_priority.name AS priority
     FROM employee
@@ -754,7 +789,7 @@ FROM (
             WHERE task_operation.state_id = (
                 SELECT id
                 FROM task_state
-                WHERE task_state.name = 'закрыта'
+                WHERE LOWER( task_state.name ) = 'закрыта'
             )
         )
     ) AS tmp
@@ -762,7 +797,7 @@ FROM (
     RIGHT JOIN task_priority
     ON priority_id = task_priority.id
 ) AS tmp1
-WHERE priority_id > 0
+WHERE priority_id > 0  AND snils LIKE in_snils
 GROUP BY id, priority, name;
 
 END$$
@@ -1266,7 +1301,7 @@ THEN
       );
 END IF;
 
-  COMMIT;
+COMMIT;
 
 END$$
 
