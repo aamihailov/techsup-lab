@@ -791,7 +791,7 @@ FROM (
             WHERE task_operation.state_id = (
                 SELECT id
                 FROM task_state
-                WHERE task_state.name = 'закрыта'
+                WHERE LOWER( task_state.name ) = 'закрыта'
             )
         )
     ) AS tmp
