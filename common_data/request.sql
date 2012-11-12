@@ -323,3 +323,130 @@ END IF;
 
 END;
 $$ LANGUAGE plpgsql;
+
+
+-- students51
+-- получить информацию о всех операциях 
+-- с конкретным оборудованием
+
+SELECT equipment_operation.id AS oper_id, 
+       equipment_operation_type.name AS oper_name,
+       tmp_repair.repair_id,
+       datetime
+FROM _techsup_left.equipment_operation
+INNER JOIN (
+    SELECT id AS equipment_id
+    FROM _techsup_left.equipment
+    WHERE LOWER( equipment.serial_number ) = 'issl-675-8635-84-pc' 
+) AS t
+ON equipment_operation.equipment_id = t.equipment_id
+LEFT JOIN _techsup_left.equipment_operation_type
+ON eq_oper_type_id = equipment_operation_type.id
+LEFT JOIN (
+    SELECT repair.equipment_operation_id AS repair_id
+    FROM _techsup_left.repair
+    WHERE repair.equipment_operation_id IN (
+        SELECT id
+        FROM _techsup_left.equipment_operation
+        WHERE equipment_operation.equipment_id = (
+            SELECT equipment.id
+            FROM _techsup_left.equipment
+            WHERE LOWER( equipment.serial_number ) LIKE 'issl-675-8635-84-pc'
+        ) AND equipment_operation.eq_oper_type_id = ( 
+            SELECT equipment_operation_type.id
+            FROM _techsup_left.equipment_operation_type
+            WHERE LOWER( equipment_operation_type.name ) = 'ремонт' )
+    )
+) AS tmp_repair
+ON equipment_operation.id = tmp_repair.repair_id;
+
+-- students51
+-- получить информацию о всех ремонтах 
+-- с конкретным оборудованием
+
+SELECT repair.equipment_operation_id AS repair_id,
+       detail_model.name AS detail_model,
+       tmp_repair.detail_price,
+       repair.comment,
+       v_employee.name,
+       v_employee.phone,
+       repair.datetime
+FROM _techsup_left.repair
+RIGHT JOIN (
+    SELECT id, detail_price
+    FROM _techsup_left.equipment_operation
+    WHERE equipment_operation.equipment_id = (
+        SELECT equipment.id
+        FROM _techsup_left.equipment
+        WHERE LOWER( equipment.serial_number ) LIKE 'issl-675-8635-84-pc'
+    ) AND equipment_operation.eq_oper_type_id = ( 
+        SELECT equipment_operation_type.id
+        FROM _techsup_left.equipment_operation_type
+        WHERE LOWER( equipment_operation_type.name ) = 'ремонт'
+    )
+) AS tmp_repair
+ON equipment_operation_id = tmp_repair.id
+LEFT JOIN _techsup_left.detail_model
+ON detail_model_id = detail_model.id
+INNER JOIN _techsup_left.task_operation
+ON repair.task_id = task_operation.task_id
+LEFT JOIN _techsup_left.v_employee
+ON technic_id = v_employee.id;
+
+-- student51
+-- получить всех владельцев конкретного оборудования
+-- с последним изменением статуса (принят/уволен)
+
+SELECT v_employee.id AS employee_id, v_employee.name,
+       v_employee_role.name AS role,
+       v_employee.phone, v_employee.login,
+       tmp2.state, tmp2.date
+FROM _techsup_left.v_employee
+LEFT JOIN _techsup_left.v_employee_role
+ON v_employee.role_id = v_employee_role.id
+RIGHT JOIN (
+    SELECT *
+    FROM (
+        -- id сотрудников  с последними изменёнными статусами
+        SELECT v_employee_operation.employee_id, 
+               v_employee_operation_type.name AS state,
+               v_employee_operation.date
+        FROM _techsup_left.v_employee_operation
+        INNER JOIN (
+            SELECT v_employee_operation.employee_id, MAX( v_employee_operation.date ) AS date
+            FROM _techsup_left.v_employee_operation
+            GROUP BY v_employee_operation.employee_id
+        ) AS tmp1
+        ON v_employee_operation.employee_id = tmp1.employee_id AND
+           v_employee_operation.date = tmp1.date
+        INNER JOIN _techsup_left.v_employee_operation_type
+        ON type_id = v_employee_operation_type.id
+    ) AS tmp
+    WHERE tmp.employee_id IN (
+        SELECT employee_id
+        FROM _techsup_left.v_equipment_owner
+        WHERE v_equipment_owner.equipment_id = (
+            SELECT equipment.id
+            FROM _techsup_left.equipment
+            WHERE LOWER( equipment.serial_number ) LIKE 'comm-269-5195-31-proj'
+        )
+   )
+) AS tmp2
+ON v_employee.id = tmp2.employee_id
+ORDER BY date, name;
+
+-- students51
+-- получить расходы по закупке деталей
+-- для конкретного оборудования
+
+SELECT tmp.sum_detail_price
+FROM (
+    SELECT equipment_id, SUM( detail_price ) AS sum_detail_price 
+    FROM _techsup_left.equipment_operation
+    GROUP BY equipment_id
+) AS tmp
+WHERE tmp.equipment_id = (
+    SELECT id
+    FROM _techsup_left.equipment
+    WHERE LOWER( equipment.serial_number ) LIKE 'issl-675-8635-84-pc'
+);

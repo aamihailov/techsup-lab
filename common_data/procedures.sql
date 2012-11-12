@@ -76,6 +76,7 @@ END$$
 
 -- ---------------------------------------------------------------------------------------------
 
+-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! изменена
 DROP PROCEDURE IF EXISTS get_equipment_operation$$
 CREATE PROCEDURE get_equipment_operation( 
                                          IN serial_number VARCHAR( 128 )
@@ -154,7 +155,7 @@ BEGIN
 
 SELECT employee.id AS employee_id, employee.name,
        employee_role.name AS role,
-       employee.phone, employee.email,
+       employee.phone, employee.login,
        tmp2.state, tmp2.date
 FROM employee
 LEFT JOIN employee_role
