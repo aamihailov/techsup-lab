@@ -1487,6 +1487,10 @@ THEN
       SELECT id
       FROM equipment
       WHERE LOWER( equipment.serial_number ) LIKE in_serial_number
+    ) AND equipment_owner.employee_id = (
+      SELECT id
+      FROM employee
+      WHERE LOWER( employee.snils ) LIKE in_snils
     );
 END IF;
 

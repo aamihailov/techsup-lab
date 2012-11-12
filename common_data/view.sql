@@ -195,8 +195,7 @@ FROM
         datetime        TIMESTAMP WITH TIME ZONE,
         priority_id     INTEGER,
         client_id       INTEGER,
-        owner_id        INTEGER,
-        equipment_id    INTEGER
+        owner_id        INTEGER
     );
 
 CREATE VIEW _techsup_right.v_task_priority AS
@@ -221,8 +220,7 @@ FROM
         name                CHARACTER VARYING(255),
         serial_number       CHARACTER VARYING(255),
         addr                CHARACTER VARYING(512),
-        equipment_model_id  INTEGER,
-        owner_id            INTEGER
+        equipment_model_id  INTEGER
     );
 
 CREATE VIEW _techsup_right.v_equipment_model AS
