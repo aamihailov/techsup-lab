@@ -62,14 +62,19 @@ SELECT tmp.snils,
        (
         SELECT _techsup_left.get_sum_task_for_employee_priority(tmp.snils, 'самый высокий' )
        ) AS "P5"
-FROM _techsup_left.v_technics
+FROM _techsup_left.v_employee
 RIGHT JOIN (
   SELECT id, name, snils
   FROM _techsup_left.v_employee
--- LIMIT 10
-  WHERE v_employee.snils = '275-985-770 30'
+  WHERE v_employee.role_id = (
+            SELECT id
+            FROM _techsup_left.v_employee_role
+            WHERE LOWER( v_employee_role.name ) = 'техник'
+  ) 
+--  LIMIT 10
+  AND v_employee.snils = '275-985-770 30'
 ) AS tmp
-ON v_technics.employee_id = tmp.id
+ON v_employee.id = tmp.id 
 
 -- students51
 -- просмотреть очередь заявок с последним
