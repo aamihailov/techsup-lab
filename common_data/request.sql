@@ -45,25 +45,30 @@ $$ LANGUAGE plpgsql;
 -- '071-630-281 12'
 -- SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'самый низкий' );
 
-SELECT snils,
-       name,
-       (
-        SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'самый высокий' )
-       ) AS very_hight,
-       (
-        SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'высокий' )
-       ) AS hight,
-       (
-        SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'средний' )
-       ) AS midle,
-       (
-        SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'низкий' )
-       ) AS down,
+SELECT tmp.snils,
+       tmp.name,
        (
         SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'самый низкий' )
-       ) AS short_down
-FROM _techsup_left.v_employee
-WHERE v_employee.snils = '275-985-770 30'
+       ) AS "P1",
+       (
+        SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'низкий' )
+       ) AS "P2",
+       (
+        SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'средний' )
+       ) AS "P3",
+       (
+        SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'высокий' )
+       ) AS "P4",
+       (
+        SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'самый высокий' )
+       ) AS "P5"
+FROM _techsup_left.v_technics
+RIGHT JOIN (
+  SELECT id, name, snils
+  FROM _techsup_left.v_employee
+  WHERE v_employee.snils = '275-985-770 30'
+) AS tmp
+ON v_technics.employee_id = tmp.id
 
 -- students51
 -- просмотреть очередь заявок с последним
