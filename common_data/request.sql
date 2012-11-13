@@ -2,14 +2,19 @@
 -- получить информацию околичестве выполненных заявок
 -- для конкретного работника по приоритетам заявок
 
-SELECT id, name, priority, COUNT(*)
-FROM (
-    SELECT v_employee.id, v_employee.snils, v_employee.name,
-           tmp.task_id, tmp.priority_id,
-           task_priority.name AS priority
-    FROM _techsup_left.v_employee
-    RIGHT JOIN (
-        SELECT owner_id, task.id AS task_id, task.priority_id
+CREATE OR REPLACE FUNCTION _techsup_left.get_sum_task_for_employee_priority(
+                                     in_snils       CHARACTER VARYING(16),
+                                     in_priority    CHARACTER VARYING(255)
+                                     )
+RETURNS INTEGER
+AS $$
+
+BEGIN
+
+RETURN (
+    SELECT COUNT( * ) 
+    FROM (
+        SELECT task.id
         FROM _techsup_left.task
         WHERE id IN (
             SELECT task_id
@@ -19,43 +24,50 @@ FROM (
                 FROM _techsup_left.task_state
                 WHERE LOWER( task_state.name ) = 'закрыта'
             )
-        )
+        ) AND
+        owner_id = (
+            SELECT id
+            FROM _techsup_left.v_employee
+            WHERE LOWER( v_employee.snils ) LIKE $1
+        ) AND
+        task.priority_id = ( 
+            SELECT id
+            FROM _techsup_left.task_priority
+            WHERE LOWER( task_priority.name ) = $2
+        )    
     ) AS tmp
-    ON v_employee.id = tmp.owner_id
-    RIGHT JOIN _techsup_left.task_priority
-    ON priority_id = task_priority.id
-) AS tmp1
-WHERE priority_id > 0  AND snils LIKE '275-985-770 30'
-GROUP BY id, priority, name;
+);
+
+END;
+$$ LANGUAGE plpgsql;
+
+-- '275-985-770 30'
+-- '071-630-281 12'
+-- SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'самый низкий' );
+
+SELECT snils,
+       name,
+       (
+        SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'самый высокий' )
+       ) AS very_hight,
+       (
+        SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'высокий' )
+       ) AS hight,
+       (
+        SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'средний' )
+       ) AS midle,
+       (
+        SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'низкий' )
+       ) AS down,
+       (
+        SELECT _techsup_left.get_sum_task_for_employee_priority('275-985-770 30', 'самый низкий' )
+       ) AS short_down
+FROM _techsup_left.v_employee
+WHERE v_employee.snils = '275-985-770 30'
 
 -- students51
 -- просмотреть очередь заявок с последним
 -- изменённым статусом для пользователя
-
-DROP TABLE IF EXISTS tmp_task;
-CREATE TEMPORARY TABLE tmp_task AS
-    SELECT task.id, task_priority.name AS priority, task.name AS task
-    FROM _techsup_left.task
-    INNER JOIN _techsup_left.task_priority
-    ON task.priority_id = task_priority.id;
-
-DROP TABLE IF EXISTS tmp;
-CREATE TEMPORARY TABLE tmp AS
-    SELECT task_operation.task_id, 
-           v_employee.name,
-           task_state.name AS state, task_operation.datetime 
-    FROM _techsup_left.task_operation
-    INNER JOIN (
-        SELECT task_operation.task_id, MAX( task_operation.datetime ) AS date
-        FROM _techsup_left.task_operation
-        GROUP BY task_operation.task_id
-    ) AS temp
-    ON task_operation.task_id = temp.task_id AND
-       task_operation.datetime = temp.date
-    LEFT JOIN _techsup_left.v_employee
-    ON technic_id = v_employee.id
-    INNER JOIN _techsup_left.task_state 
-    ON state_id = task_state.id;
 
 SELECT *
 FROM (
@@ -64,14 +76,31 @@ FROM (
            task.name AS task,
            tmp.name AS technic,
            tmp.state, tmp.datetime
-    FROM tmp
+    FROM (
+        SELECT task_operation.task_id, 
+               v_employee.name,
+               task_state.name AS state, task_operation.datetime 
+        FROM _techsup_left.task_operation
+        INNER JOIN (
+            SELECT task_operation.task_id, MAX( task_operation.datetime ) AS date
+            FROM _techsup_left.task_operation
+            GROUP BY task_operation.task_id
+        ) AS temp
+        ON task_operation.task_id = temp.task_id AND
+           task_operation.datetime = temp.date
+        LEFT JOIN _techsup_left.v_employee
+        ON technic_id = v_employee.id
+        INNER JOIN _techsup_left.task_state 
+        ON state_id = task_state.id
+    ) tmp
     INNER JOIN _techsup_left.task
     ON tmp.task_id = task.id
     INNER JOIN _techsup_left.task_priority
     ON priority_id = task_priority.id
 ) AS t
 WHERE t.datetime >= '2012-10-01' AND datetime <= ( SELECT current_timestamp )
-ORDER BY t.datetime;
+ORDER BY t.datetime DESC
+LIMIT 20;
 
 -- students51
 -- добавить новую заявку
@@ -496,7 +525,7 @@ FROM (
     ) AS tmp_summ
     LEFT JOIN _techsup_left.v_employee
     ON client_id = v_employee.id
-    ) AS t_summ
+) AS t_summ
 WHERE t_summ.summ > 0
 ORDER BY summ DESC
 LIMIT 10;
