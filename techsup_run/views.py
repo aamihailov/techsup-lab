@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from random import randint
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 
 from django.shortcuts import render_to_response
 from django.http import HttpResponse
@@ -99,9 +99,9 @@ def owners(request, printer_id, snils):
 
 def task(request, eqid):
     response = ""
-    beg_date = EquipmentOperation.objects.get(equipment__serial_number=eqid, eq_oper_type_id=1).datetime.date()
+    beg_date = EquipmentOperation.objects.get(equipment__serial_number=eqid, eq_oper_type_id=1).datetime
     beg_date += timedelta( weeks = randint(10, 300) )
-    today = date(2012, 10, 20)
+    today = datetime(2012, 10, 20)
     
     eq = Equipment.objects.get(serial_number = eqid)
     owners = eq.owner.all()
@@ -123,7 +123,7 @@ def task(request, eqid):
     while beg_date < today:
         owner = owners[randint(0,len(owners)-1)]
         date_add  = '%s' % beg_date; snils_add = owner.snils
-        beg_date += timedelta( days = randint(0, 5) )
+        beg_date += timedelta( days = randint(0, 5), hours = randint(1, 10) )
         
         tech = Employee.objects.raw(query, [beg_date, beg_date + timedelta( weeks = 4 )])
         tech = [t for t in tech]
@@ -134,15 +134,15 @@ def task(request, eqid):
             tch = tech[randint(0,len(tech)-1)]
             cls = tech[randint(0,len(tech)-1)]
         date_own  = '%s' % beg_date; snils_own = tch.snils
-        beg_date += timedelta( days = randint(0, 5) )
+        beg_date += timedelta( days = randint(0, 5), hours = randint(1, 10) )
         
         if randint(0,3) == 0:
             date_rep  = '%s' % beg_date; snils_rep = 'repair' 
-            beg_date += timedelta( days = randint(0, 5) )
+            beg_date += timedelta( days = randint(0, 5), hours = randint(1, 10) )
         else:
             date_rep  = '2020-01-01';    snils_rep = 'not-a-repair'
         date_cls  = '%s' % beg_date; snils_cls = cls.snils
-        beg_date += timedelta( weeks = randint(10, 300) )
+        beg_date += timedelta( weeks = randint(10, 300), hours = randint(1, 10) )
         
         add = "%s\t%s" % (date_add, snils_add)
         own = "%s\t%s" % (date_own, snils_own)

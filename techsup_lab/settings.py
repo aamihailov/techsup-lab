@@ -69,7 +69,7 @@ DATABASES = {
         }
     },
 }
-DATABASES['default'] = DATABASES['local_my']
+DATABASES['default'] = DATABASES['local_pg']
 
 
 # Local time zone for this installation. Choices can be found here:
